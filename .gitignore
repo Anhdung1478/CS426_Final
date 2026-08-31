@@ -1,0 +1,39 @@
+# Vendored skill repos: ~60 MB of third-party git clones, not our code
+.claude/skills/
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+local.properties
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+captures/
+.cxx/
+app/release/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Backend (Spring Boot, Phase 3)
+backend/build/
+backend/.gradle/
+
+# Secrets — the DeepSeek key lives only in the backend env
+.env
+*.keystore
+*.jks
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

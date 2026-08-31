@@ -1,0 +1,107 @@
+# Lexicon Depths — Roadmap
+
+Index of phase plans, their gates, and what is open to work on right now.
+
+**This file holds no task detail.** It says which phase is open and where its tasks live. Detail lives in the phase files.
+
+| Document | Role |
+|---|---|
+| [`project-idea.md`](../project-idea.md) | Game design and rationale. The *why*. |
+| [`project-context.md`](../project-context.md) | Code navigation: feature → file. Read first in a fresh session. |
+| **this file** | Which phase is open, and the progression between them. |
+| `docs/phase-N.md` | Task tables and per-task detail for one phase. |
+
+---
+
+## Progression
+
+```
+   🟢 Phase 1 ──▶ ⬜ Phase 2 ──▶ 🔒 Phase 3 ──▶ 🔒 Phase 4
+      7/12          0/12          not planned    not planned
+   Foundation    Playable run    AI maps        Polish
+```
+
+Legend: 🟢 open · ⬜ blocked by an earlier gate · 🔒 not planned yet
+
+The project plans **two phases ahead**. Phase 3 gets written in detail only once Phase 1 closes.
+
+---
+
+## Phases
+
+### 🟢 Phase 1 — Foundation · **OPEN, START HERE**
+
+📄 [`docs/phase-1.md`](phase-1.md) — 12 tasks
+
+The app launches, seeds a word bank into Room, runs a working SM-2 scheduler, renders a terminal UI in English and Vietnamese, and reviews flashcards. No combat.
+
+**Progress: 7/12** — P1-1 through P1-7 done (the entire critical path plus content and Track A). **Next task: P1-8** (`Prefs` + Settings screen), which starts Track B's remaining work.
+
+**Milestone:** P1-12 (flashcards) exercises the whole learning engine before any monster exists. A broken SM-2 surfaces there, not after the battle system is built on top of it.
+
+**Gate out:** the exit checklist at the bottom of `phase-1.md`. All eight items.
+
+---
+
+### ⬜ Phase 2 — The playable run · blocked
+
+📄 [`docs/phase-2.md`](phase-2.md) — 12 tasks, written and ready
+
+Pick a topic, walk a branching 3-floor dungeon, fight monsters with real question types, take damage, and finish the run dead or victorious. Nine of the twelve question types ship here.
+
+**Blocked on:** Phase 1's exit checklist. Specifically P2-1 needs a working `WordDao` (P1-4) and a seeded database (P1-6); P2-11 needs the widget kit (P1-11).
+
+**Milestone:** P2-12 closes the loop — a loss writes failed words back into the review queue.
+
+You can read `phase-2.md` now to see what Phase 1's contracts have to support. Do not start its tasks.
+
+---
+
+### 🔒 Phase 3 — AI map generation · not planned
+
+The Spring Boot proxy in `backend/`, live DeepSeek map generation, and the My Library screen. Also swaps affix harvest onto the Datamuse `sp=` wildcard query.
+
+The one constraint worth recording now, because it shapes Phase 2's interfaces: **never call DeepSeek from the client.** The API key would be extractable from the APK. Everything routes through the proxy, whose `.env` holds the key.
+
+Planned in detail once Phase 1 closes.
+
+---
+
+### 🔒 Phase 4 — Polish · not planned
+
+Vocabulary stats screen, SRS review notifications with the Android 13+ `POST_NOTIFICATIONS` runtime permission flow, onboarding tooltips, achievements, and the test/edge-case list for the report.
+
+---
+
+## Working agreement
+
+**Two people, two tracks.** Every task carries a track tag so you can work at once without touching the same files:
+
+- **Track A** — data and game logic. Owns `db/`, `game/`, `content/`, `assets/`.
+- **Track B** — UI and resources. Owns `ui/`, `res/`.
+- **·** — a shared handoff point. One person does it while the other reviews.
+
+The tracks meet at exactly two frozen contracts: **P1-4** (DAO signatures) and **P2-1** (the question API). Do each first in its phase, then fan out. Neither track changes those signatures without telling the other person.
+
+**Difficulty tiers** are set by how much reasoning a task needs, so work routes to the right person or model:
+
+| Tier | Meaning |
+|---|---|
+| **low** | Implementation only. The decisions are already made. |
+| **medium** | Some design judgment inside a defined boundary. |
+| **high** | The shape itself needs working out — schema design, algorithms, and any API both tracks depend on. |
+
+**Before any task:** read [`.claude/skills/minimal-app-design/SKILL.md`](../.claude/skills/minimal-app-design/SKILL.md). It is binding and it overrides conventional Android advice.
+
+**After any task:** `cd android && gradlew.bat assembleDebug && gradlew.bat test`, then flip the status cell in the phase file's task table.
+
+---
+
+## Keeping this current
+
+When a task completes, update two places:
+
+1. The task's row in `docs/phase-N.md` (status → ✅)
+2. The progress count in this file's Progression block and the phase entry
+
+When a phase closes, mark the next one 🟢 and write the detail file for the phase after it — always two ahead, never more.
