@@ -16,12 +16,12 @@ Index of phase plans, their gates, and what is open to work on right now.
 ## Progression
 
 ```
-   🟢 Phase 1 ──▶ ⬜ Phase 2 ──▶ 🔒 Phase 3 ──▶ 🔒 Phase 4
-      7/12          0/12          not planned    not planned
+   ✅ Phase 1 ──▶ 🟢 Phase 2 ──▶ 🔒 Phase 3 ──▶ 🔒 Phase 4
+     12/12          0/12          not planned    not planned
    Foundation    Playable run    AI maps        Polish
 ```
 
-Legend: 🟢 open · ⬜ blocked by an earlier gate · 🔒 not planned yet
+Legend: ✅ closed · 🟢 open · ⬜ blocked by an earlier gate · 🔒 not planned yet
 
 The project plans **two phases ahead**. Phase 3 gets written in detail only once Phase 1 closes.
 
@@ -29,31 +29,29 @@ The project plans **two phases ahead**. Phase 3 gets written in detail only once
 
 ## Phases
 
-### 🟢 Phase 1 — Foundation · **OPEN, START HERE**
+### ✅ Phase 1 — Foundation · **CLOSED**
 
-📄 [`docs/phase-1.md`](phase-1.md) — 12 tasks
+📄 [`docs/phase-1.md`](phase-1.md) — 12 tasks, all done
 
 The app launches, seeds a word bank into Room, runs a working SM-2 scheduler, renders a terminal UI in English and Vietnamese, and reviews flashcards. No combat.
 
-**Progress: 7/12** — P1-1 through P1-7 done (the entire critical path plus content and Track A). **Next task: P1-8** (`Prefs` + Settings screen), which starts Track B's remaining work.
+**Progress: 12/12** — full exit checklist passed on-device (build, `PermadeathBoundaryTest`, fresh-install seeding, Vietnamese locale with zero tofu boxes, a 5-card Practice session surviving a force-quit, and the `game/` Android-import check). See [`report-phase1.md`](../report-phase1.md).
 
-**Milestone:** P1-12 (flashcards) exercises the whole learning engine before any monster exists. A broken SM-2 surfaces there, not after the battle system is built on top of it.
-
-**Gate out:** the exit checklist at the bottom of `phase-1.md`. All eight items.
+**Milestone:** P1-12 (flashcards) exercised the whole learning engine before any monster exists — verified end-to-end with distinct SM-2 outcomes per grade.
 
 ---
 
-### ⬜ Phase 2 — The playable run · blocked
+### 🟢 Phase 2 — The playable run · **OPEN, START HERE**
 
 📄 [`docs/phase-2.md`](phase-2.md) — 12 tasks, written and ready
 
 Pick a topic, walk a branching 3-floor dungeon, fight monsters with real question types, take damage, and finish the run dead or victorious. Nine of the twelve question types ship here.
 
-**Blocked on:** Phase 1's exit checklist. Specifically P2-1 needs a working `WordDao` (P1-4) and a seeded database (P1-6); P2-11 needs the widget kit (P1-11).
+**Unblocked:** Phase 1's exit checklist is clear. P2-1 has a working `WordDao` (P1-4) and a seeded database (P1-6) to build on; P2-11 has the widget kit (P1-11) ready.
 
 **Milestone:** P2-12 closes the loop — a loss writes failed words back into the review queue.
 
-You can read `phase-2.md` now to see what Phase 1's contracts have to support. Do not start its tasks.
+Read `phase-2.md` for the task table before starting.
 
 ---
 

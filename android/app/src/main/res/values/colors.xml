@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Terminal palette, named by role so a retheme touches only this file. -->
+    <color name="bg">#0D0F0C</color>
+    <color name="surface">#161A14</color>
+    <color name="fg">#D6F5D6</color>
+    <color name="fg_dim">#7A9B7A</color>
+    <color name="accent">#33FF66</color>
+    <color name="success">#33FF66</color>
+    <color name="warn">#FFCC33</color>
+    <color name="danger">#FF3B3B</color>
+    <color name="hp_full">#33FF66</color>
+    <color name="hp_low">#FF3B3B</color>
+</resources>

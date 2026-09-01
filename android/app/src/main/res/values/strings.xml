@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lexicon Depths</string>
+
+    <!-- Hub -->
+    <string name="hub_cefr">CEFR level: %1$s</string>
+    <string name="hub_streak">Streak: %1$d</string>
+    <string name="hub_due">Words due: %1$d</string>
+    <string name="hub_marks">Marks: %1$d</string>
+    <string name="hub_btn_practice">Practice</string>
+    <string name="hub_btn_realm">Realm Select</string>
+    <string name="hub_btn_library">My Library</string>
+    <string name="hub_btn_stats">Stats</string>
+    <string name="hub_btn_settings">Settings</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_cefr_label">CEFR level</string>
+    <string name="settings_locale_label">UI language</string>
+    <string name="settings_locale_system">System default</string>
+    <string name="settings_locale_en">English</string>
+    <string name="settings_locale_vi">Tiếng Việt</string>
+    <string name="settings_timer_full">Full bonus window: %1$d ms</string>
+    <string name="settings_timer_partial">Partial bonus window: %1$d ms</string>
+
+    <!-- Practice -->
+    <string name="practice_title">Practice</string>
+    <string name="practice_show_answer">Show answer</string>
+    <string name="practice_speak">🔊 Pronounce</string>
+    <string name="practice_progress">Card %1$d of %2$d</string>
+    <string name="practice_empty">Nothing due right now — come back later.</string>
+    <string name="practice_done">Session complete. Nice work.</string>
+    <string name="rating_again">Again</string>
+    <string name="rating_hard">Hard</string>
+    <string name="rating_good">Good</string>
+    <string name="rating_easy">Easy</string>
+
+    <!-- Placeholder screens -->
+    <string name="placeholder_body">Under construction — coming in a later phase.</string>
+    <string name="realm_select_title">Realm Select</string>
+    <string name="dungeon_map_title">Dungeon Map</string>
+    <string name="battle_title">Battle</string>
+    <string name="reward_title">Spoils</string>
+    <string name="stats_title">Vocabulary Stats</string>
+    <string name="library_title">My Library</string>
+</resources>

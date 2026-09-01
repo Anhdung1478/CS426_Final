@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Lexicon.Title" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/mono_font_family</item>
+        <item name="android:fontFamily">@font/mono_font_family</item>
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Lexicon.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/mono_font_family</item>
+        <item name="android:fontFamily">@font/mono_font_family</item>
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="TextAppearance.Lexicon.Mono" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/mono_font_family</item>
+        <item name="android:fontFamily">@font/mono_font_family</item>
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:textSize">@dimen/text_mono</item>
+    </style>
+
+    <style name="TextAppearance.Lexicon.Dim" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/mono_font_family</item>
+        <item name="android:fontFamily">@font/mono_font_family</item>
+        <item name="android:textColor">@color/fg_dim</item>
+        <item name="android:textSize">@dimen/text_dim</item>
+    </style>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lexicon Depths</string>
+
+    <!-- Hub -->
+    <string name="hub_cefr">Trình độ CEFR: %1$s</string>
+    <string name="hub_streak">Chuỗi ngày: %1$d</string>
+    <string name="hub_due">Từ cần ôn: %1$d</string>
+    <string name="hub_marks">Điểm thưởng: %1$d</string>
+    <string name="hub_btn_practice">Luyện tập</string>
+    <string name="hub_btn_realm">Chọn vùng đất</string>
+    <string name="hub_btn_library">Thư viện của tôi</string>
+    <string name="hub_btn_stats">Thống kê</string>
+    <string name="hub_btn_settings">Cài đặt</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_cefr_label">Trình độ CEFR</string>
+    <string name="settings_locale_label">Ngôn ngữ giao diện</string>
+    <string name="settings_locale_system">Theo hệ thống</string>
+    <string name="settings_locale_en">Tiếng Anh</string>
+    <string name="settings_locale_vi">Tiếng Việt</string>
+    <string name="settings_timer_full">Khung thưởng đầy đủ: %1$d ms</string>
+    <string name="settings_timer_partial">Khung thưởng một phần: %1$d ms</string>
+
+    <!-- Practice -->
+    <string name="practice_title">Luyện tập</string>
+    <string name="practice_show_answer">Hiện đáp án</string>
+    <string name="practice_speak">🔊 Phát âm</string>
+    <string name="practice_progress">Thẻ %1$d trên %2$d</string>
+    <string name="practice_empty">Hiện chưa có từ nào cần ôn — quay lại sau nhé.</string>
+    <string name="practice_done">Đã hoàn thành phiên học. Làm tốt lắm.</string>
+    <string name="rating_again">Lại</string>
+    <string name="rating_hard">Khó</string>
+    <string name="rating_good">Tốt</string>
+    <string name="rating_easy">Dễ</string>
+
+    <!-- Placeholder screens -->
+    <string name="placeholder_body">Đang xây dựng — sẽ có trong giai đoạn sau.</string>
+    <string name="realm_select_title">Chọn vùng đất</string>
+    <string name="dungeon_map_title">Bản đồ hầm ngục</string>
+    <string name="battle_title">Chiến đấu</string>
+    <string name="reward_title">Chiến lợi phẩm</string>
+    <string name="stats_title">Thống kê từ vựng</string>
+    <string name="library_title">Thư viện của tôi</string>
+</resources>

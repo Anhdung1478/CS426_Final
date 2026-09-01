@@ -228,6 +228,6 @@ This file maps *code*. The plan maps *work*. They are separate on purpose — th
 | [`docs/phase-1.md`](docs/phase-1.md) | Phase 1 task table, dependency graph, and per-task detail. |
 | [`docs/phase-2.md`](docs/phase-2.md) | Phase 2, same shape. Written but blocked. |
 
-**Right now: Phase 1 — Foundation, 7/12 done. Next task is P1-8** (`Prefs` + Settings screen).
+**Phase 1 — Foundation is closed (12/12).** Phase 2 is now open — see [`docs/plan.md`](docs/plan.md) and [`docs/phase-2.md`](docs/phase-2.md).
 
 Phases 3 (AI map generation) and 4 (polish) are named in `docs/plan.md` but not planned in detail. The project plans two phases ahead, never more.

@@ -1,0 +1,6173 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "headword": "apple",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a round fruit with red, green, or yellow skin",
+      "example": "She ate a red apple for breakfast.",
+      "viGloss": "quả táo",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "apple pie",
+        "apple juice"
+      ],
+      "forms": [
+        "apples"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "banana",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a long curved yellow fruit",
+      "example": "He packed a banana in his lunch bag.",
+      "viGloss": "quả chuối",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "banana split"
+      ],
+      "forms": [
+        "bananas"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "bread",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a food made from baked flour and water",
+      "example": "We bought fresh bread from the bakery.",
+      "viGloss": "bánh mì",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "loaf of bread",
+        "slice of bread"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "water",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the clear liquid people and animals drink",
+      "example": "Please drink more water every day.",
+      "viGloss": "nước",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "drink water",
+        "glass of water"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "milk",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a white liquid produced by cows for drinking",
+      "example": "She poured milk into her coffee.",
+      "viGloss": "sữa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "glass of milk"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "coffee",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a hot drink made from roasted beans",
+      "example": "He drinks a cup of coffee every morning.",
+      "viGloss": "cà phê",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "cup of coffee",
+        "make coffee"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "tea",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a hot drink made by pouring water on leaves",
+      "example": "Would you like a cup of tea?",
+      "viGloss": "trà",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "cup of tea",
+        "make tea"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "rice",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "small white or brown grains cooked and eaten",
+      "example": "In Vietnam, rice is eaten at almost every meal.",
+      "viGloss": "cơm/gạo",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "bowl of rice",
+        "cook rice"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "egg",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "an oval food laid by a hen",
+      "example": "She fried an egg for breakfast.",
+      "viGloss": "trứng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "boiled egg",
+        "fried egg"
+      ],
+      "forms": [
+        "eggs"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "meat",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the flesh of an animal eaten as food",
+      "example": "He does not eat meat on Fridays.",
+      "viGloss": "thịt",
+      "synonyms": [],
+      "antonyms": [
+        "vegetable"
+      ],
+      "collocations": [
+        "cut of meat",
+        "raw meat"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "fish",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "an animal that lives in water and is eaten as food",
+      "example": "They caught a fish and cooked it for dinner.",
+      "viGloss": "cá",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "fresh fish",
+        "fry fish"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "breakfast",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the first meal of the day",
+      "example": "We usually have breakfast at seven o'clock.",
+      "viGloss": "bữa sáng",
+      "synonyms": [],
+      "antonyms": [
+        "dinner"
+      ],
+      "collocations": [
+        "have breakfast",
+        "eat breakfast"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "lunch",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a meal eaten in the middle of the day",
+      "example": "They had lunch together at the office.",
+      "viGloss": "bữa trưa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "have lunch",
+        "pack lunch"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "dinner",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the main meal eaten in the evening",
+      "example": "My family eats dinner together every night.",
+      "viGloss": "bữa tối",
+      "synonyms": [],
+      "antonyms": [
+        "breakfast"
+      ],
+      "collocations": [
+        "have dinner",
+        "cook dinner"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "hungry",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "feeling that you need to eat",
+      "example": "I am so hungry after the long walk.",
+      "viGloss": "đói",
+      "synonyms": [
+        "starving"
+      ],
+      "antonyms": [
+        "full"
+      ],
+      "collocations": [
+        "feel hungry",
+        "go hungry"
+      ],
+      "forms": [
+        "hungrily",
+        "hunger"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "cook",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to prepare food by heating it",
+      "example": "My father likes to cook dinner on weekends.",
+      "viGloss": "nấu ăn",
+      "synonyms": [
+        "prepare"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "cook a meal"
+      ],
+      "forms": [
+        "cooks",
+        "cooked",
+        "cooking",
+        "cookery"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "eat",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to put food in your mouth and swallow it",
+      "example": "Children should eat vegetables every day.",
+      "viGloss": "ăn",
+      "synonyms": [
+        "consume"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "eat breakfast",
+        "eat out"
+      ],
+      "forms": [
+        "eats",
+        "ate",
+        "eaten",
+        "eating"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "drink",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to swallow a liquid",
+      "example": "You should drink water after exercise.",
+      "viGloss": "uống",
+      "synonyms": [
+        "sip"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "drink water",
+        "drink coffee"
+      ],
+      "forms": [
+        "drinks",
+        "drank",
+        "drunk",
+        "drinking"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "cup",
+      "cefr": "A1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a small container used for drinking",
+      "example": "He filled the cup with hot tea.",
+      "viGloss": "cái tách/ly",
+      "synonyms": [
+        "mug"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "cup of tea",
+        "paper cup"
+      ],
+      "forms": [
+        "cups"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "vegetable",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a plant grown for food, eaten with a meal",
+      "example": "Carrots are a healthy vegetable.",
+      "viGloss": "rau củ",
+      "synonyms": [
+        "veggie"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "fresh vegetable",
+        "raw vegetable"
+      ],
+      "forms": [
+        "vegetables",
+        "vegetarian"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "fruit",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the sweet part of a plant that grows from a flower",
+      "example": "Mangoes are her favorite fruit.",
+      "viGloss": "trái cây",
+      "synonyms": [],
+      "antonyms": [
+        "vegetable"
+      ],
+      "collocations": [
+        "fresh fruit",
+        "piece of fruit"
+      ],
+      "forms": [
+        "fruits",
+        "fruity"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "sugar",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a sweet substance used to flavor food and drinks",
+      "example": "He added two spoons of sugar to his tea.",
+      "viGloss": "đường",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "add sugar",
+        "spoon of sugar"
+      ],
+      "forms": [
+        "sugary"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "salt",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a white substance used to flavor food",
+      "example": "Add a pinch of salt to the soup.",
+      "viGloss": "muối",
+      "synonyms": [],
+      "antonyms": [
+        "sugar"
+      ],
+      "collocations": [
+        "pinch of salt",
+        "add salt"
+      ],
+      "forms": [
+        "salty"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "recipe",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a set of instructions for cooking a dish",
+      "example": "She followed her grandmother's recipe for the cake.",
+      "viGloss": "công thức nấu ăn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "follow a recipe",
+        "try a recipe"
+      ],
+      "forms": [
+        "recipes"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "restaurant",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a place where people pay to eat meals",
+      "example": "We had dinner at a Vietnamese restaurant.",
+      "viGloss": "nhà hàng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "book a restaurant",
+        "eat at a restaurant"
+      ],
+      "forms": [
+        "restaurants"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "menu",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a list of food available in a restaurant",
+      "example": "The waiter handed us the menu.",
+      "viGloss": "thực đơn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "look at the menu",
+        "order from the menu"
+      ],
+      "forms": [
+        "menus"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "order",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to ask for food or drink in a restaurant",
+      "example": "We ordered noodles and spring rolls.",
+      "viGloss": "gọi món",
+      "synonyms": [
+        "request"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "order food",
+        "place an order"
+      ],
+      "forms": [
+        "orders",
+        "ordered",
+        "ordering"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "delicious",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "having a very pleasant taste",
+      "example": "This soup is absolutely delicious.",
+      "viGloss": "ngon",
+      "synonyms": [
+        "tasty"
+      ],
+      "antonyms": [
+        "bland"
+      ],
+      "collocations": [
+        "taste delicious",
+        "smell delicious"
+      ],
+      "forms": [
+        "deliciously"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "fresh",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "recently made, grown, or picked",
+      "example": "The market sells fresh vegetables every morning.",
+      "viGloss": "tươi",
+      "synonyms": [
+        "new"
+      ],
+      "antonyms": [
+        "stale"
+      ],
+      "collocations": [
+        "fresh fruit",
+        "fresh air"
+      ],
+      "forms": [
+        "freshly",
+        "freshness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "snack",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a small amount of food eaten between meals",
+      "example": "She had a snack before dinner.",
+      "viGloss": "đồ ăn vặt",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "grab a snack",
+        "healthy snack"
+      ],
+      "forms": [
+        "snacks",
+        "snacking"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "meal",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the food eaten at a particular time",
+      "example": "Breakfast is the most important meal of the day.",
+      "viGloss": "bữa ăn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "skip a meal",
+        "cook a meal"
+      ],
+      "forms": [
+        "meals"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "spoon",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a tool used for eating or serving food",
+      "example": "He stirred his coffee with a spoon.",
+      "viGloss": "cái muỗng/thìa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "spoon of sugar"
+      ],
+      "forms": [
+        "spoons",
+        "spoonful"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "fork",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a tool with points used for eating food",
+      "example": "She picked up her fork and started eating.",
+      "viGloss": "cái nĩa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [],
+      "forms": [
+        "forks"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "knife",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a tool with a sharp blade used for cutting food",
+      "example": "Use a sharp knife to cut the bread.",
+      "viGloss": "con dao",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "sharp knife",
+        "cut with a knife"
+      ],
+      "forms": [
+        "knives"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "bowl",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a round, deep dish used for food",
+      "example": "He ate a bowl of rice for lunch.",
+      "viGloss": "cái tô/bát",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "bowl of rice",
+        "bowl of soup"
+      ],
+      "forms": [
+        "bowls"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "taste",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to notice the flavor of food in your mouth",
+      "example": "Can I taste your soup?",
+      "viGloss": "nếm",
+      "synonyms": [
+        "sample"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "taste good",
+        "taste bad"
+      ],
+      "forms": [
+        "tastes",
+        "tasted",
+        "tasting",
+        "tasty"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "waiter",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a man who serves food in a restaurant",
+      "example": "The waiter brought us our menus.",
+      "viGloss": "người phục vụ (nam)",
+      "synonyms": [
+        "server"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "call the waiter"
+      ],
+      "forms": [
+        "waiters",
+        "waitress"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "diet",
+      "cefr": "A2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the food that a person usually eats",
+      "example": "A balanced diet includes fruit and vegetables.",
+      "viGloss": "chế độ ăn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "healthy diet",
+        "go on a diet"
+      ],
+      "forms": [
+        "diets",
+        "dieting"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "ingredient",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "one of the foods used to make a dish",
+      "example": "Flour is the main ingredient in bread.",
+      "viGloss": "nguyên liệu",
+      "synonyms": [
+        "component"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "main ingredient",
+        "fresh ingredient"
+      ],
+      "forms": [
+        "ingredients"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "nutrition",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the process of getting the food needed for health",
+      "example": "Good nutrition helps children grow strong.",
+      "viGloss": "dinh dưỡng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "good nutrition",
+        "poor nutrition"
+      ],
+      "forms": [
+        "nutritious",
+        "nutritional"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "appetite",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the desire to eat food",
+      "example": "Exercise usually gives me a big appetite.",
+      "viGloss": "sự thèm ăn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "lose your appetite",
+        "have an appetite"
+      ],
+      "forms": [
+        "appetizer"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "cuisine",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a style of cooking from a country or region",
+      "example": "Vietnamese cuisine is famous for fresh herbs.",
+      "viGloss": "ẩm thực",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "local cuisine",
+        "fine cuisine"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "portion",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the amount of food given to one person",
+      "example": "The restaurant serves large portions.",
+      "viGloss": "khẩu phần",
+      "synonyms": [
+        "serving"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "large portion",
+        "small portion"
+      ],
+      "forms": [
+        "portions"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "organic",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "grown without artificial chemicals",
+      "example": "They only buy organic vegetables.",
+      "viGloss": "hữu cơ",
+      "synonyms": [
+        "natural"
+      ],
+      "antonyms": [
+        "artificial"
+      ],
+      "collocations": [
+        "organic food",
+        "organic farming"
+      ],
+      "forms": [
+        "organically"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "protein",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a substance in food needed for growth",
+      "example": "Eggs are a good source of protein.",
+      "viGloss": "chất đạm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "source of protein",
+        "high in protein"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "calorie",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a unit used to measure the energy in food",
+      "example": "This cake has a lot of calories.",
+      "viGloss": "calo",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "count calories",
+        "burn calories"
+      ],
+      "forms": [
+        "calories"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "seasoning",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "salt, spices, or herbs added to food",
+      "example": "Add some seasoning to make the dish tastier.",
+      "viGloss": "gia vị",
+      "synonyms": [
+        "spice"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "add seasoning"
+      ],
+      "forms": [
+        "season",
+        "seasoned"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "roast",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to cook food in an oven with dry heat",
+      "example": "We roast a chicken every Sunday.",
+      "viGloss": "quay/nướng",
+      "synonyms": [
+        "bake"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "roast chicken",
+        "roast vegetables"
+      ],
+      "forms": [
+        "roasted",
+        "roasting",
+        "roasts"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "boil",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to heat a liquid until it bubbles",
+      "example": "You should boil the water before adding the rice.",
+      "viGloss": "luộc/đun sôi",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "boil water",
+        "boil an egg"
+      ],
+      "forms": [
+        "boiled",
+        "boiling",
+        "boils"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "fry",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to cook food in hot oil",
+      "example": "She likes to fry the fish in a pan.",
+      "viGloss": "chiên",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "fry an egg",
+        "deep fry"
+      ],
+      "forms": [
+        "fried",
+        "frying",
+        "fries"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "bake",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to cook food using dry heat in an oven",
+      "example": "My mother loves to bake bread on weekends.",
+      "viGloss": "nướng (bánh)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "bake a cake",
+        "freshly baked"
+      ],
+      "forms": [
+        "baked",
+        "baking",
+        "baker",
+        "bakes"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "grill",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to cook food over direct heat",
+      "example": "They grill fish over an open fire.",
+      "viGloss": "nướng vỉ",
+      "synonyms": [
+        "barbecue"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "grill meat",
+        "grilled chicken"
+      ],
+      "forms": [
+        "grilled",
+        "grilling",
+        "grills"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "leftover",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "food that remains after a meal",
+      "example": "We kept the leftovers in the fridge.",
+      "viGloss": "đồ ăn thừa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "eat leftovers",
+        "reheat leftovers"
+      ],
+      "forms": [
+        "leftovers"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "allergy",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a bad reaction to a certain food",
+      "example": "He has a serious allergy to peanuts.",
+      "viGloss": "dị ứng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "food allergy",
+        "have an allergy"
+      ],
+      "forms": [
+        "allergic"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "vegetarian",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "not eating meat or fish",
+      "example": "She has been vegetarian for five years.",
+      "viGloss": "người ăn chay",
+      "synonyms": [],
+      "antonyms": [
+        "carnivorous"
+      ],
+      "collocations": [
+        "vegetarian diet",
+        "vegetarian restaurant"
+      ],
+      "forms": [
+        "vegetarians",
+        "vegetarianism"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "spicy",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "having a strong, hot taste",
+      "example": "This curry is too spicy for me.",
+      "viGloss": "cay",
+      "synonyms": [
+        "hot"
+      ],
+      "antonyms": [
+        "mild"
+      ],
+      "collocations": [
+        "spicy food",
+        "too spicy"
+      ],
+      "forms": [
+        "spicier",
+        "spiciest"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "bland",
+      "cefr": "B1",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "having little or no flavor",
+      "example": "The soup tasted bland without any salt.",
+      "viGloss": "nhạt nhẽo",
+      "synonyms": [
+        "tasteless"
+      ],
+      "antonyms": [
+        "spicy"
+      ],
+      "collocations": [
+        "bland food",
+        "taste bland"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "culinary",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "relating to cooking or the kitchen",
+      "example": "She studied at a culinary school in Paris.",
+      "viGloss": "thuộc về nấu ăn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "culinary school",
+        "culinary skills"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "gourmet",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "relating to high-quality, fancy food",
+      "example": "They opened a gourmet restaurant downtown.",
+      "viGloss": "sành ăn/cao cấp",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "gourmet food",
+        "gourmet meal"
+      ],
+      "forms": [
+        "gourmets"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "delicacy",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a rare or expensive food considered a treat",
+      "example": "Snails are considered a delicacy in France.",
+      "viGloss": "món ngon quý hiếm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "local delicacy",
+        "rare delicacy"
+      ],
+      "forms": [
+        "delicacies"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "staple",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a basic food eaten regularly",
+      "example": "Rice is a staple in many Asian countries.",
+      "viGloss": "lương thực chính",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "staple food",
+        "dietary staple"
+      ],
+      "forms": [
+        "staples"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "additive",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a substance added to food to improve it",
+      "example": "The juice contains no artificial additives.",
+      "viGloss": "chất phụ gia",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "food additive",
+        "artificial additive"
+      ],
+      "forms": [
+        "additives"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "savor",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to enjoy the taste of food slowly",
+      "example": "Take your time to savor every bite.",
+      "viGloss": "thưởng thức",
+      "synonyms": [
+        "relish"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "savor the flavor"
+      ],
+      "forms": [
+        "savored",
+        "savoring",
+        "savory"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "palatable",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "having a pleasant taste",
+      "example": "The chef made the dish more palatable with lemon.",
+      "viGloss": "dễ ăn/vừa miệng",
+      "synonyms": [
+        "tasty"
+      ],
+      "antonyms": [
+        "unpalatable"
+      ],
+      "collocations": [
+        "palatable meal"
+      ],
+      "forms": [
+        "palatability"
+      ],
+      "affixKey": "un-"
+    },
+    {
+      "headword": "wholesome",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "adjective",
+      "definition": "good for your health",
+      "example": "They serve wholesome meals made from local produce.",
+      "viGloss": "lành mạnh (bổ dưỡng)",
+      "synonyms": [
+        "healthy"
+      ],
+      "antonyms": [
+        "unhealthy"
+      ],
+      "collocations": [
+        "wholesome food",
+        "wholesome meal"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "ferment",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to change chemically through the action of bacteria",
+      "example": "Cabbage is fermented to make kimchi.",
+      "viGloss": "lên men",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "ferment vegetables"
+      ],
+      "forms": [
+        "fermented",
+        "fermenting",
+        "fermentation"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "marinate",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to soak food in a sauce before cooking",
+      "example": "You should marinate the chicken overnight for more flavor.",
+      "viGloss": "ướp",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "marinate meat",
+        "marinate overnight"
+      ],
+      "forms": [
+        "marinated",
+        "marinating",
+        "marinade"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "texture",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "the way food feels in your mouth",
+      "example": "The cake has a soft, fluffy texture.",
+      "viGloss": "kết cấu/độ mềm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "smooth texture",
+        "creamy texture"
+      ],
+      "forms": [
+        "textures",
+        "textured"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "aroma",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a pleasant, noticeable smell of food",
+      "example": "The aroma of fresh bread filled the kitchen.",
+      "viGloss": "hương thơm",
+      "synonyms": [
+        "fragrance"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "rich aroma",
+        "aroma of coffee"
+      ],
+      "forms": [
+        "aromas",
+        "aromatic"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "indulge",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to allow yourself to enjoy something, often food",
+      "example": "On weekends, she likes to indulge in chocolate cake.",
+      "viGloss": "nuông chiều bản thân",
+      "synonyms": [
+        "treat"
+      ],
+      "antonyms": [
+        "abstain"
+      ],
+      "collocations": [
+        "indulge in dessert"
+      ],
+      "forms": [
+        "indulged",
+        "indulging",
+        "indulgence"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "ration",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a fixed amount of food allowed",
+      "example": "During the war, families received a weekly food ration.",
+      "viGloss": "khẩu phần (hạn định)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "food ration",
+        "ration card"
+      ],
+      "forms": [
+        "rations",
+        "rationed",
+        "rationing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "sustenance",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "food and drink needed to stay alive",
+      "example": "The travelers carried enough sustenance for the journey.",
+      "viGloss": "lương thực nuôi sống",
+      "synonyms": [
+        "nourishment"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "provide sustenance"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "connoisseur",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "noun",
+      "definition": "a person with expert knowledge of food or drink",
+      "example": "He is a true connoisseur of fine wine.",
+      "viGloss": "người sành sỏi",
+      "synonyms": [
+        "expert"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "wine connoisseur",
+        "food connoisseur"
+      ],
+      "forms": [
+        "connoisseurs"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "nourish",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to keep someone healthy with food",
+      "example": "A good breakfast helps nourish the body for the day.",
+      "viGloss": "nuôi dưỡng",
+      "synonyms": [
+        "feed"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "nourish the body"
+      ],
+      "forms": [
+        "nourished",
+        "nourishing",
+        "nourishment"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "ripen",
+      "cefr": "B2",
+      "topic": "food",
+      "pos": "verb",
+      "definition": "to become ready to eat",
+      "example": "The bananas will ripen in a few days.",
+      "viGloss": "chín (trái cây)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "ripen fully"
+      ],
+      "forms": [
+        "ripened",
+        "ripening",
+        "ripe"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "bus",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a large vehicle that carries many passengers",
+      "example": "We took the bus to school.",
+      "viGloss": "xe buýt",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "catch a bus",
+        "bus stop"
+      ],
+      "forms": [
+        "buses"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "train",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a vehicle that runs on rails and carries passengers",
+      "example": "The train leaves the station at nine.",
+      "viGloss": "tàu hỏa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "catch a train",
+        "train station"
+      ],
+      "forms": [
+        "trains"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "car",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a road vehicle with four wheels",
+      "example": "They drove to the coast in their car.",
+      "viGloss": "xe hơi",
+      "synonyms": [
+        "automobile"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "drive a car",
+        "park the car"
+      ],
+      "forms": [
+        "cars"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "plane",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a vehicle that flies through the air",
+      "example": "Our plane landed early this morning.",
+      "viGloss": "máy bay",
+      "synonyms": [
+        "airplane"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "catch a plane",
+        "board a plane"
+      ],
+      "forms": [
+        "planes"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "ticket",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a piece of paper showing you have paid to travel",
+      "example": "She bought a ticket for the morning train.",
+      "viGloss": "vé",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "buy a ticket",
+        "book a ticket"
+      ],
+      "forms": [
+        "tickets"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "map",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a drawing that shows where places are",
+      "example": "He used a map to find the museum.",
+      "viGloss": "bản đồ",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "read a map",
+        "look at a map"
+      ],
+      "forms": [
+        "maps"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "bag",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a container used for carrying things while traveling",
+      "example": "She packed her bag the night before the trip.",
+      "viGloss": "túi/hành lý",
+      "synonyms": [
+        "luggage"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "pack a bag",
+        "carry a bag"
+      ],
+      "forms": [
+        "bags"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "hotel",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a building where travelers pay to stay",
+      "example": "We stayed at a small hotel near the beach.",
+      "viGloss": "khách sạn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "book a hotel",
+        "stay at a hotel"
+      ],
+      "forms": [
+        "hotels"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "room",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a space in a building where guests stay",
+      "example": "Our room had a nice view of the sea.",
+      "viGloss": "phòng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "book a room",
+        "hotel room"
+      ],
+      "forms": [
+        "rooms"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "street",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a road in a town or city",
+      "example": "The market is on the next street.",
+      "viGloss": "đường phố",
+      "synonyms": [
+        "road"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "cross the street",
+        "walk down the street"
+      ],
+      "forms": [
+        "streets"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "city",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a large town",
+      "example": "Hanoi is a busy, historic city.",
+      "viGloss": "thành phố",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "big city",
+        "city center"
+      ],
+      "forms": [
+        "cities"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "country",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "an area of land with its own government",
+      "example": "Vietnam is a beautiful country in Southeast Asia.",
+      "viGloss": "quốc gia/đất nước",
+      "synonyms": [
+        "nation"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "visit a country",
+        "foreign country"
+      ],
+      "forms": [
+        "countries"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "passport",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "an official document needed to travel abroad",
+      "example": "Don't forget to bring your passport to the airport.",
+      "viGloss": "hộ chiếu",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "renew a passport",
+        "check a passport"
+      ],
+      "forms": [
+        "passports"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "airport",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a place where planes take off and land",
+      "example": "We arrived at the airport two hours early.",
+      "viGloss": "sân bay",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "at the airport",
+        "airport security"
+      ],
+      "forms": [
+        "airports"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "taxi",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a car with a driver that you pay to use",
+      "example": "We took a taxi from the airport to the hotel.",
+      "viGloss": "xe taxi",
+      "synonyms": [
+        "cab"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "call a taxi",
+        "take a taxi"
+      ],
+      "forms": [
+        "taxis"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "walk",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to move on foot",
+      "example": "They decided to walk to the old town.",
+      "viGloss": "đi bộ",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "walk around",
+        "go for a walk"
+      ],
+      "forms": [
+        "walks",
+        "walked",
+        "walking"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "drive",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to control and operate a vehicle",
+      "example": "He drives to work every day.",
+      "viGloss": "lái xe",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "drive a car",
+        "learn to drive"
+      ],
+      "forms": [
+        "drives",
+        "drove",
+        "driven",
+        "driving"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "arrive",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to reach a place",
+      "example": "Our flight will arrive at noon.",
+      "viGloss": "đến nơi",
+      "synonyms": [
+        "reach"
+      ],
+      "antonyms": [
+        "depart"
+      ],
+      "collocations": [
+        "arrive on time",
+        "arrive late"
+      ],
+      "forms": [
+        "arrives",
+        "arrived",
+        "arriving",
+        "arrival"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "leave",
+      "cefr": "A1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to go away from a place",
+      "example": "We need to leave for the airport soon.",
+      "viGloss": "rời đi",
+      "synonyms": [
+        "depart"
+      ],
+      "antonyms": [
+        "arrive"
+      ],
+      "collocations": [
+        "leave early",
+        "leave home"
+      ],
+      "forms": [
+        "leaves",
+        "left",
+        "leaving"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "journey",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "an act of traveling from one place to another",
+      "example": "The journey to the mountains took six hours.",
+      "viGloss": "hành trình/chuyến đi",
+      "synonyms": [
+        "trip"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "long journey",
+        "go on a journey"
+      ],
+      "forms": [
+        "journeys"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "luggage",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the bags a traveler carries",
+      "example": "Please keep your luggage with you at all times.",
+      "viGloss": "hành lý",
+      "synonyms": [
+        "baggage"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "carry luggage",
+        "lose luggage"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "suitcase",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a rectangular case for carrying clothes while traveling",
+      "example": "She packed her suitcase for the trip to Da Nang.",
+      "viGloss": "vali",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "pack a suitcase",
+        "carry a suitcase"
+      ],
+      "forms": [
+        "suitcases"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "destination",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the place someone is traveling to",
+      "example": "Ha Long Bay is a popular tourist destination.",
+      "viGloss": "điểm đến",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "final destination",
+        "popular destination"
+      ],
+      "forms": [
+        "destinations"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "itinerary",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a planned route or schedule for a trip",
+      "example": "Our itinerary includes three cities in five days.",
+      "viGloss": "lịch trình",
+      "synonyms": [
+        "schedule"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "plan an itinerary",
+        "travel itinerary"
+      ],
+      "forms": [
+        "itineraries"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "reservation",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "an arrangement to have something kept for you",
+      "example": "We made a reservation at the hotel for two nights.",
+      "viGloss": "sự đặt trước",
+      "synonyms": [
+        "booking"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "make a reservation",
+        "cancel a reservation"
+      ],
+      "forms": [
+        "reservations",
+        "reserve"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "tourist",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a person who travels for pleasure",
+      "example": "Many tourists visit Hoi An every year.",
+      "viGloss": "khách du lịch",
+      "synonyms": [
+        "traveler"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "tourist attraction",
+        "tourist season"
+      ],
+      "forms": [
+        "tourists",
+        "tourism"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "sightseeing",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "visiting interesting places as a tourist",
+      "example": "We spent the afternoon sightseeing in the old quarter.",
+      "viGloss": "tham quan",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "go sightseeing"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "souvenir",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "an object bought to remember a trip",
+      "example": "She bought a souvenir from the local market.",
+      "viGloss": "quà lưu niệm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "buy a souvenir",
+        "souvenir shop"
+      ],
+      "forms": [
+        "souvenirs"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "delay",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a period of time when something is late",
+      "example": "The flight delay lasted almost three hours.",
+      "viGloss": "sự trì hoãn/chậm trễ",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "flight delay",
+        "cause a delay"
+      ],
+      "forms": [
+        "delays",
+        "delayed",
+        "delaying"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "departure",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the act of leaving a place",
+      "example": "Our departure time is six in the morning.",
+      "viGloss": "sự khởi hành",
+      "synonyms": [],
+      "antonyms": [
+        "arrival"
+      ],
+      "collocations": [
+        "departure time",
+        "departure gate"
+      ],
+      "forms": [
+        "departures",
+        "depart"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "arrival",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the act of reaching a place",
+      "example": "Please wait near the arrival hall.",
+      "viGloss": "sự đến nơi",
+      "synonyms": [],
+      "antonyms": [
+        "departure"
+      ],
+      "collocations": [
+        "arrival time",
+        "arrival hall"
+      ],
+      "forms": [
+        "arrivals",
+        "arrive"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "boarding",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the process of getting on a plane, train, or ship",
+      "example": "Please listen for the boarding announcement at the gate.",
+      "viGloss": "sự lên tàu/máy bay",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "boarding pass",
+        "boarding gate"
+      ],
+      "forms": [
+        "board"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "customs",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the place at a border where bags are checked",
+      "example": "We had to wait in line at customs.",
+      "viGloss": "hải quan",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "go through customs",
+        "customs officer"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "visa",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "official permission to enter a country",
+      "example": "You need a visa to visit that country.",
+      "viGloss": "thị thực (visa)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "apply for a visa",
+        "tourist visa"
+      ],
+      "forms": [
+        "visas"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "currency",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the money used in a particular country",
+      "example": "You should exchange your currency before the trip.",
+      "viGloss": "tiền tệ",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "exchange currency",
+        "local currency"
+      ],
+      "forms": [
+        "currencies"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "guide",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a person who shows tourists around a place",
+      "example": "Our guide showed us the best local restaurants.",
+      "viGloss": "hướng dẫn viên",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "tour guide",
+        "hire a guide"
+      ],
+      "forms": [
+        "guides",
+        "guiding",
+        "guided"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "backpack",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a bag carried on the back while traveling",
+      "example": "He carried all his clothes in a backpack.",
+      "viGloss": "ba lô",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "pack a backpack",
+        "carry a backpack"
+      ],
+      "forms": [
+        "backpacks",
+        "backpacking",
+        "backpacker"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "route",
+      "cefr": "A2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the road or way taken to get somewhere",
+      "example": "We took the scenic route along the coast.",
+      "viGloss": "tuyến đường",
+      "synonyms": [
+        "path"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "scenic route",
+        "take a route"
+      ],
+      "forms": [
+        "routes"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "voyage",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a long journey, especially by sea",
+      "example": "The ship's voyage across the ocean took two weeks.",
+      "viGloss": "chuyến hải trình",
+      "synonyms": [
+        "journey"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "long voyage",
+        "sea voyage"
+      ],
+      "forms": [
+        "voyages"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "transit",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the act of passing through a place on the way to another",
+      "example": "We had a two-hour transit in Singapore.",
+      "viGloss": "sự quá cảnh",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "in transit",
+        "transit visa"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "layover",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a short stay between flights",
+      "example": "Our layover in Bangkok lasted five hours.",
+      "viGloss": "thời gian dừng chân giữa chuyến bay",
+      "synonyms": [
+        "stopover"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "long layover",
+        "short layover"
+      ],
+      "forms": [
+        "layovers"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "embark",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to begin a journey, especially by ship",
+      "example": "The passengers embarked on the ship at noon.",
+      "viGloss": "lên tàu (bắt đầu hành trình)",
+      "synonyms": [],
+      "antonyms": [
+        "disembark"
+      ],
+      "collocations": [
+        "embark on a journey"
+      ],
+      "forms": [
+        "embarked",
+        "embarking",
+        "embarks"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "disembark",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to get off a ship, plane, or train",
+      "example": "Passengers began to disembark as soon as the plane landed.",
+      "viGloss": "xuống tàu/máy bay",
+      "synonyms": [],
+      "antonyms": [
+        "embark"
+      ],
+      "collocations": [
+        "disembark the plane"
+      ],
+      "forms": [
+        "disembarked",
+        "disembarking"
+      ],
+      "affixKey": "dis-"
+    },
+    {
+      "headword": "wanderlust",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a strong desire to travel",
+      "example": "Her wanderlust led her to visit twenty countries.",
+      "viGloss": "khao khát xê dịch",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "feel wanderlust"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "expedition",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "an organized journey for a specific purpose",
+      "example": "The team went on an expedition to the mountains.",
+      "viGloss": "cuộc thám hiểm",
+      "synonyms": [
+        "journey"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "go on an expedition"
+      ],
+      "forms": [
+        "expeditions"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "terrain",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the physical features of an area of land",
+      "example": "The terrain was too rocky for a car.",
+      "viGloss": "địa hình",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "rough terrain",
+        "mountainous terrain"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "landmark",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a well-known building or feature used for navigation",
+      "example": "The tower is the most famous landmark in the city.",
+      "viGloss": "địa danh/mốc nổi bật",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "famous landmark",
+        "historic landmark"
+      ],
+      "forms": [
+        "landmarks"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "overseas",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "adverb",
+      "definition": "in or to a foreign country across the sea",
+      "example": "She moved overseas to study English.",
+      "viGloss": "ở nước ngoài",
+      "synonyms": [
+        "abroad"
+      ],
+      "antonyms": [
+        "domestic"
+      ],
+      "collocations": [
+        "study overseas",
+        "travel overseas"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "domestic",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "existing or happening within one's own country",
+      "example": "They took a domestic flight to the coast.",
+      "viGloss": "trong nước/nội địa",
+      "synonyms": [],
+      "antonyms": [
+        "overseas"
+      ],
+      "collocations": [
+        "domestic flight",
+        "domestic travel"
+      ],
+      "forms": [
+        "domestically"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "commute",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to travel regularly between home and work",
+      "example": "He commutes to the city every day by train.",
+      "viGloss": "đi lại (giữa nhà và nơi làm)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "commute to work"
+      ],
+      "forms": [
+        "commutes",
+        "commuted",
+        "commuting",
+        "commuter"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "navigate",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to find your way to a place",
+      "example": "We used a map to navigate through the old town.",
+      "viGloss": "định hướng/dẫn đường",
+      "synonyms": [
+        "steer"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "navigate a route"
+      ],
+      "forms": [
+        "navigated",
+        "navigating",
+        "navigation",
+        "navigator"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "explore",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to travel around a place to learn about it",
+      "example": "We spent the day exploring the ancient temple.",
+      "viGloss": "khám phá",
+      "synonyms": [
+        "discover"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "explore a city",
+        "explore the area"
+      ],
+      "forms": [
+        "explores",
+        "explored",
+        "exploring",
+        "exploration"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "adventure",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "an exciting or unusual experience, often while traveling",
+      "example": "Backpacking through Asia was a real adventure.",
+      "viGloss": "cuộc phiêu lưu",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "go on an adventure",
+        "sense of adventure"
+      ],
+      "forms": [
+        "adventures",
+        "adventurous"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "hostel",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "cheap, shared accommodation for travelers",
+      "example": "We stayed in a hostel to save money.",
+      "viGloss": "nhà trọ (giá rẻ)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "stay in a hostel",
+        "youth hostel"
+      ],
+      "forms": [
+        "hostels"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "resort",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a place people visit for vacation and relaxation",
+      "example": "They spent their honeymoon at a beach resort.",
+      "viGloss": "khu nghỉ dưỡng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "beach resort",
+        "luxury resort"
+      ],
+      "forms": [
+        "resorts"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "transport",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a system or means of traveling",
+      "example": "Public transport in the city is cheap and reliable.",
+      "viGloss": "phương tiện giao thông",
+      "synonyms": [
+        "transportation"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "public transport",
+        "transport system"
+      ],
+      "forms": [
+        "transportation",
+        "transported"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "detour",
+      "cefr": "B1",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a longer route taken to avoid something",
+      "example": "We took a detour to avoid the traffic jam.",
+      "viGloss": "đường vòng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "take a detour"
+      ],
+      "forms": [
+        "detours"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "nomadic",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "moving from place to place instead of living in one location",
+      "example": "Some desert tribes still live a nomadic lifestyle.",
+      "viGloss": "du mục",
+      "synonyms": [],
+      "antonyms": [
+        "settled"
+      ],
+      "collocations": [
+        "nomadic lifestyle",
+        "nomadic tribe"
+      ],
+      "forms": [
+        "nomad"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "pilgrimage",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a journey to a place of religious importance",
+      "example": "Thousands make a pilgrimage to the temple each year.",
+      "viGloss": "cuộc hành hương",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "go on a pilgrimage"
+      ],
+      "forms": [
+        "pilgrimages",
+        "pilgrim"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "cosmopolitan",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "containing people and influences from many countries",
+      "example": "Singapore is a cosmopolitan city full of different cultures.",
+      "viGloss": "mang tính quốc tế/đa văn hóa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "cosmopolitan city"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "remote",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "far away from other places",
+      "example": "The village is remote and hard to reach by car.",
+      "viGloss": "hẻo lánh/xa xôi",
+      "synonyms": [
+        "isolated"
+      ],
+      "antonyms": [
+        "accessible"
+      ],
+      "collocations": [
+        "remote village",
+        "remote area"
+      ],
+      "forms": [
+        "remotely"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "secluded",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "quiet and private, away from other people",
+      "example": "They found a secluded beach with no other tourists.",
+      "viGloss": "biệt lập/yên tĩnh",
+      "synonyms": [
+        "isolated"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "secluded beach",
+        "secluded spot"
+      ],
+      "forms": [
+        "seclusion"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "picturesque",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "visually attractive, like a picture",
+      "example": "The village has picturesque views of the valley.",
+      "viGloss": "đẹp như tranh",
+      "synonyms": [
+        "scenic"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "picturesque view",
+        "picturesque village"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "breathtaking",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "extremely impressive or beautiful",
+      "example": "The view from the summit was absolutely breathtaking.",
+      "viGloss": "ngoạn mục/đẹp đến nghẹt thở",
+      "synonyms": [
+        "stunning"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "breathtaking view",
+        "breathtaking scenery"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "jetlag",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "tiredness caused by traveling across time zones",
+      "example": "After the long flight, she suffered from jetlag for days.",
+      "viGloss": "hội chứng lệch múi giờ",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "suffer from jetlag"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "quarantine",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a period of isolation to prevent disease spreading",
+      "example": "Travelers were placed in quarantine for two weeks.",
+      "viGloss": "cách ly",
+      "synonyms": [
+        "isolation"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "under quarantine",
+        "quarantine period"
+      ],
+      "forms": [
+        "quarantined"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "immigration",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the process of entering a country to live, or checking travelers at a border",
+      "example": "We waited an hour at immigration.",
+      "viGloss": "nhập cảnh/di trú",
+      "synonyms": [],
+      "antonyms": [
+        "emigration"
+      ],
+      "collocations": [
+        "immigration officer",
+        "go through immigration"
+      ],
+      "forms": [
+        "immigrant",
+        "immigrate"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "expatriate",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a person living outside their native country",
+      "example": "Many expatriates work in the city's tech industry.",
+      "viGloss": "người sống xa quê hương",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "expatriate community"
+      ],
+      "forms": [
+        "expatriates",
+        "expat"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "sojourn",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "a temporary stay in a place",
+      "example": "He wrote a book about his sojourn in Japan.",
+      "viGloss": "chuyến lưu trú ngắn",
+      "synonyms": [
+        "stay"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "brief sojourn"
+      ],
+      "forms": [
+        "sojourns"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "trek",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to walk a long, difficult distance",
+      "example": "They trekked for three days through the jungle.",
+      "viGloss": "đi bộ đường dài (leo núi)",
+      "synonyms": [
+        "hike"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "trek through the mountains"
+      ],
+      "forms": [
+        "trekked",
+        "trekking",
+        "treks"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "traverse",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to travel across or through an area",
+      "example": "The road traverses the entire national park.",
+      "viGloss": "băng qua/vượt qua",
+      "synonyms": [
+        "cross"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "traverse the mountains"
+      ],
+      "forms": [
+        "traversed",
+        "traversing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "venture",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "verb",
+      "definition": "to travel somewhere unfamiliar or risky",
+      "example": "Few tourists venture beyond the main square.",
+      "viGloss": "mạo hiểm đi đến",
+      "synonyms": [
+        "dare"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "venture out",
+        "venture into"
+      ],
+      "forms": [
+        "ventured",
+        "venturing",
+        "ventures"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "hospitality",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "friendly and generous treatment of guests",
+      "example": "We were amazed by the hospitality of the local people.",
+      "viGloss": "lòng hiếu khách",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "warm hospitality",
+        "show hospitality"
+      ],
+      "forms": [
+        "hospitable"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "logistics",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "noun",
+      "definition": "the detailed planning of a complex event, like travel",
+      "example": "Organizing the group tour required careful logistics.",
+      "viGloss": "công tác hậu cần/tổ chức",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "travel logistics",
+        "handle logistics"
+      ],
+      "forms": [
+        "logistical"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "panoramic",
+      "cefr": "B2",
+      "topic": "travel",
+      "pos": "adjective",
+      "definition": "showing a wide view of an area",
+      "example": "The hotel room has a panoramic view of the bay.",
+      "viGloss": "toàn cảnh",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "panoramic view"
+      ],
+      "forms": [
+        "panorama"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "job",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the work someone does to earn money",
+      "example": "She got a new job at the bank.",
+      "viGloss": "công việc",
+      "synonyms": [
+        "occupation"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "find a job",
+        "apply for a job"
+      ],
+      "forms": [
+        "jobs"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "work",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to do a job or task",
+      "example": "He works at a software company.",
+      "viGloss": "làm việc",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "work hard",
+        "work overtime"
+      ],
+      "forms": [
+        "works",
+        "worked",
+        "working"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "money",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "coins and banknotes used to pay for things",
+      "example": "They need more money to start the business.",
+      "viGloss": "tiền",
+      "synonyms": [
+        "cash"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "make money",
+        "save money"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "shop",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a place where things are sold",
+      "example": "She bought a gift from the shop near her office.",
+      "viGloss": "cửa hàng",
+      "synonyms": [
+        "store"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "open a shop",
+        "go to the shop"
+      ],
+      "forms": [
+        "shops",
+        "shopping"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "buy",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to get something by paying money",
+      "example": "The company plans to buy new computers.",
+      "viGloss": "mua",
+      "synonyms": [
+        "purchase"
+      ],
+      "antonyms": [
+        "sell"
+      ],
+      "collocations": [
+        "buy a product"
+      ],
+      "forms": [
+        "buys",
+        "bought",
+        "buying"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "sell",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to give something in exchange for money",
+      "example": "They sell handmade products online.",
+      "viGloss": "bán",
+      "synonyms": [],
+      "antonyms": [
+        "buy"
+      ],
+      "collocations": [
+        "sell a product",
+        "sell well"
+      ],
+      "forms": [
+        "sells",
+        "sold",
+        "selling"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "price",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the amount of money needed to buy something",
+      "example": "The price of the ticket has gone up.",
+      "viGloss": "giá cả",
+      "synonyms": [
+        "cost"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "raise the price",
+        "fair price"
+      ],
+      "forms": [
+        "prices",
+        "pricing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "pay",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to give money for goods or services",
+      "example": "The company pays its staff every month.",
+      "viGloss": "trả tiền",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "pay a bill",
+        "pay in cash"
+      ],
+      "forms": [
+        "pays",
+        "paid",
+        "paying",
+        "payment"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "boss",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the person who is in charge at work",
+      "example": "My boss gave me a new project today.",
+      "viGloss": "sếp",
+      "synonyms": [
+        "manager"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "talk to the boss"
+      ],
+      "forms": [
+        "bosses"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "office",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a room or building where people work",
+      "example": "She arrives at the office at eight every day.",
+      "viGloss": "văn phòng",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "go to the office",
+        "office hours"
+      ],
+      "forms": [
+        "offices"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "meeting",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "an event where people discuss things",
+      "example": "We have a meeting with the client at ten.",
+      "viGloss": "cuộc họp",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "attend a meeting",
+        "hold a meeting"
+      ],
+      "forms": [
+        "meetings"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "phone",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a device used to talk to people from far away",
+      "example": "He called his client on his phone.",
+      "viGloss": "điện thoại",
+      "synonyms": [
+        "telephone"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "answer the phone",
+        "phone call"
+      ],
+      "forms": [
+        "phones"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "email",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a message sent electronically over the internet",
+      "example": "She sent an email to confirm the meeting.",
+      "viGloss": "thư điện tử",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "send an email",
+        "check email"
+      ],
+      "forms": [
+        "emails"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "computer",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "an electronic machine used for work and calculations",
+      "example": "Every employee has a computer at their desk.",
+      "viGloss": "máy vi tính",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "use a computer",
+        "turn on the computer"
+      ],
+      "forms": [
+        "computers"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "desk",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a table used for working, often in an office",
+      "example": "His desk was covered with paperwork.",
+      "viGloss": "bàn làm việc",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "office desk",
+        "sit at a desk"
+      ],
+      "forms": [
+        "desks"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "plan",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a detailed idea for doing or achieving something",
+      "example": "The team made a plan for the new project.",
+      "viGloss": "kế hoạch",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "make a plan",
+        "business plan"
+      ],
+      "forms": [
+        "plans",
+        "planned",
+        "planning"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "team",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a group of people working together",
+      "example": "Our team finished the project ahead of schedule.",
+      "viGloss": "đội nhóm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "work as a team",
+        "join a team"
+      ],
+      "forms": [
+        "teams",
+        "teamwork"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "customer",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person who buys goods or services",
+      "example": "The shop always treats its customers well.",
+      "viGloss": "khách hàng",
+      "synonyms": [
+        "client"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "loyal customer",
+        "serve a customer"
+      ],
+      "forms": [
+        "customers"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "manager",
+      "cefr": "A1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person in charge of a business or department",
+      "example": "She was promoted to sales manager last year.",
+      "viGloss": "quản lý",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "hire a manager",
+        "department manager"
+      ],
+      "forms": [
+        "managers",
+        "manage",
+        "management"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "company",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a business that sells goods or services",
+      "example": "He works for a large technology company.",
+      "viGloss": "công ty",
+      "synonyms": [
+        "firm"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "run a company",
+        "join a company"
+      ],
+      "forms": [
+        "companies"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "salary",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "money paid regularly for work",
+      "example": "Her salary increased after the promotion.",
+      "viGloss": "lương",
+      "synonyms": [
+        "wage"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "monthly salary",
+        "raise a salary"
+      ],
+      "forms": [
+        "salaries"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "budget",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a plan for how money will be spent",
+      "example": "The marketing team has a small budget this year.",
+      "viGloss": "ngân sách",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "set a budget",
+        "stay within budget"
+      ],
+      "forms": [
+        "budgets",
+        "budgeting"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "invoice",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a document listing goods sold and the amount owed",
+      "example": "Please send the invoice by the end of the week.",
+      "viGloss": "hóa đơn",
+      "synonyms": [
+        "bill"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "send an invoice",
+        "pay an invoice"
+      ],
+      "forms": [
+        "invoices"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "contract",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a written legal agreement",
+      "example": "Both companies signed the contract yesterday.",
+      "viGloss": "hợp đồng",
+      "synonyms": [
+        "agreement"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "sign a contract",
+        "break a contract"
+      ],
+      "forms": [
+        "contracts",
+        "contractual"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "deadline",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the time by which something must be finished",
+      "example": "We must finish the report before the deadline.",
+      "viGloss": "hạn chót",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "meet a deadline",
+        "miss a deadline"
+      ],
+      "forms": [
+        "deadlines"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "employee",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person who works for a company",
+      "example": "The company has over two hundred employees.",
+      "viGloss": "nhân viên",
+      "synonyms": [
+        "worker"
+      ],
+      "antonyms": [
+        "employer"
+      ],
+      "collocations": [
+        "hire an employee",
+        "train an employee"
+      ],
+      "forms": [
+        "employees"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "employer",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person or company that pays others to work",
+      "example": "Her employer offered her a higher salary.",
+      "viGloss": "chủ lao động/nhà tuyển dụng",
+      "synonyms": [],
+      "antonyms": [
+        "employee"
+      ],
+      "collocations": [
+        "current employer"
+      ],
+      "forms": [
+        "employers"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "interview",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a formal meeting to evaluate a job candidate",
+      "example": "She has a job interview tomorrow morning.",
+      "viGloss": "cuộc phỏng vấn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "job interview",
+        "attend an interview"
+      ],
+      "forms": [
+        "interviews",
+        "interviewed",
+        "interviewer"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "promotion",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a move to a higher position at work",
+      "example": "He received a promotion after two years.",
+      "viGloss": "sự thăng chức",
+      "synonyms": [],
+      "antonyms": [
+        "demotion"
+      ],
+      "collocations": [
+        "get a promotion",
+        "deserve a promotion"
+      ],
+      "forms": [
+        "promotions",
+        "promote",
+        "promoted"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "colleague",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person you work with",
+      "example": "She had lunch with a colleague from the finance team.",
+      "viGloss": "đồng nghiệp",
+      "synonyms": [
+        "coworker"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "close colleague"
+      ],
+      "forms": [
+        "colleagues"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "client",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person or company that pays for a service",
+      "example": "The lawyer met with a new client this morning.",
+      "viGloss": "khách hàng (dịch vụ)",
+      "synonyms": [
+        "customer"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "meet a client",
+        "satisfy a client"
+      ],
+      "forms": [
+        "clients"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "product",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "something made or grown to be sold",
+      "example": "The company launched a new product last month.",
+      "viGloss": "sản phẩm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "launch a product",
+        "develop a product"
+      ],
+      "forms": [
+        "products",
+        "production",
+        "produce"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "service",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "work done for a customer, not a physical product",
+      "example": "The hotel is known for its excellent service.",
+      "viGloss": "dịch vụ",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "customer service",
+        "provide a service"
+      ],
+      "forms": [
+        "services"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "market",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the group of people who might buy a product",
+      "example": "The company wants to expand into the Asian market.",
+      "viGloss": "thị trường",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "target market",
+        "enter a market"
+      ],
+      "forms": [
+        "markets",
+        "marketing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "profit",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the money gained after costs are paid",
+      "example": "The business made a large profit this quarter.",
+      "viGloss": "lợi nhuận",
+      "synonyms": [
+        "earnings"
+      ],
+      "antonyms": [
+        "loss"
+      ],
+      "collocations": [
+        "make a profit",
+        "profit margin"
+      ],
+      "forms": [
+        "profits",
+        "profitable"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "loss",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "money lost when costs are more than earnings",
+      "example": "The company reported a loss last year.",
+      "viGloss": "khoản lỗ",
+      "synonyms": [],
+      "antonyms": [
+        "profit"
+      ],
+      "collocations": [
+        "report a loss",
+        "suffer a loss"
+      ],
+      "forms": [
+        "losses"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "invest",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to put money into something to make a profit",
+      "example": "They decided to invest in a new startup.",
+      "viGloss": "đầu tư",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "invest money",
+        "invest in a company"
+      ],
+      "forms": [
+        "invests",
+        "invested",
+        "investing",
+        "investment"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "income",
+      "cefr": "A2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "money earned from work or investment",
+      "example": "Her monthly income covers all her expenses.",
+      "viGloss": "thu nhập",
+      "synonyms": [
+        "earnings"
+      ],
+      "antonyms": [
+        "expense"
+      ],
+      "collocations": [
+        "monthly income",
+        "source of income"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "revenue",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the total money a business earns",
+      "example": "The company's revenue grew by ten percent this year.",
+      "viGloss": "doanh thu",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "generate revenue",
+        "annual revenue"
+      ],
+      "forms": [
+        "revenues"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "expense",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "money spent on something",
+      "example": "Travel is a major expense for the sales team.",
+      "viGloss": "chi phí",
+      "synonyms": [
+        "cost"
+      ],
+      "antonyms": [
+        "income"
+      ],
+      "collocations": [
+        "cut expenses",
+        "business expense"
+      ],
+      "forms": [
+        "expenses",
+        "expensive"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "negotiate",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to discuss something to reach an agreement",
+      "example": "The two companies negotiated a new contract.",
+      "viGloss": "đàm phán",
+      "synonyms": [
+        "bargain"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "negotiate a deal",
+        "negotiate a price"
+      ],
+      "forms": [
+        "negotiated",
+        "negotiating",
+        "negotiation"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "strategy",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a plan to achieve a goal",
+      "example": "The firm changed its marketing strategy this year.",
+      "viGloss": "chiến lược",
+      "synonyms": [
+        "plan"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "business strategy",
+        "develop a strategy"
+      ],
+      "forms": [
+        "strategies",
+        "strategic"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "entrepreneur",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person who starts and runs a business",
+      "example": "The young entrepreneur launched her first company at twenty.",
+      "viGloss": "doanh nhân khởi nghiệp",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "successful entrepreneur"
+      ],
+      "forms": [
+        "entrepreneurs",
+        "entrepreneurship"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "startup",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a newly established business",
+      "example": "He works for a tech startup in the city.",
+      "viGloss": "công ty khởi nghiệp",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "launch a startup",
+        "tech startup"
+      ],
+      "forms": [
+        "startups"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "stakeholder",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person with an interest in a business",
+      "example": "The manager presented the plan to all stakeholders.",
+      "viGloss": "bên liên quan",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "key stakeholder"
+      ],
+      "forms": [
+        "stakeholders"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "merger",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the joining of two companies into one",
+      "example": "The merger created the largest bank in the country.",
+      "viGloss": "sự sáp nhập",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "company merger",
+        "announce a merger"
+      ],
+      "forms": [
+        "mergers",
+        "merge"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "acquisition",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the act of buying another company",
+      "example": "The acquisition doubled the size of the firm.",
+      "viGloss": "sự mua lại (thâu tóm)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "make an acquisition"
+      ],
+      "forms": [
+        "acquisitions",
+        "acquire"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "shareholder",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a person who owns shares in a company",
+      "example": "The shareholders voted on the new plan.",
+      "viGloss": "cổ đông",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "major shareholder"
+      ],
+      "forms": [
+        "shareholders"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "headquarters",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the main office of a company",
+      "example": "The company's headquarters is located in Ho Chi Minh City.",
+      "viGloss": "trụ sở chính",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "company headquarters"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "branch",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a local office of a larger company",
+      "example": "The bank opened a new branch downtown.",
+      "viGloss": "chi nhánh",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "local branch",
+        "open a branch"
+      ],
+      "forms": [
+        "branches"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "distribution",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the process of supplying goods to sellers",
+      "example": "The company improved its distribution across the region.",
+      "viGloss": "sự phân phối",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "distribution network",
+        "distribution channel"
+      ],
+      "forms": [
+        "distribute",
+        "distributor"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "forecast",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a prediction about future business results",
+      "example": "The sales forecast looks positive for next quarter.",
+      "viGloss": "dự báo",
+      "synonyms": [
+        "prediction"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "sales forecast",
+        "economic forecast"
+      ],
+      "forms": [
+        "forecasts",
+        "forecasted",
+        "forecasting"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "deficit",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the amount by which spending is more than income",
+      "example": "The company reported a budget deficit this year.",
+      "viGloss": "sự thâm hụt",
+      "synonyms": [],
+      "antonyms": [
+        "surplus"
+      ],
+      "collocations": [
+        "budget deficit",
+        "trade deficit"
+      ],
+      "forms": [
+        "deficits"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "surplus",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "an amount left over after needs are met",
+      "example": "The firm had a cash surplus at year end.",
+      "viGloss": "thặng dư",
+      "synonyms": [],
+      "antonyms": [
+        "deficit"
+      ],
+      "collocations": [
+        "budget surplus",
+        "trade surplus"
+      ],
+      "forms": [
+        "surpluses"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "outsource",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to pay another company to do certain work",
+      "example": "They outsource their customer service to another firm.",
+      "viGloss": "thuê ngoài",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "outsource work"
+      ],
+      "forms": [
+        "outsourced",
+        "outsourcing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "franchise",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a license to run a business using a bigger brand",
+      "example": "She bought a coffee shop franchise last year.",
+      "viGloss": "nhượng quyền thương mại",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "buy a franchise",
+        "franchise owner"
+      ],
+      "forms": [
+        "franchises",
+        "franchising"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "competitor",
+      "cefr": "B1",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a business competing for the same customers",
+      "example": "Our biggest competitor just lowered its prices.",
+      "viGloss": "đối thủ cạnh tranh",
+      "synonyms": [
+        "rival"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "main competitor"
+      ],
+      "forms": [
+        "competitors",
+        "compete",
+        "competition"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "conglomerate",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a large corporation made of several companies",
+      "example": "The conglomerate owns businesses in many industries.",
+      "viGloss": "tập đoàn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "media conglomerate"
+      ],
+      "forms": [
+        "conglomerates"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "monopoly",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "complete control of a market by one company",
+      "example": "The company held a monopoly on the electricity supply.",
+      "viGloss": "sự độc quyền",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "hold a monopoly"
+      ],
+      "forms": [
+        "monopolies",
+        "monopolize"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "subsidiary",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a company controlled by a larger company",
+      "example": "The startup became a subsidiary of the tech giant.",
+      "viGloss": "công ty con",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "wholly owned subsidiary"
+      ],
+      "forms": [
+        "subsidiaries"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "liability",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a debt or financial obligation",
+      "example": "The firm's liabilities increased after the loan.",
+      "viGloss": "nợ phải trả/trách nhiệm pháp lý",
+      "synonyms": [],
+      "antonyms": [
+        "asset"
+      ],
+      "collocations": [
+        "financial liability",
+        "legal liability"
+      ],
+      "forms": [
+        "liabilities",
+        "liable"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "asset",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "something valuable owned by a business",
+      "example": "Property is one of the company's biggest assets.",
+      "viGloss": "tài sản",
+      "synonyms": [],
+      "antonyms": [
+        "liability"
+      ],
+      "collocations": [
+        "fixed asset",
+        "valuable asset"
+      ],
+      "forms": [
+        "assets"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "equity",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the value of shares owned in a company",
+      "example": "Investors received equity in exchange for funding.",
+      "viGloss": "vốn cổ phần",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "private equity",
+        "equity stake"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "dividend",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a payment made to shareholders from profits",
+      "example": "The company paid a dividend to all shareholders.",
+      "viGloss": "cổ tức",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "pay a dividend",
+        "annual dividend"
+      ],
+      "forms": [
+        "dividends"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "portfolio",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a collection of investments owned by a person or company",
+      "example": "She diversified her investment portfolio last year.",
+      "viGloss": "danh mục đầu tư",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "investment portfolio",
+        "diverse portfolio"
+      ],
+      "forms": [
+        "portfolios"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "arbitration",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a way of settling a dispute outside of court",
+      "example": "The dispute was settled through arbitration.",
+      "viGloss": "trọng tài (giải quyết tranh chấp)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "binding arbitration"
+      ],
+      "forms": [
+        "arbitrate",
+        "arbitrator"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "compliance",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the act of obeying rules and regulations",
+      "example": "The company hired a manager to oversee compliance.",
+      "viGloss": "sự tuân thủ",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "ensure compliance",
+        "regulatory compliance"
+      ],
+      "forms": [
+        "comply",
+        "compliant"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "procurement",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the process of obtaining goods or services for a business",
+      "example": "The procurement team negotiated a better price for supplies.",
+      "viGloss": "công tác thu mua",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "procurement process",
+        "procurement team"
+      ],
+      "forms": [
+        "procure"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "overhead",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the ongoing costs of running a business",
+      "example": "Rent and utilities make up most of the overhead.",
+      "viGloss": "chi phí vận hành cố định",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "reduce overhead",
+        "overhead costs"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "insolvency",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the state of being unable to pay debts",
+      "example": "The company faced insolvency after years of losses.",
+      "viGloss": "tình trạng mất khả năng thanh toán",
+      "synonyms": [
+        "bankruptcy"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "face insolvency"
+      ],
+      "forms": [
+        "insolvent"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "leverage",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the use of borrowed money to increase potential return",
+      "example": "The firm used leverage to fund the expansion.",
+      "viGloss": "đòn bẩy tài chính",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "use leverage",
+        "financial leverage"
+      ],
+      "forms": [
+        "leveraged",
+        "leveraging"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "diversify",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "verb",
+      "definition": "to expand a business into different products or markets",
+      "example": "The company decided to diversify into new markets.",
+      "viGloss": "đa dạng hóa",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "diversify a portfolio"
+      ],
+      "forms": [
+        "diversified",
+        "diversifying",
+        "diversification"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "benchmark",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "a standard used to measure performance",
+      "example": "Sales this quarter beat the industry benchmark.",
+      "viGloss": "tiêu chuẩn đối chiếu",
+      "synonyms": [
+        "standard"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "set a benchmark",
+        "industry benchmark"
+      ],
+      "forms": [
+        "benchmarks",
+        "benchmarking"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "incentive",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "something that encourages a person to do something",
+      "example": "The company offers bonuses as an incentive to work harder.",
+      "viGloss": "động lực khuyến khích",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "financial incentive",
+        "offer an incentive"
+      ],
+      "forms": [
+        "incentives",
+        "incentivize"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "litigation",
+      "cefr": "B2",
+      "topic": "business",
+      "pos": "noun",
+      "definition": "the process of taking legal action",
+      "example": "The dispute resulted in years of litigation.",
+      "viGloss": "sự kiện tụng",
+      "synonyms": [
+        "lawsuit"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "avoid litigation",
+        "face litigation"
+      ],
+      "forms": [
+        "litigate",
+        "litigant"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "happy",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling or showing pleasure",
+      "example": "She felt happy when she passed the exam.",
+      "viGloss": "vui vẻ/hạnh phúc",
+      "synonyms": [
+        "glad"
+      ],
+      "antonyms": [
+        "sad"
+      ],
+      "collocations": [
+        "feel happy",
+        "look happy"
+      ],
+      "forms": [
+        "happily",
+        "happiness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "sad",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling unhappy",
+      "example": "He looked sad after hearing the news.",
+      "viGloss": "buồn",
+      "synonyms": [
+        "unhappy"
+      ],
+      "antonyms": [
+        "happy"
+      ],
+      "collocations": [
+        "feel sad",
+        "look sad"
+      ],
+      "forms": [
+        "sadly",
+        "sadness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "angry",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling strong displeasure",
+      "example": "She was angry when the bus was late again.",
+      "viGloss": "tức giận",
+      "synonyms": [
+        "mad"
+      ],
+      "antonyms": [
+        "calm"
+      ],
+      "collocations": [
+        "get angry",
+        "feel angry"
+      ],
+      "forms": [
+        "angrily",
+        "anger"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "tired",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "in need of rest or sleep",
+      "example": "I feel tired after working all day.",
+      "viGloss": "mệt mỏi",
+      "synonyms": [
+        "exhausted"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "feel tired",
+        "get tired"
+      ],
+      "forms": [
+        "tiredly",
+        "tiredness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "scared",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling fear",
+      "example": "The little boy was scared of the dark.",
+      "viGloss": "sợ hãi",
+      "synonyms": [
+        "afraid"
+      ],
+      "antonyms": [
+        "brave"
+      ],
+      "collocations": [
+        "get scared",
+        "feel scared"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "excited",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling very happy and enthusiastic",
+      "example": "The kids were excited about the trip to the zoo.",
+      "viGloss": "phấn khích",
+      "synonyms": [],
+      "antonyms": [
+        "bored"
+      ],
+      "collocations": [
+        "get excited",
+        "feel excited"
+      ],
+      "forms": [
+        "excitedly",
+        "excitement"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "glad",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "pleased or happy about something",
+      "example": "I am glad you could come to the party.",
+      "viGloss": "vui mừng",
+      "synonyms": [
+        "happy"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "glad to see"
+      ],
+      "forms": [
+        "gladly"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "afraid",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling fear of something",
+      "example": "She is afraid of spiders.",
+      "viGloss": "sợ",
+      "synonyms": [
+        "scared"
+      ],
+      "antonyms": [
+        "brave"
+      ],
+      "collocations": [
+        "afraid of",
+        "be afraid"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "worried",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "anxious about a problem",
+      "example": "He looked worried about the exam results.",
+      "viGloss": "lo lắng",
+      "synonyms": [
+        "anxious"
+      ],
+      "antonyms": [
+        "calm"
+      ],
+      "collocations": [
+        "get worried",
+        "look worried"
+      ],
+      "forms": [
+        "worry",
+        "worriedly"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "calm",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "not anxious or excited",
+      "example": "She stayed calm during the emergency.",
+      "viGloss": "bình tĩnh",
+      "synonyms": [
+        "relaxed"
+      ],
+      "antonyms": [
+        "anxious"
+      ],
+      "collocations": [
+        "stay calm",
+        "keep calm"
+      ],
+      "forms": [
+        "calmly",
+        "calmness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "proud",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling pleased about an achievement",
+      "example": "His parents were proud of his good grades.",
+      "viGloss": "tự hào",
+      "synonyms": [],
+      "antonyms": [
+        "ashamed"
+      ],
+      "collocations": [
+        "proud of",
+        "feel proud"
+      ],
+      "forms": [
+        "proudly",
+        "pride"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "shy",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "nervous about meeting new people",
+      "example": "The new student was too shy to speak up.",
+      "viGloss": "nhút nhát",
+      "synonyms": [
+        "timid"
+      ],
+      "antonyms": [
+        "confident"
+      ],
+      "collocations": [
+        "feel shy",
+        "act shy"
+      ],
+      "forms": [
+        "shyly",
+        "shyness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "bored",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling tired because something is not interesting",
+      "example": "The children got bored during the long meeting.",
+      "viGloss": "chán",
+      "synonyms": [],
+      "antonyms": [
+        "excited"
+      ],
+      "collocations": [
+        "get bored",
+        "feel bored"
+      ],
+      "forms": [
+        "boredom",
+        "boring"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "surprised",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling astonishment at something unexpected",
+      "example": "She was surprised by the birthday party.",
+      "viGloss": "ngạc nhiên",
+      "synonyms": [
+        "amazed"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "look surprised",
+        "be surprised"
+      ],
+      "forms": [
+        "surprisingly",
+        "surprise"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "nervous",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "worried and anxious about something",
+      "example": "He felt nervous before the job interview.",
+      "viGloss": "hồi hộp/lo lắng",
+      "synonyms": [
+        "anxious"
+      ],
+      "antonyms": [
+        "calm"
+      ],
+      "collocations": [
+        "feel nervous",
+        "get nervous"
+      ],
+      "forms": [
+        "nervously",
+        "nervousness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "lonely",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "unhappy because you are alone",
+      "example": "She felt lonely after moving to a new city.",
+      "viGloss": "cô đơn",
+      "synonyms": [
+        "isolated"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "feel lonely"
+      ],
+      "forms": [
+        "loneliness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "brave",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "willing to face danger or pain",
+      "example": "The firefighter was brave enough to enter the burning house.",
+      "viGloss": "dũng cảm",
+      "synonyms": [
+        "courageous"
+      ],
+      "antonyms": [
+        "afraid"
+      ],
+      "collocations": [
+        "brave enough",
+        "act brave"
+      ],
+      "forms": [
+        "bravely",
+        "bravery"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "kind",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "friendly and generous toward others",
+      "example": "It was kind of you to help the old man.",
+      "viGloss": "tốt bụng",
+      "synonyms": [
+        "caring"
+      ],
+      "antonyms": [
+        "cruel"
+      ],
+      "collocations": [
+        "kind to",
+        "be kind"
+      ],
+      "forms": [
+        "kindly",
+        "kindness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "funny",
+      "cefr": "A1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "causing laughter or amusement",
+      "example": "The movie was so funny that everyone laughed.",
+      "viGloss": "hài hước/buồn cười",
+      "synonyms": [
+        "amusing"
+      ],
+      "antonyms": [
+        "serious"
+      ],
+      "collocations": [
+        "funny joke"
+      ],
+      "forms": [
+        "funnier",
+        "funniest"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "jealous",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling envy of someone's success or possessions",
+      "example": "He felt jealous when his friend got a new phone.",
+      "viGloss": "ghen tị",
+      "synonyms": [
+        "envious"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "jealous of",
+        "feel jealous"
+      ],
+      "forms": [
+        "jealously",
+        "jealousy"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "embarrassed",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling ashamed or awkward",
+      "example": "She felt embarrassed after tripping in front of the class.",
+      "viGloss": "xấu hổ/ngượng ngùng",
+      "synonyms": [
+        "ashamed"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "feel embarrassed",
+        "look embarrassed"
+      ],
+      "forms": [
+        "embarrassment",
+        "embarrassing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "confident",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "sure of your own abilities",
+      "example": "He felt confident before the big presentation.",
+      "viGloss": "tự tin",
+      "synonyms": [],
+      "antonyms": [
+        "shy"
+      ],
+      "collocations": [
+        "feel confident",
+        "sound confident"
+      ],
+      "forms": [
+        "confidently",
+        "confidence"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "disappointed",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "sad because something was not as good as hoped",
+      "example": "She was disappointed with her test score.",
+      "viGloss": "thất vọng",
+      "synonyms": [],
+      "antonyms": [
+        "satisfied"
+      ],
+      "collocations": [
+        "disappointed with",
+        "feel disappointed"
+      ],
+      "forms": [
+        "disappointment",
+        "disappointing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "curious",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "eager to know or learn something",
+      "example": "The child was curious about how the toy worked.",
+      "viGloss": "tò mò",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "curious about",
+        "stay curious"
+      ],
+      "forms": [
+        "curiously",
+        "curiosity"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "confused",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "unable to understand or think clearly",
+      "example": "I was confused by the complicated instructions.",
+      "viGloss": "bối rối/khó hiểu",
+      "synonyms": [
+        "puzzled"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "get confused",
+        "look confused"
+      ],
+      "forms": [
+        "confusion",
+        "confusing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "grateful",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling thankful",
+      "example": "She was grateful for her friend's help.",
+      "viGloss": "biết ơn",
+      "synonyms": [
+        "thankful"
+      ],
+      "antonyms": [
+        "ungrateful"
+      ],
+      "collocations": [
+        "grateful for",
+        "feel grateful"
+      ],
+      "forms": [
+        "gratefully",
+        "gratitude"
+      ],
+      "affixKey": "un-"
+    },
+    {
+      "headword": "anxious",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "worried or nervous about something",
+      "example": "He felt anxious about the upcoming exam.",
+      "viGloss": "lo âu",
+      "synonyms": [
+        "worried"
+      ],
+      "antonyms": [
+        "calm"
+      ],
+      "collocations": [
+        "anxious about",
+        "feel anxious"
+      ],
+      "forms": [
+        "anxiously",
+        "anxiety"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "cheerful",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "happy and positive",
+      "example": "She greeted everyone with a cheerful smile.",
+      "viGloss": "vui vẻ/tươi tắn",
+      "synonyms": [
+        "happy"
+      ],
+      "antonyms": [
+        "gloomy"
+      ],
+      "collocations": [
+        "cheerful mood",
+        "stay cheerful"
+      ],
+      "forms": [
+        "cheerfully",
+        "cheerfulness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "frustrated",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "annoyed because something is not working",
+      "example": "He was frustrated by the slow internet connection.",
+      "viGloss": "bực bội/thất vọng",
+      "synonyms": [
+        "annoyed"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "frustrated with",
+        "get frustrated"
+      ],
+      "forms": [
+        "frustration",
+        "frustrating"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "relieved",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "no longer feeling worried",
+      "example": "She felt relieved when the test results were good.",
+      "viGloss": "nhẹ nhõm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "feel relieved"
+      ],
+      "forms": [
+        "relief",
+        "relieving"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "ashamed",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling guilty or embarrassed about something",
+      "example": "He felt ashamed of lying to his parents.",
+      "viGloss": "hổ thẹn",
+      "synonyms": [
+        "embarrassed"
+      ],
+      "antonyms": [
+        "proud"
+      ],
+      "collocations": [
+        "ashamed of",
+        "feel ashamed"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "hopeful",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling positive about the future",
+      "example": "She remained hopeful about finding a new job.",
+      "viGloss": "hy vọng",
+      "synonyms": [
+        "optimistic"
+      ],
+      "antonyms": [
+        "hopeless"
+      ],
+      "collocations": [
+        "hopeful about",
+        "stay hopeful"
+      ],
+      "forms": [
+        "hopefully",
+        "hope"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "miserable",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "very unhappy",
+      "example": "He felt miserable after losing his wallet.",
+      "viGloss": "khổ sở/đau khổ",
+      "synonyms": [
+        "unhappy"
+      ],
+      "antonyms": [
+        "happy"
+      ],
+      "collocations": [
+        "feel miserable"
+      ],
+      "forms": [
+        "miserably",
+        "misery"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "content",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "satisfied with what you have",
+      "example": "She seemed content with her simple life.",
+      "viGloss": "hài lòng",
+      "synonyms": [
+        "satisfied"
+      ],
+      "antonyms": [
+        "discontent"
+      ],
+      "collocations": [
+        "content with"
+      ],
+      "forms": [
+        "contentment",
+        "contentedly"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "irritated",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "slightly angry and impatient",
+      "example": "He became irritated by the constant noise.",
+      "viGloss": "khó chịu",
+      "synonyms": [
+        "annoyed"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "irritated by",
+        "get irritated"
+      ],
+      "forms": [
+        "irritation",
+        "irritating"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "amazed",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "filled with great surprise or wonder",
+      "example": "We were amazed by the beautiful scenery.",
+      "viGloss": "kinh ngạc",
+      "synonyms": [
+        "astonished"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "amazed by",
+        "look amazed"
+      ],
+      "forms": [
+        "amazement",
+        "amazing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "upset",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "unhappy or annoyed about something",
+      "example": "She was upset about missing the flight.",
+      "viGloss": "buồn bực/khó chịu",
+      "synonyms": [
+        "distressed"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "upset about",
+        "get upset"
+      ],
+      "forms": [
+        "upsetting"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "satisfied",
+      "cefr": "A2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "pleased because a need has been met",
+      "example": "The customer was satisfied with the service.",
+      "viGloss": "hài lòng",
+      "synonyms": [
+        "content"
+      ],
+      "antonyms": [
+        "disappointed"
+      ],
+      "collocations": [
+        "satisfied with",
+        "feel satisfied"
+      ],
+      "forms": [
+        "satisfaction",
+        "satisfying"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "overwhelmed",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "having too much to deal with emotionally",
+      "example": "She felt overwhelmed by all the wedding preparations.",
+      "viGloss": "choáng ngợp/quá tải",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "feel overwhelmed",
+        "overwhelmed by"
+      ],
+      "forms": [
+        "overwhelming"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "resentful",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling bitter about being treated unfairly",
+      "example": "He felt resentful after being passed over for the promotion.",
+      "viGloss": "bất mãn/oán giận",
+      "synonyms": [
+        "bitter"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "resentful of",
+        "feel resentful"
+      ],
+      "forms": [
+        "resentfully",
+        "resentment"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "compassionate",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "showing kindness and concern for others' suffering",
+      "example": "The nurse was compassionate toward every patient.",
+      "viGloss": "nhân ái/trắc ẩn",
+      "synonyms": [
+        "caring"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "compassionate toward"
+      ],
+      "forms": [
+        "compassionately",
+        "compassion"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "empathetic",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "able to understand and share the feelings of others",
+      "example": "A good teacher is empathetic toward struggling students.",
+      "viGloss": "đồng cảm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "empathetic toward"
+      ],
+      "forms": [
+        "empathetically",
+        "empathy"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "insecure",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "not confident about yourself",
+      "example": "She felt insecure about her English skills at first.",
+      "viGloss": "thiếu tự tin/bất an",
+      "synonyms": [],
+      "antonyms": [
+        "confident"
+      ],
+      "collocations": [
+        "feel insecure",
+        "insecure about"
+      ],
+      "forms": [
+        "insecurity"
+      ],
+      "affixKey": "in-"
+    },
+    {
+      "headword": "optimistic",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "hopeful about the future",
+      "example": "He stayed optimistic despite the setback.",
+      "viGloss": "lạc quan",
+      "synonyms": [
+        "hopeful"
+      ],
+      "antonyms": [
+        "pessimistic"
+      ],
+      "collocations": [
+        "optimistic about",
+        "remain optimistic"
+      ],
+      "forms": [
+        "optimistically",
+        "optimism"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "pessimistic",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "expecting the worst outcome",
+      "example": "She had a pessimistic view of the economy.",
+      "viGloss": "bi quan",
+      "synonyms": [],
+      "antonyms": [
+        "optimistic"
+      ],
+      "collocations": [
+        "pessimistic about"
+      ],
+      "forms": [
+        "pessimistically",
+        "pessimism"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "indifferent",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "having no particular interest or feeling",
+      "example": "He seemed indifferent to the whole argument.",
+      "viGloss": "thờ ơ",
+      "synonyms": [
+        "uninterested"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "indifferent to"
+      ],
+      "forms": [
+        "indifferently",
+        "indifference"
+      ],
+      "affixKey": "in-"
+    },
+    {
+      "headword": "envious",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "wanting what someone else has",
+      "example": "She was envious of her sister's new car.",
+      "viGloss": "ganh tị",
+      "synonyms": [
+        "jealous"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "envious of"
+      ],
+      "forms": [
+        "enviously",
+        "envy"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "guilty",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling responsible for something wrong",
+      "example": "He felt guilty about forgetting her birthday.",
+      "viGloss": "cảm thấy có lỗi",
+      "synonyms": [],
+      "antonyms": [
+        "innocent"
+      ],
+      "collocations": [
+        "feel guilty",
+        "guilty about"
+      ],
+      "forms": [
+        "guiltily",
+        "guilt"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "longing",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "a strong feeling of wanting something",
+      "example": "She felt a deep longing to see her family again.",
+      "viGloss": "nỗi khao khát/mong nhớ",
+      "synonyms": [
+        "yearning"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "longing for"
+      ],
+      "forms": [
+        "longingly"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "nostalgic",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling sentimental about the past",
+      "example": "The old song made him feel nostalgic.",
+      "viGloss": "hoài niệm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "feel nostalgic",
+        "nostalgic about"
+      ],
+      "forms": [
+        "nostalgically",
+        "nostalgia"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "apprehensive",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "anxious about something that may happen",
+      "example": "She was apprehensive about starting her new job.",
+      "viGloss": "lo lắng/e ngại",
+      "synonyms": [
+        "anxious"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "apprehensive about"
+      ],
+      "forms": [
+        "apprehensively",
+        "apprehension"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "restless",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "unable to relax or stay still",
+      "example": "The children grew restless during the long car ride.",
+      "viGloss": "bồn chồn/không yên",
+      "synonyms": [],
+      "antonyms": [
+        "calm"
+      ],
+      "collocations": [
+        "grow restless",
+        "feel restless"
+      ],
+      "forms": [
+        "restlessly",
+        "restlessness"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "melancholy",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "a feeling of deep, thoughtful sadness",
+      "example": "The rainy afternoon put her in a melancholy mood.",
+      "viGloss": "u sầu",
+      "synonyms": [
+        "sad"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "melancholy mood"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "elated",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "extremely happy and excited",
+      "example": "The team was elated after winning the championship.",
+      "viGloss": "hân hoan/vui sướng",
+      "synonyms": [
+        "thrilled"
+      ],
+      "antonyms": [
+        "dejected"
+      ],
+      "collocations": [
+        "elated about",
+        "feel elated"
+      ],
+      "forms": [
+        "elation"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "distressed",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "suffering from anxiety or sorrow",
+      "example": "The distressed passengers waited for news of the delay.",
+      "viGloss": "đau khổ/lo lắng",
+      "synonyms": [
+        "upset"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "deeply distressed"
+      ],
+      "forms": [
+        "distress",
+        "distressing"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "sympathetic",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "showing understanding and care for someone's problem",
+      "example": "The doctor was sympathetic to her concerns.",
+      "viGloss": "cảm thông",
+      "synonyms": [
+        "compassionate"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "sympathetic to",
+        "feel sympathetic"
+      ],
+      "forms": [
+        "sympathetically",
+        "sympathy"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "skeptical",
+      "cefr": "B1",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "having doubts about something",
+      "example": "He remained skeptical about the new plan.",
+      "viGloss": "hoài nghi",
+      "synonyms": [
+        "doubtful"
+      ],
+      "antonyms": [
+        "convinced"
+      ],
+      "collocations": [
+        "skeptical about",
+        "remain skeptical"
+      ],
+      "forms": [
+        "skeptically",
+        "skepticism"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "euphoric",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling intense happiness and excitement",
+      "example": "She was euphoric after winning the scholarship.",
+      "viGloss": "sung sướng tột độ",
+      "synonyms": [
+        "elated"
+      ],
+      "antonyms": [
+        "despondent"
+      ],
+      "collocations": [
+        "feel euphoric"
+      ],
+      "forms": [
+        "euphorically",
+        "euphoria"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "despondent",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling hopeless and depressed",
+      "example": "He grew despondent after losing his job.",
+      "viGloss": "chán nản/tuyệt vọng",
+      "synonyms": [
+        "hopeless"
+      ],
+      "antonyms": [
+        "euphoric"
+      ],
+      "collocations": [
+        "despondent about"
+      ],
+      "forms": [
+        "despondency"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "complacent",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "too satisfied with yourself to try to improve",
+      "example": "The team became complacent after their early success.",
+      "viGloss": "tự mãn",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "grow complacent"
+      ],
+      "forms": [
+        "complacently",
+        "complacency"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "disdain",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "a feeling that someone or something is not worth respect",
+      "example": "She looked at the messy room with disdain.",
+      "viGloss": "sự khinh thường",
+      "synonyms": [
+        "contempt"
+      ],
+      "antonyms": [
+        "respect"
+      ],
+      "collocations": [
+        "treat with disdain"
+      ],
+      "forms": [
+        "disdainful"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "apathy",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "a lack of interest or concern",
+      "example": "Voter apathy was high in the last election.",
+      "viGloss": "sự thờ ơ",
+      "synonyms": [
+        "indifference"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "voter apathy",
+        "widespread apathy"
+      ],
+      "forms": [
+        "apathetic"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "remorse",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "deep regret for something wrong you did",
+      "example": "He showed real remorse for his mistake.",
+      "viGloss": "sự hối hận",
+      "synonyms": [
+        "regret"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "feel remorse",
+        "show remorse"
+      ],
+      "forms": [
+        "remorseful"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "trepidation",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "a feeling of fear about something that may happen",
+      "example": "She entered the exam room with trepidation.",
+      "viGloss": "sự run sợ/lo sợ",
+      "synonyms": [
+        "anxiety"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "with trepidation"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "exuberant",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "full of energy and excitement",
+      "example": "The crowd gave an exuberant welcome to the team.",
+      "viGloss": "hào hứng/tràn đầy năng lượng",
+      "synonyms": [
+        "enthusiastic"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "exuberant welcome"
+      ],
+      "forms": [
+        "exuberantly",
+        "exuberance"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "ambivalent",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "having mixed feelings about something",
+      "example": "She felt ambivalent about moving to a new country.",
+      "viGloss": "mâu thuẫn (cảm xúc lẫn lộn)",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "ambivalent about"
+      ],
+      "forms": [
+        "ambivalently",
+        "ambivalence"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "forlorn",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "sad and lonely, as if abandoned",
+      "example": "The forlorn puppy waited by the door for hours.",
+      "viGloss": "cô độc/thảm thương",
+      "synonyms": [
+        "lonely"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "forlorn look"
+      ],
+      "forms": [
+        "forlornly"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "wistful",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "having a sad, longing feeling",
+      "example": "She gave a wistful smile when remembering her childhood.",
+      "viGloss": "man mác buồn/hoài niệm",
+      "synonyms": [
+        "nostalgic"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "wistful smile"
+      ],
+      "forms": [
+        "wistfully"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "indignant",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "angry because of something unfair",
+      "example": "He was indignant about the unfair decision.",
+      "viGloss": "phẫn nộ",
+      "synonyms": [
+        "outraged"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "indignant about"
+      ],
+      "forms": [
+        "indignantly",
+        "indignation"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "resilience",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "the ability to recover quickly from difficulty",
+      "example": "Her resilience helped her get through the hard year.",
+      "viGloss": "khả năng phục hồi/kiên cường",
+      "synonyms": [
+        "toughness"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "show resilience",
+        "build resilience"
+      ],
+      "forms": [
+        "resilient"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "vulnerability",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "the state of being easily hurt emotionally",
+      "example": "Sharing her story took real vulnerability.",
+      "viGloss": "sự dễ tổn thương",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "emotional vulnerability"
+      ],
+      "forms": [
+        "vulnerable"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "equanimity",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "calmness in a difficult situation",
+      "example": "She faced the crisis with remarkable equanimity.",
+      "viGloss": "sự bình thản",
+      "synonyms": [
+        "calmness"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "face with equanimity"
+      ],
+      "forms": [],
+      "affixKey": null
+    },
+    {
+      "headword": "empathy",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "the ability to understand another person's feelings",
+      "example": "Good leaders show empathy toward their team.",
+      "viGloss": "sự đồng cảm",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "show empathy",
+        "empathy for"
+      ],
+      "forms": [
+        "empathetic",
+        "empathize"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "discontent",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "noun",
+      "definition": "dissatisfaction with a situation",
+      "example": "There was growing discontent among the employees.",
+      "viGloss": "sự bất mãn",
+      "synonyms": [
+        "dissatisfaction"
+      ],
+      "antonyms": [
+        "contentment"
+      ],
+      "collocations": [
+        "growing discontent"
+      ],
+      "forms": [
+        "discontented"
+      ],
+      "affixKey": null
+    },
+    {
+      "headword": "aggrieved",
+      "cefr": "B2",
+      "topic": "emotions",
+      "pos": "adjective",
+      "definition": "feeling resentment from unfair treatment",
+      "example": "The aggrieved customer demanded a refund.",
+      "viGloss": "bị đối xử bất công/bực bội",
+      "synonyms": [],
+      "antonyms": [],
+      "collocations": [
+        "aggrieved party"
+      ],
+      "forms": [],
+      "affixKey": null
+    }
+  ]
+}

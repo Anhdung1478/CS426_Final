@@ -19,11 +19,11 @@
 | P1-5 | Seed content JSON | medium | P1-1 | P1-6 | A | ✅ done |
 | P1-6 | `SeedLoader` | medium | P1-4, P1-5 | P2-1 | A | ✅ done |
 | P1-7 | SM-2 scheduler + tests | high | P1-4 | P1-12 | A | ✅ done |
-| P1-8 | `Prefs` + Settings screen | low | P1-2 | P1-10, P2-2 | B | ⬜ |
-| P1-9 | Activity shells + Hub screen | medium | P1-3 | P1-10, P1-12 | B | ⬜ |
-| P1-10 | en/vi localization | medium | P1-8, P1-9 | — | B | ⬜ |
-| P1-11 | Terminal widget kit | medium | P1-3 | P1-12, P2-7 | B | ⬜ |
-| P1-12 | Practice / Flashcards screen | medium | P1-7, P1-9, P1-11 | — | · | ⬜ |
+| P1-8 | `Prefs` + Settings screen | low | P1-2 | P1-10, P2-2 | B | ✅ done |
+| P1-9 | Activity shells + Hub screen | medium | P1-3 | P1-10, P1-12 | B | ✅ done |
+| P1-10 | en/vi localization | medium | P1-8, P1-9 | — | B | ✅ done |
+| P1-11 | Terminal widget kit | medium | P1-3 | P1-12, P2-7 | B | ✅ done |
+| P1-12 | Practice / Flashcards screen | medium | P1-7, P1-9, P1-11 | — | · | ✅ done |
 
 **Critical path:** P1-1 → P1-2 → P1-4 → P1-7 → P1-12
 
@@ -374,7 +374,7 @@ public static WordProgress apply(WordProgress current, ReviewGrade grade, long n
 
 ---
 
-## P1-8 · Prefs + Settings screen
+## P1-8 · Prefs + Settings screen ✅ done
 
 **Difficulty:** low · **Track:** B · **Depends on:** P1-2 · **Unblocks:** P1-10, P2-2
 
@@ -391,13 +391,13 @@ public static WordProgress apply(WordProgress current, ReviewGrade grade, long n
 Settings exposes CEFR as a picker, locale as a picker, and both timer thresholds as sliders. Typed getters only — no raw `getString` calls leaking out of `Prefs`.
 
 **Done when**
-- [ ] Values survive a force-quit
-- [ ] Timer sliders are bounded so partial can never be less than full
-- [ ] Every label comes from `strings.xml`
+- [x] Values survive a force-quit
+- [x] Timer sliders are bounded so partial can never be less than full
+- [x] Every label comes from `strings.xml`
 
 ---
 
-## P1-9 · Activity shells + Hub screen
+## P1-9 · Activity shells + Hub screen ✅ done
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P1-3 · **Unblocks:** P1-10, P1-12
 
@@ -408,13 +408,13 @@ Create the eight Activities listed in [`project-context.md`](../project-context.
 The Hub is the launcher and gets real content: CEFR level, current streak, words due today, Marks balance, and entry buttons to Realm select, Practice, Library, Stats, and Settings.
 
 **Done when**
-- [ ] All eight launch and the back stack behaves
-- [ ] The Hub reads live data from Room, not hardcoded numbers
-- [ ] Rotation is impossible (portrait lock holds)
+- [x] All eight launch and the back stack behaves
+- [x] The Hub reads live data from Room, not hardcoded numbers
+- [x] Rotation is impossible (portrait lock holds)
 
 ---
 
-## P1-10 · Localization
+## P1-10 · Localization ✅ done
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P1-8, P1-9
 
@@ -428,14 +428,14 @@ Two settings that must not be conflated:
 Switch at runtime with `AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("vi"))`. It persists across restarts on its own; do not hand-roll a `Configuration` override.
 
 **Done when**
-- [ ] Zero hardcoded user-visible strings anywhere in `ui/`
-- [ ] Both files have identical key sets (a missing `vi` key silently falls back to English)
-- [ ] Switching locale updates every screen, including ones already on the back stack
-- [ ] No tofu boxes on any Vietnamese screen
+- [x] Zero hardcoded user-visible strings anywhere in `ui/`
+- [x] Both files have identical key sets (a missing `vi` key silently falls back to English)
+- [x] Switching locale updates every screen, including ones already on the back stack
+- [x] No tofu boxes on any Vietnamese screen
 
 ---
 
-## P1-11 · Terminal widget kit
+## P1-11 · Terminal widget kit ✅ done
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P1-3 · **Unblocks:** P1-12, P2-7
 
@@ -456,13 +456,13 @@ Switch at runtime with `AppCompatDelegate.setApplicationLocales(LocaleListCompat
 Every animation must be cancellable and must stop in `onPause`. A `Handler` still posting into a dead Activity leaks it.
 
 **Done when**
-- [ ] All five run at 60fps on a mid-range device
-- [ ] Nothing keeps running after `onPause`
-- [ ] No `Activity` reference is held by a long-lived object
+- [x] All five run at 60fps on a mid-range device
+- [x] Nothing keeps running after `onPause`
+- [x] No `Activity` reference is held by a long-lived object
 
 ---
 
-## P1-12 · Practice / Flashcards screen
+## P1-12 · Practice / Flashcards screen ✅ done
 
 **Difficulty:** medium · **Track:** · · **Depends on:** P1-7, P1-9, P1-11
 
@@ -482,10 +482,10 @@ Deliberately separate from the roguelike loop: no HP, no permadeath, no timer. L
 Worth pointing out in the report: two very different UX modes, one shared learning-science engine.
 
 **Done when**
-- [ ] Reviewing five cards with different ratings produces four different next-due dates
-- [ ] Force-quit and reopen — the queue reflects those ratings (proves the Room write landed)
-- [ ] Works fully in airplane mode except TTS
-- [ ] An empty queue shows a real "nothing due" state, not a blank screen or a crash
+- [x] Reviewing five cards with different ratings produces four different next-due dates
+- [x] Force-quit and reopen — the queue reflects those ratings (proves the Room write landed)
+- [x] Works fully in airplane mode except TTS
+- [x] An empty queue shows a real "nothing due" state, not a blank screen or a crash
 
 ---
 
@@ -493,11 +493,13 @@ Worth pointing out in the report: two very different UX modes, one shared learni
 
 Run all of this before opening Phase 2.
 
-1. `gradlew.bat assembleDebug` and `gradlew.bat test` both pass
-2. `PermadeathBoundaryTest` passes on a device
-3. Fresh install seeds ~300 words; second launch does not re-seed
-4. Settings → Vietnamese. Every string translates, **zero tofu boxes**
-5. Practice: review five cards, force-quit, reopen, confirm the queue changed
-6. Airplane mode: everything works except TTS
-7. No dependency added beyond the approved six plus the three `androidTest`-scoped ones
-8. `git grep -n "android\." -- "*/game/*"` returns nothing
+1. [x] `gradlew.bat assembleDebug` and `gradlew.bat test` both pass
+2. [x] `PermadeathBoundaryTest` passes on a device
+3. [x] Fresh install seeds ~300 words; second launch does not re-seed
+4. [x] Settings → Vietnamese. Every string translates, **zero tofu boxes**
+5. [x] Practice: review five cards, force-quit, reopen, confirm the queue changed
+6. [x] Airplane mode: everything works except TTS
+7. [x] No dependency added beyond the approved six plus the three `androidTest`-scoped ones
+8. [x] `git grep -n "android\." -- "*/game/*"` returns nothing
+
+**Phase 1 is closed — 12/12.** See [`report-phase1.md`](../report-phase1.md) for the full write-up.

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Fully committed dark terminal look, independent of system light/dark setting. -->
+    <style name="Theme.Lexicon" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/bg</item>
+        <item name="colorSecondary">@color/fg_dim</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/fg</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:textColorPrimary">@color/fg</item>
+        <item name="android:textColorSecondary">@color/fg_dim</item>
+        <item name="android:fontFamily">@font/mono_font_family</item>
+        <item name="fontFamily">@font/mono_font_family</item>
+        <item name="android:windowBackground">@color/bg</item>
+    </style>
+
+</resources>
