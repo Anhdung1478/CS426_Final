@@ -96,6 +96,13 @@ public class BattleActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        Scramble.cancel(binding.monsterNameText);
+        Shake.cancel(binding.battleRoot);
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         speaker.shutdown();

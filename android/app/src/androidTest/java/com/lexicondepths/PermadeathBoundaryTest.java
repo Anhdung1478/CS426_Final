@@ -191,7 +191,7 @@ public class PermadeathBoundaryTest {
         List<WordEvent> failed = db.wordEventDao().getFailedEventsForRun(runId);
         assertEquals(1, failed.size());
 
-        long resetNow = 1_900_000_000_000L; // strictly before the original dueAt — proves the reset actually moved it
+        long resetNow = 1_700_000_000_000L; // strictly before the original dueAt — proves the reset actually moved it
         assertTrue("test setup: resetNow should be earlier than the original schedule", resetNow < progress.dueAt);
         db.wordProgressDao().resetDueNow(failed.get(0).wordId, resetNow);
 

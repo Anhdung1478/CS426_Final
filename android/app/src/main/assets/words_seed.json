@@ -792,7 +792,7 @@
         "nutritious",
         "nutritional"
       ],
-      "affixKey": null
+      "affixKey": "-tion"
     },
     {
       "headword": "appetite",
@@ -872,7 +872,7 @@
       "forms": [
         "organically"
       ],
-      "affixKey": null
+      "affixKey": "-ic"
     },
     {
       "headword": "protein",
@@ -1281,7 +1281,7 @@
       "forms": [
         "palatability"
       ],
-      "affixKey": "un-"
+      "affixKey": "-able"
     },
     {
       "headword": "wholesome",
@@ -2023,7 +2023,7 @@
         "reservations",
         "reserve"
       ],
-      "affixKey": null
+      "affixKey": "-tion"
     },
     {
       "headword": "tourist",
@@ -2420,7 +2420,7 @@
       "forms": [
         "expeditions"
       ],
-      "affixKey": null
+      "affixKey": "-tion"
     },
     {
       "headword": "terrain",
@@ -2861,7 +2861,7 @@
         "immigrant",
         "immigrate"
       ],
-      "affixKey": null
+      "affixKey": "-tion"
     },
     {
       "headword": "expatriate",
@@ -3998,7 +3998,7 @@
         "acquisitions",
         "acquire"
       ],
-      "affixKey": null
+      "affixKey": "-tion"
     },
     {
       "headword": "shareholder",
@@ -4071,7 +4071,7 @@
         "distribute",
         "distributor"
       ],
-      "affixKey": null
+      "affixKey": "-tion"
     },
     {
       "headword": "forecast",
@@ -4369,7 +4369,7 @@
         "arbitrate",
         "arbitrator"
       ],
-      "affixKey": null
+      "affixKey": "-tion"
     },
     {
       "headword": "compliance",
@@ -5134,7 +5134,7 @@
         "gratefully",
         "gratitude"
       ],
-      "affixKey": "un-"
+      "affixKey": "-ful"
     },
     {
       "headword": "anxious",
@@ -5444,7 +5444,7 @@
         "resentfully",
         "resentment"
       ],
-      "affixKey": null
+      "affixKey": "-ful"
     },
     {
       "headword": "compassionate",
