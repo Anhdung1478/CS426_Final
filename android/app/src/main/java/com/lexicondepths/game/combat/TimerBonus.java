@@ -1,5 +1,7 @@
 package com.lexicondepths.game.combat;
 
+import java.util.Set;
+
 /**
  * Bonuses only, never penalties — questions never time out and never fail the player.
  * Punishing slow-but-correct answers would train fast guessing over actual thinking, which
@@ -7,6 +9,9 @@ package com.lexicondepths.game.combat;
  * so a slow correct answer never scores worse than a fast wrong one (both floor at NONE).
  */
 public final class TimerBonus {
+
+    public static final String TIMER_PLUS_5S = "TIMER_PLUS_5S";
+    private static final long TIMER_PLUS_5S_MS = 5000;
 
     private TimerBonus() {
     }
@@ -27,5 +32,12 @@ public final class TimerBonus {
             return Tier.PARTIAL;
         }
         return Tier.NONE;
+    }
+
+    /** Overload carrying the one timer-related relic — Quickened Quill widens both windows by 5s. */
+    public static Tier evaluate(long elapsedMillis, double ratio, long fullBonusMs, long partialBonusMs,
+                                 Set<String> relics) {
+        long bonus = relics.contains(TIMER_PLUS_5S) ? TIMER_PLUS_5S_MS : 0;
+        return evaluate(elapsedMillis, ratio, fullBonusMs + bonus, partialBonusMs + bonus);
     }
 }

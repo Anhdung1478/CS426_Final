@@ -23,6 +23,9 @@ public interface RealmDao {
     @Query("SELECT * FROM Realm")
     LiveData<List<Realm>> getAll();
 
+    @Query("SELECT COUNT(*) FROM Realm")
+    int count();
+
     @Query("SELECT * FROM Realm WHERE id = :id")
     Realm getById(long id);
 

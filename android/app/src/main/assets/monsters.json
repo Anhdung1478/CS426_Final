@@ -113,6 +113,22 @@
         "  /   \\/      ",
         " (_)  (_)     "
       ]
+    },
+    {
+      "id": "archivist",
+      "name": "The Archivist",
+      "questionTypes": ["DEFINITION_TO_WORD", "COLLOCATION", "WORDLE"],
+      "slots": 5,
+      "resists": [],
+      "boss": true,
+      "ascii": [
+        "     ___________     ",
+        "    /  ||||||||  \\   ",
+        "   |   |[o]  [o]|  |  ",
+        "   |   |________|  |  ",
+        "   |    /||||\\      |  ",
+        "    \\__/      \\____/  "
+      ]
     }
   ]
 }

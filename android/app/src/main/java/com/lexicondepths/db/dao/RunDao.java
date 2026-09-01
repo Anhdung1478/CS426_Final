@@ -33,6 +33,9 @@ public interface RunDao {
     @Update
     void updateNode(RunNode node);
 
+    @Query("SELECT * FROM RunNode WHERE id = :nodeId")
+    RunNode getNode(long nodeId);
+
     @Query("SELECT * FROM RunNode WHERE runId = :runId ORDER BY floor, step, slot")
     List<RunNode> getNodesForRun(long runId);
 
@@ -41,6 +44,20 @@ public interface RunDao {
 
     @Query("SELECT * FROM RunRelic WHERE runId = :runId")
     List<RunRelic> getRelicsForRun(long runId);
+
+    /** Node + run commit together so a crash between the two can never leave floor/step ahead of the node it came from. */
+    @Transaction
+    default void commitNodeCompletion(RunNode node, Run run) {
+        updateNode(node);
+        updateRun(run);
+    }
+
+    /** Per-question commit: slot progress and HP land together, which is what makes mid-battle resume safe. */
+    @Transaction
+    default void commitSlotResult(RunNode node, Run run) {
+        updateNode(node);
+        updateRun(run);
+    }
 
     /**
      * The permadeath boundary. Deletes only run-scoped state: Run, RunNode, RunRelic.

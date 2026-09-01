@@ -10,4 +10,5 @@ public class Monster {
     public int slots;
     public List<String> resists;
     public List<String> ascii;
+    public boolean boss;
 }

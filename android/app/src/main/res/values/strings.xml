@@ -7,6 +7,7 @@
     <string name="hub_streak">Streak: %1$d</string>
     <string name="hub_due">Words due: %1$d</string>
     <string name="hub_marks">Marks: %1$d</string>
+    <string name="hub_btn_resume_run">Resume Run</string>
     <string name="hub_btn_practice">Practice</string>
     <string name="hub_btn_realm">Realm Select</string>
     <string name="hub_btn_library">My Library</string>
@@ -37,13 +38,55 @@
 
     <!-- Battle -->
     <string name="add_word_label">Add</string>
+    <string name="tts_play">🔊 Play</string>
+    <string name="tts_play_again">🔊 Play again (%1$d left)</string>
+    <string name="tts_no_plays_left">No plays left</string>
+    <string name="tts_unavailable">Audio unavailable — type from memory</string>
+    <string name="battle_slots_progress">Slot %1$d / %2$d</string>
+    <string name="battle_damage_taken">You take %1$d damage.</string>
+    <string name="battle_damage_none">No damage!</string>
+
+    <!-- Realm select -->
+    <string name="realm_select_title">Realm Select</string>
+    <string name="realm_echo_trial">Echo Trial</string>
+    <string name="realm_echo_trial_desc">All unlocked topics, prioritizing your review queue.</string>
+    <string name="realm_item_format">%1$s (%2$s–%3$s)</string>
+
+    <!-- Dungeon map -->
+    <string name="dungeon_map_title">Dungeon Map</string>
+    <string name="dungeon_map_hp">HP: %1$d / %2$d</string>
+    <string name="dungeon_map_marks">Marks this run: %1$d</string>
+    <string name="dungeon_map_choose">Choose your path:</string>
+    <string name="dungeon_map_legend">B=Battle  E=Elite  R=Rest  T=Treasure  !=Boss</string>
+    <string name="node_type_battle">⚔ Battle</string>
+    <string name="node_type_elite">☠ Elite</string>
+    <string name="node_type_rest">♨ Rest</string>
+    <string name="node_type_treasure">✦ Treasure</string>
+    <string name="node_type_boss">👑 Boss</string>
+    <string name="rest_dialog_title">Rest Node</string>
+    <string name="rest_dialog_heal">Heal +%1$d HP</string>
+    <string name="rest_dialog_review">Review due words</string>
+
+    <!-- Battle -->
+    <string name="battle_title">Battle</string>
+
+    <!-- Reward -->
+    <string name="reward_title">Reward</string>
+    <string name="reward_choose_relic">Choose a relic:</string>
+    <string name="reward_skip">Skip</string>
+    <string name="reward_none_available">No relics left to offer.</string>
+
+    <!-- Spoils -->
+    <string name="spoils_title">Spoils</string>
+    <string name="spoils_result_won">Victory</string>
+    <string name="spoils_result_lost">You Died</string>
+    <string name="spoils_summary">Floor reached: %1$d\nMarks earned: %2$d</string>
+    <string name="spoils_missed_words">Spoils — words that echo back:</string>
+    <string name="spoils_missed_words_empty">No missed words this run.</string>
+    <string name="spoils_continue">Continue</string>
 
     <!-- Placeholder screens -->
     <string name="placeholder_body">Under construction — coming in a later phase.</string>
-    <string name="realm_select_title">Realm Select</string>
-    <string name="dungeon_map_title">Dungeon Map</string>
-    <string name="battle_title">Battle</string>
-    <string name="reward_title">Spoils</string>
     <string name="stats_title">Vocabulary Stats</string>
     <string name="library_title">My Library</string>
 </resources>

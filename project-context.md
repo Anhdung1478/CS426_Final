@@ -50,22 +50,22 @@ Adding anything else needs a written justification in the PR. Reach for the Andr
 
 ```
 E:\Project\CS426_Final\
-├── android\                    ⬜  Open THIS folder in Android Studio, not the repo root
+├── android\                    ✅  Open THIS folder in Android Studio, not the repo root
 │   └── app\src\
 │       ├── main\java\com\lexicondepths\
-│       │   ├── App.java        ⬜  Application. Owns AppDatabase, Prefs, ExecutorService.
-│       │   ├── Prefs.java      ⬜  SharedPreferences wrapper.
-│       │   ├── db\             ⬜  Room only: entities, DAOs, Converters, AppDatabase.
-│       │   ├── game\           ⬜  Pure Java rules engine. NO Android imports. See §7.
-│       │   │   ├── srs\        ⬜  SM-2 scheduler.
-│       │   │   ├── combat\     ⬜  Damage + timer bonus math.
-│       │   │   ├── run\        ⬜  Dungeon generation and run state.
-│       │   │   └── question\   ⬜  Question models + the 12 generators.
-│       │   ├── content\        ⬜  Loaders that read assets\ JSON into memory or Room.
-│       │   └── ui\             ⬜  One package per screen, plus ui\widget\ for shared views.
-│       ├── main\assets\        ⬜  words_seed.json, monsters.json, relics.json
-│       ├── main\res\           ⬜  layout\ values\ values-vi\ font\ drawable\
-│       └── test\java\          ⬜  JUnit over game\. Runs without an emulator.
+│       │   ├── App.java        ✅  Application. Owns AppDatabase, Prefs, ExecutorService.
+│       │   ├── Prefs.java      ✅  SharedPreferences wrapper.
+│       │   ├── db\             ✅  Room only: entities, DAOs, Converters, AppDatabase.
+│       │   ├── game\           ✅  Pure Java rules engine. NO Android imports. See §7.
+│       │   │   ├── srs\        ✅  SM-2 scheduler.
+│       │   │   ├── combat\     ✅  Damage + timer bonus math.
+│       │   │   ├── run\        ✅  Dungeon generation and run state.
+│       │   │   └── question\   ✅  Question models + the 11 shipped generators.
+│       │   ├── content\        ✅  Loaders that read assets\ JSON into memory or Room.
+│       │   └── ui\             ✅  One package per screen, plus ui\widget\ for shared views.
+│       ├── main\assets\        ✅  words_seed.json, monsters.json, relics.json
+│       ├── main\res\           ✅  layout\ values\ values-vi\ font\ drawable\
+│       └── test\java\          ✅  JUnit over game\. Runs without an emulator.
 ├── backend\                    ⬜  Spring Boot DeepSeek proxy. Phase 3. Empty for now.
 ├── docs\                       ✅  Long-form notes that do not belong in code.
 ├── project-idea.md             ✅  Design doc. Rationale and game design.
@@ -90,34 +90,34 @@ The section that earns this file's existence. Find the feature, get the entry po
 
 | Feature | Entry point | Status |
 |---|---|---|
-| SM-2 scheduling, interval math | `game/srs/Sm2.java` | ⬜ P1-7 |
-| Self-rating grades (again/hard/good/easy) | `game/srs/ReviewGrade.java` | ⬜ P1-7 |
-| Due-queue query | `db/dao/WordDao.java` | ⬜ P1-4 |
-| Seeding the word bank on first launch | `content/SeedLoader.java` | ⬜ P1-6 |
-| Word bank content itself | `assets/words_seed.json` | ⬜ P1-5 |
+| SM-2 scheduling, interval math | `game/srs/Sm2.java` | ✅ P1-7 |
+| Self-rating grades (again/hard/good/easy) | `game/srs/ReviewGrade.java` | ✅ P1-7 |
+| Due-queue query | `db/dao/WordDao.java` | ✅ P1-4 |
+| Seeding the word bank on first launch | `content/SeedLoader.java` | ✅ P1-6 |
+| Word bank content itself | `assets/words_seed.json` | ✅ P1-5 |
 
 ### Combat and runs
 
 | Feature | Entry point | Status |
 |---|---|---|
-| Damage formula `base × (1 − ratio) × depth` | `game/combat/Damage.java` | ⬜ P2-2 |
-| Timer bonuses (bonus only, never penalty) | `game/combat/TimerBonus.java` | ⬜ P2-2 |
-| Floor/step/branch generation | `game/run/NodeGen.java` | ⬜ P2-9 |
-| Run state, HP, resume-after-kill | `game/run/RunEngine.java` | ⬜ P2-9 |
-| Relic effects (8 passives) | `game/run/Relic.java` + `assets/relics.json` | ⬜ P2-9 |
-| Monster definitions and ASCII art | `assets/monsters.json`, `content/MonsterCatalog.java` | ⬜ P2-8 |
+| Damage formula `base × (1 − ratio) × depth` | `game/combat/Damage.java` | ✅ P2-2 |
+| Timer bonuses (bonus only, never penalty) | `game/combat/TimerBonus.java` | ✅ P2-2 |
+| Floor/step/branch generation | `game/run/NodeGen.java` | ✅ P2-9 |
+| Run state, HP, resume-after-kill | `game/run/RunEngine.java`, `game/run/RunState.java` | ✅ P2-9 |
+| Relic effects (8 passives) | `game/combat/Damage.java`, `game/combat/TimerBonus.java`, `game/run/RunEngine.java` + `assets/relics.json` | ✅ P2-9 |
+| Monster definitions and ASCII art | `assets/monsters.json`, `content/MonsterCatalog.java` | ✅ P2-8 |
 
 ### Question types
 
-All 12 implement `game/question/QuestionGenerator.java` and return a `QuestionResult` carrying a **completion ratio 0.0–1.0**. That single number is what lets a Wordle grid and an affix harvest feed the same damage formula.
+All 11 shipped types implement `game/question/QuestionGenerator.java` and return a `QuestionResult` carrying a **completion ratio 0.0–1.0**. That single number is what lets a Wordle grid and an affix harvest feed the same damage formula.
 
 | Group | File | Status |
 |---|---|---|
-| Contracts: `Question`, `Answer`, `QuestionResult`, `QuestionType` | `game/question/` | ⬜ P2-1 |
-| Definition→Word, Word→Definition, Synonym/Antonym | `game/question/gen/` | ⬜ P2-3 |
-| Word form, Cloze, Collocation | `game/question/gen/` | ⬜ P2-4 |
-| Anagram, Sentence scramble, Wordle, Affix harvest | `game/question/gen/` | ⬜ P2-5 |
-| Listening→Spelling (+ TTS wrapper) | `game/question/gen/`, `ui/widget/Speaker.java` | ⬜ P2-6 |
+| Contracts: `Question`, `Answer`, `QuestionResult`, `QuestionType` | `game/question/` | ✅ P2-1 |
+| Definition→Word, Word→Definition, Synonym/Antonym | `game/question/gen/` | ✅ P2-3 |
+| Word form, Cloze, Collocation | `game/question/gen/` | ✅ P2-4 |
+| Anagram, Sentence scramble, Wordle, Affix harvest | `game/question/gen/` | ✅ P2-5 |
+| Listening→Spelling (+ TTS wrapper) | `game/question/gen/`, `ui/widget/Speaker.java` | ✅ P2-6 |
 | Register/formality (C1+) | — | deferred past Phase 2 |
 
 ### Screens
@@ -126,13 +126,14 @@ One `Activity` each, all in `ui/`.
 
 | Screen | File | Status |
 |---|---|---|
-| Character Hub (launcher) | `ui/hub/HubActivity.java` | ⬜ P1-9 |
-| Settings | `ui/settings/SettingsActivity.java` | ⬜ P1-8 |
-| Practice / Flashcards | `ui/practice/PracticeActivity.java` | ⬜ P1-12 |
-| Realm select | `ui/realm/RealmSelectActivity.java` | ⬜ P2-10 |
-| Dungeon map | `ui/map/DungeonMapActivity.java` | ⬜ P2-10 |
-| Battle | `ui/battle/BattleActivity.java` | ⬜ P2-11 |
-| Reward / Spoils | `ui/reward/RewardActivity.java` | ⬜ P2-12 |
+| Character Hub (launcher) | `ui/hub/HubActivity.java` | ✅ P1-9 |
+| Settings | `ui/settings/SettingsActivity.java` | ✅ P1-8 |
+| Practice / Flashcards | `ui/practice/PracticeActivity.java` | ✅ P1-12 |
+| Realm select | `ui/realm/RealmSelectActivity.java` | ✅ P2-10 |
+| Dungeon map | `ui/map/DungeonMapActivity.java` | ✅ P2-10 |
+| Battle | `ui/battle/BattleActivity.java` | ✅ P2-11 |
+| Reward (mid-run relic pick) | `ui/reward/RewardActivity.java` | ✅ P2-12 |
+| Spoils (run-end recap) | `ui/reward/SpoilsActivity.java` | ✅ P2-12 |
 | Vocabulary stats | `ui/stats/StatsActivity.java` | ⬜ Phase 4 |
 | My Library (generated maps) | `ui/library/LibraryActivity.java` | ⬜ Phase 3 |
 
@@ -140,13 +141,13 @@ One `Activity` each, all in `ui/`.
 
 | Feature | Entry point | Status |
 |---|---|---|
-| Terminal theme, colors, mono font | `res/values/themes.xml`, `res/font/` | ⬜ P1-3 |
-| Typewriter, scramble, screen-shake, HP bar | `ui/widget/` | ⬜ P1-11 |
-| CRT scanline overlay | `res/drawable/scanlines.xml` | ⬜ P1-11 |
-| Question input views (MCQ, free-text, Wordle grid, ordering) | `ui/battle/view/QuestionView.java` + subclasses | ⬜ P2-7 |
-| Monster rendering (swappable for sprites later) | `ui/widget/MonsterRenderer.java` | ⬜ P2-8 |
-| English + Vietnamese strings | `res/values/strings.xml`, `res/values-vi/strings.xml` | ⬜ P1-10 |
-| Runtime locale switch | `AppCompatDelegate.setApplicationLocales` in Settings | ⬜ P1-10 |
+| Terminal theme, colors, mono font | `res/values/themes.xml`, `res/font/` | ✅ P1-3 |
+| Typewriter, scramble, screen-shake, HP bar | `ui/widget/` | ✅ P1-11 |
+| CRT scanline overlay | `res/drawable/scanlines.xml` | ✅ P1-11 |
+| Question input views (MCQ, free-text, Wordle grid, ordering) | `ui/battle/view/QuestionView.java` + subclasses | ✅ P2-7 |
+| Monster rendering (swappable for sprites later) | `ui/widget/MonsterRenderer.java` | ✅ P2-8 |
+| English + Vietnamese strings | `res/values/strings.xml`, `res/values-vi/strings.xml` | ✅ P1-10 |
+| Runtime locale switch | `AppCompatDelegate.setApplicationLocales` in Settings | ✅ P1-10 |
 
 ---
 
@@ -226,8 +227,8 @@ This file maps *code*. The plan maps *work*. They are separate on purpose — th
 |---|---|
 | [`docs/plan.md`](docs/plan.md) | **Start here.** Which phase is open, progression, the two-track working agreement. |
 | [`docs/phase-1.md`](docs/phase-1.md) | Phase 1 task table, dependency graph, and per-task detail. |
-| [`docs/phase-2.md`](docs/phase-2.md) | Phase 2, same shape. Written but blocked. |
+| [`docs/phase-2.md`](docs/phase-2.md) | Phase 2, same shape, now closed. |
 
-**Phase 1 — Foundation is closed (12/12).** Phase 2 is now open — see [`docs/plan.md`](docs/plan.md) and [`docs/phase-2.md`](docs/phase-2.md).
+**Phase 1 — Foundation and Phase 2 — The playable run are both closed (12/12 each).** See [`docs/plan.md`](docs/plan.md), [`docs/phase-2.md`](docs/phase-2.md), and [`report-phase2.md`](report-phase2.md).
 
-Phases 3 (AI map generation) and 4 (polish) are named in `docs/plan.md` but not planned in detail. The project plans two phases ahead, never more.
+Phase 3 (AI map generation) is next but not yet planned in detail, and Phase 4 (polish) isn't planned at all. The project plans two phases ahead, never more.

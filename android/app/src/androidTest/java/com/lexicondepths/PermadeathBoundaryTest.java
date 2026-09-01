@@ -136,4 +136,73 @@ public class PermadeathBoundaryTest {
         assertEquals(progress.lapses, afterClear.lapses);
         assertEquals(progress.dueAt, afterClear.dueAt);
     }
+
+    /**
+     * P2-12's Spoils path: a loss resets dueAt to now for every failed word so it resurfaces
+     * immediately, but per the design doc's permadeath boundary callout, that reset must never
+     * touch ease, interval, reps, or lapses — the word comes back sooner, not as if never learned.
+     */
+    @Test
+    public void spoils_resetDueNow_changesOnlyDueAt_leavesMasteryUntouched() {
+        Word word = new Word();
+        word.headword = "resilient";
+        word.cefr = CefrLevel.B2;
+        word.topic = "emotions";
+        word.pos = "adjective";
+        word.definition = "able to recover quickly from difficulties";
+        word.example = "She stayed resilient after the setback.";
+        word.synonyms = Collections.singletonList("tough");
+        word.antonyms = Collections.singletonList("fragile");
+        word.collocations = Collections.singletonList("remain resilient");
+        word.forms = Arrays.asList("resiliently", "resilience");
+        db.wordDao().insertAll(Collections.singletonList(word));
+        Word insertedWord = db.wordDao().getByHeadword("resilient");
+
+        WordProgress progress = new WordProgress();
+        progress.wordId = insertedWord.id;
+        progress.ease = 1.9;
+        progress.interval = 12;
+        progress.reps = 4;
+        progress.lapses = 2;
+        progress.dueAt = 1_800_000_000_000L; // far in the future — a normal, healthy schedule
+        db.wordProgressDao().upsert(progress);
+
+        // A run failed this word: WordEvent with ratio < 1.0 is what Spoils reads to find it.
+        Run run = new Run();
+        run.status = RunStatus.ACTIVE;
+        run.hp = 0;
+        run.floor = 2;
+        run.step = 3;
+        run.marks = 20;
+        run.seed = 7L;
+        run.startedAt = System.currentTimeMillis();
+        long runId = db.runDao().insertRun(run);
+
+        WordEvent event = new WordEvent();
+        event.wordId = insertedWord.id;
+        event.runId = runId;
+        event.questionType = "CLOZE";
+        event.ratio = 0.0;
+        event.damageDealt = 19;
+        event.elapsedMillis = 5000;
+        event.timestamp = System.currentTimeMillis();
+        db.wordEventDao().insert(event);
+
+        List<WordEvent> failed = db.wordEventDao().getFailedEventsForRun(runId);
+        assertEquals(1, failed.size());
+
+        long resetNow = 1_900_000_000_000L; // strictly before the original dueAt — proves the reset actually moved it
+        assertTrue("test setup: resetNow should be earlier than the original schedule", resetNow < progress.dueAt);
+        db.wordProgressDao().resetDueNow(failed.get(0).wordId, resetNow);
+
+        // Ending the run must still route through the same permadeath-safe cleanup.
+        db.runDao().clearRunState(runId);
+
+        WordProgress afterSpoils = db.wordProgressDao().getByWordId(insertedWord.id);
+        assertEquals("Spoils must move dueAt to now", resetNow, afterSpoils.dueAt);
+        assertEquals("ease must survive a loss unchanged", progress.ease, afterSpoils.ease, 0.0);
+        assertEquals("interval must survive a loss unchanged", progress.interval, afterSpoils.interval);
+        assertEquals("reps must survive a loss unchanged", progress.reps, afterSpoils.reps);
+        assertEquals("lapses must survive a loss unchanged", progress.lapses, afterSpoils.lapses);
+    }
 }

@@ -16,14 +16,14 @@ Index of phase plans, their gates, and what is open to work on right now.
 ## Progression
 
 ```
-   ✅ Phase 1 ──▶ 🟢 Phase 2 ──▶ 🔒 Phase 3 ──▶ 🔒 Phase 4
-     12/12          8/12          not planned    not planned
+   ✅ Phase 1 ──▶ ✅ Phase 2 ──▶ 🔒 Phase 3 ──▶ 🔒 Phase 4
+     12/12          12/12          not planned    not planned
    Foundation    Playable run    AI maps        Polish
 ```
 
 Legend: ✅ closed · 🟢 open · ⬜ blocked by an earlier gate · 🔒 not planned yet
 
-The project plans **two phases ahead**. Phase 3 gets written in detail only once Phase 1 closes.
+The project plans **two phases ahead**. Phase 3 gets written in detail only once Phase 2 closes.
 
 ---
 
@@ -41,19 +41,15 @@ The app launches, seeds a word bank into Room, runs a working SM-2 scheduler, re
 
 ---
 
-### 🟢 Phase 2 — The playable run · **OPEN, START HERE**
+### ✅ Phase 2 — The playable run · **CLOSED**
 
-📄 [`docs/phase-2.md`](phase-2.md) — 12 tasks, written and ready
+📄 [`docs/phase-2.md`](phase-2.md) — 12 tasks, all done
 
 Pick a topic, walk a branching 3-floor dungeon, fight monsters with real question types, take damage, and finish the run dead or victorious. Nine of the twelve question types ship here.
 
-**Unblocked:** Phase 1's exit checklist is clear. P2-1 has a working `WordDao` (P1-4) and a seeded database (P1-6) to build on; P2-11 has the widget kit (P1-11) ready.
+**Progress: 12/12** — full exit checklist passed: a run starts from Realm Select, a full battle plays out with slots clearing and HP dropping, the timer bonus applies without ever penalizing, a force-quit mid-battle resumes exactly where it left off, a loss runs the Spoils flow (failed words due now, ease/interval untouched), floor 3 doubles damage via the depth multiplier, and `gradlew.bat test` is green at 98 tests. See [`report-phase2.md`](../report-phase2.md).
 
-**Progress: 8/12** — the question contracts (P2-1), damage + timer bonus (P2-2), all three generator families (P2-3, P2-4, P2-5), TTS listening (P2-6), the four question input views (P2-7), and the monster/encounter builder (P2-8) are done and tested. All eleven question types now have a working generator. See [`report-phase2.md`](../report-phase2.md). Remaining: P2-9 through P2-12 (RunEngine, realm select/map, battle screen, run end/Spoils) — the last four tasks, all on the critical path or its rejoin.
-
-**Milestone:** P2-12 closes the loop — a loss writes failed words back into the review queue.
-
-Read `phase-2.md` for the task table before starting.
+**Milestone reached:** P2-12 closes the loop — a loss writes failed words back into the review queue, and both winning and losing route through the same run-cleanup transaction.
 
 ---
 
@@ -63,7 +59,7 @@ The Spring Boot proxy in `backend/`, live DeepSeek map generation, and the My Li
 
 The one constraint worth recording now, because it shapes Phase 2's interfaces: **never call DeepSeek from the client.** The API key would be extractable from the APK. Everything routes through the proxy, whose `.env` holds the key.
 
-Planned in detail once Phase 1 closes.
+Not planned in detail yet — Phase 2 just closed. Per the "two phases ahead, never more" rule below, writing `docs/phase-3.md` is the next planning step, not part of this session's scope.
 
 ---
 

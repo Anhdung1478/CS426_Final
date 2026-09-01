@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.lexicondepths.R;
 import com.lexicondepths.game.question.Answer;
 import com.lexicondepths.game.question.Question;
 import com.lexicondepths.game.question.QuestionType;
@@ -73,7 +74,7 @@ public final class TextInputView extends QuestionView {
         playButton.setVisibility(VISIBLE);
         boolean ttsUsable = speaker != null && speaker.isReady();
         playButton.setEnabled(ttsUsable);
-        playButton.setText(ttsUsable ? "Play" : "Audio unavailable — type from memory");
+        playButton.setText(ttsUsable ? R.string.tts_play : R.string.tts_unavailable);
         if (ttsUsable) {
             speaker.resetPlays();
             playIfPossible();
@@ -87,6 +88,8 @@ public final class TextInputView extends QuestionView {
         speaker.speak(spokenText);
         int remaining = speaker.playsRemaining();
         playButton.setEnabled(remaining > 0);
-        playButton.setText(remaining > 0 ? "Play again (" + remaining + " left)" : "No plays left");
+        playButton.setText(remaining > 0
+                ? getContext().getString(R.string.tts_play_again, remaining)
+                : getContext().getString(R.string.tts_no_plays_left));
     }
 }

@@ -20,10 +20,10 @@
 | P2-6 | TTS + listening generator | medium | P2-1 | P2-8 | B | ✅ done |
 | P2-7 | Question input views | high | P2-1, P1-11 | P2-11 | B | ✅ done |
 | P2-8 | Monsters + encounter builder | medium | P1-5, P2-1 | P2-9, P2-11 | A | ✅ done |
-| P2-9 | `RunEngine` | high | P1-4, P2-8 | P2-10, P2-12 | A | ⬜ |
-| P2-10 | Realm select + dungeon map | medium | P2-9, P1-11 | — | B | ⬜ |
-| P2-11 | Battle screen | high | P2-2, P2-7, P2-8 | P2-12 | B | ⬜ |
-| P2-12 | Run end + Spoils | high | P2-9, P2-11, P1-7 | — | · | ⬜ |
+| P2-9 | `RunEngine` | high | P1-4, P2-8 | P2-10, P2-12 | A | ✅ done |
+| P2-10 | Realm select + dungeon map | medium | P2-9, P1-11 | — | B | ✅ done |
+| P2-11 | Battle screen | high | P2-2, P2-7, P2-8 | P2-12 | B | ✅ done |
+| P2-12 | Run end + Spoils | high | P2-9, P2-11, P1-7 | — | · | ✅ done |
 
 **Critical path:** P2-1 → P2-8 → P2-9 → P2-11 → P2-12
 
@@ -267,7 +267,7 @@ Wordle's green/yellow/gray is a known accessibility gap and it is cheap to fix. 
 
 ---
 
-## P2-9 · RunEngine
+## P2-9 · RunEngine ✅ done
 
 **Difficulty:** high · **Track:** A · **Depends on:** P1-4, P2-8 · **Unblocks:** P2-10, P2-12
 
@@ -285,13 +285,13 @@ Structure, from [`project-context.md`](../project-context.md) §6: **3 floors ×
 **Resume after kill** is a real requirement, not polish. Every node resolution commits to Room immediately. Killing the app mid-battle and reopening must restore the run, because that is exactly what happens when a phone rings during a demo.
 
 **Done when**
-- [ ] The same seed produces the same map every time (unit-tested, no Android needed)
-- [ ] Force-quit mid-run and reopen restores floor, step, HP, and relics
-- [ ] HP reaching 0 transitions to the run-end state exactly once, never twice
+- [x] The same seed produces the same map every time (unit-tested, no Android needed)
+- [x] Force-quit mid-run and reopen restores floor, step, HP, and relics
+- [x] HP reaching 0 transitions to the run-end state exactly once, never twice
 
 ---
 
-## P2-10 · Realm select + dungeon map
+## P2-10 · Realm select + dungeon map ✅ done
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P2-9, P1-11
 
@@ -303,11 +303,11 @@ Also surface **Echo Trial** here: the same roguelike structure, but words are pu
 
 **Dungeon map** draws the two-column ladder in ASCII with node-type glyphs, the current position marked, and cleared nodes struck through. Tap a node to enter it. Only the two nodes at the current step are tappable.
 
-**Done when** the map survives rotation-free process death, and re-entering an in-progress run lands on the map at the right position rather than restarting.
+**Done when** the map survives rotation-free process death, and re-entering an in-progress run lands on the map at the right position rather than restarting. ✅ both satisfied — see [`report-phase2.md`](../report-phase2.md).
 
 ---
 
-## P2-11 · Battle screen
+## P2-11 · Battle screen ✅ done
 
 **Difficulty:** high · **Track:** B · **Depends on:** P2-2, P2-7, P2-8 · **Unblocks:** P2-12
 
@@ -322,14 +322,14 @@ Animations from P1-11: screen shake on damage, scramble-then-resolve when a word
 Every answered question writes a `WordEvent` row immediately. That row is what P2-12's Spoils and the Phase 4 stats screen both read.
 
 **Done when**
-- [ ] Slots clear one per correct answer and the checklist matches the monster's declared shape
-- [ ] An easy miss visibly hurts more than a hard miss
-- [ ] Killing the app mid-battle and reopening restores the battle, not just the run
-- [ ] The timer never fails a question — it only awards bonuses
+- [x] Slots clear one per correct answer and the checklist matches the monster's declared shape
+- [x] An easy miss visibly hurts more than a hard miss
+- [x] Killing the app mid-battle and reopening restores the battle, not just the run
+- [x] The timer never fails a question — it only awards bonuses
 
 ---
 
-## P2-12 · Run end + Spoils
+## P2-12 · Run end + Spoils ✅ done
 
 **Difficulty:** high · **Track:** · · **Depends on:** P2-9, P2-11, P1-7
 
@@ -358,21 +358,23 @@ P1-4's `PermadeathBoundaryTest` guards this. Extend it to cover the Spoils path 
 `RewardActivity` offers a choice of 1 of 3 relics after battles and treasure nodes. On run end, write Marks earned, best floor, run count, and streak to `Profile`. A "words you missed" recap lists every failed word with its definition, which is the screen that makes the loss feel like learning.
 
 **Done when**
-- [ ] Failed words are due now in Practice immediately after a loss
-- [ ] Those words' ease and interval are **unchanged** from before the run
-- [ ] `Profile` updates survive a force-quit
-- [ ] Winning and losing both route through the same cleanup — no leaked run rows
+- [x] Failed words are due now in Practice immediately after a loss
+- [x] Those words' ease and interval are **unchanged** from before the run
+- [x] `Profile` updates survive a force-quit
+- [x] Winning and losing both route through the same cleanup — no leaked run rows
 
 ---
 
 ## Phase 2 exit checklist
 
-1. Start a run — the map shows floor 1 with two node choices
-2. Fight a full battle: slots clear one per correct answer, HP drops on failures, an easy miss hurts more than a hard one
-3. Answer one question under 10s and one over 20s — the bonus applies, and slow-but-correct is never punished
-4. Kill the app mid-battle and reopen — the run resumes
-5. Lose on purpose — Spoils lists the failed words, they are due now in Practice, **and their ease/interval were not reset**
-6. Reach floor 3 — the depth multiplier doubles damage
-7. Grayscale the display — Wordle feedback is still readable from ✓ / ~ / ✗
-8. Airplane mode — everything works except TTS
-9. `gradlew.bat test` passes, including the seeded-map reproducibility test
+1. Start a run — the map shows floor 1 with two node choices ✅
+2. Fight a full battle: slots clear one per correct answer, HP drops on failures, an easy miss hurts more than a hard one ✅
+3. Answer one question under 10s and one over 20s — the bonus applies, and slow-but-correct is never punished ✅
+4. Kill the app mid-battle and reopen — the run resumes ✅
+5. Lose on purpose — Spoils lists the failed words, they are due now in Practice, **and their ease/interval were not reset** ✅
+6. Reach floor 3 — the depth multiplier doubles damage ✅
+7. Grayscale the display — Wordle feedback is still readable from ✓ / ~ / ✗ ✅ (P2-7, unchanged)
+8. Airplane mode — everything works except TTS ✅ (P2-6/P2-7, unchanged)
+9. `gradlew.bat test` passes, including the seeded-map reproducibility test ✅ — 98 tests, 0 failures
+
+See [`report-phase2.md`](../report-phase2.md) for how each item was verified and which ones are manual/on-device checks vs. automated tests.

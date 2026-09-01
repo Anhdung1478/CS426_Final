@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/battleRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:padding="@dimen/space_md">
+
+    <TextView
+        android:id="@+id/monsterNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Lexicon.Title" />
+
+    <TextView
+        android:id="@+id/monsterAsciiText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.Lexicon.Mono" />
+
+    <TextView
+        android:id="@+id/slotsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
+
+    <com.lexicondepths.ui.widget.HpBar
+        android:id="@+id/hpBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hp_bar_height"
+        android:layout_marginTop="@dimen/space_sm" />
+
+    <TextView
+        android:id="@+id/damageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
+
+    <FrameLayout
+        android:id="@+id/questionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/space_md" />
+
+</LinearLayout>

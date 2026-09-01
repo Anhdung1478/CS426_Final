@@ -25,7 +25,10 @@ public class App extends Application {
         instance = this;
         io = Executors.newFixedThreadPool(4);
         prefs = new Prefs(this);
-        db = Room.databaseBuilder(this, AppDatabase.class, "lexicon.db").build();
+        // No shipped installs to migrate yet — destructive fallback is the right size for a dev-phase schema bump.
+        db = Room.databaseBuilder(this, AppDatabase.class, "lexicon.db")
+                .fallbackToDestructiveMigration()
+                .build();
         io.execute(() -> {
             SeedLoader.run(this, db);
             ensureProfile(db);

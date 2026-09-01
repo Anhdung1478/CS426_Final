@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:padding="@dimen/space_lg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dungeon_map_title"
+        android:textAppearance="@style/TextAppearance.Lexicon.Title" />
+
+    <com.lexicondepths.ui.widget.HpBar
+        android:id="@+id/hpBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hp_bar_height"
+        android:layout_marginTop="@dimen/space_md" />
+
+    <TextView
+        android:id="@+id/hpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
+
+    <TextView
+        android:id="@+id/marksText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dungeon_map_legend"
+        android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/space_md">
+
+        <TextView
+            android:id="@+id/mapText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Lexicon.Mono" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/choicesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:text="@string/dungeon_map_choose"
+        android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
+
+    <LinearLayout
+        android:id="@+id/choiceContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:orientation="horizontal"
+        android:weightSum="2" />
+
+</LinearLayout>

@@ -30,4 +30,10 @@ public class RunNode {
 
     @Nullable
     public String monsterId;
+
+    /** How many of the monster's slots are already answered — lets a killed app resume mid-battle. */
+    public int slotsCleared = 0;
+
+    /** Whether FIRST_MISS_FREE has already been spent in this node's encounter (per-battle, not per-run). */
+    public boolean firstMissUsed = false;
 }

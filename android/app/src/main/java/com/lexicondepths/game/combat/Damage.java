@@ -29,13 +29,15 @@ public final class Damage {
     }
 
     /**
-     * isFirstMissThisRun is passed in rather than tracked here — Damage stays a pure function,
-     * and "has a miss already happened this run" is run-scoped state that belongs to RunEngine
-     * (P2-9), not to the damage formula.
+     * isFirstMissThisEncounter is passed in rather than tracked here — Damage stays a pure
+     * function, and "has a miss already happened" is state that belongs to the caller. Per
+     * assets/relics.json's own description ("Your first miss each battle deals no damage"),
+     * that's scoped to one encounter, not the whole run — RunNode.firstMissUsed (P2-9) is
+     * what BattleActivity (P2-11) tracks it against.
      */
     public static int compute(int playerCefrOrdinal, int wordCefrOrdinal, double ratio, int floor,
-                               Set<String> relics, boolean isFirstMissThisRun) {
-        if (relics.contains(FIRST_MISS_FREE) && isFirstMissThisRun) {
+                               Set<String> relics, boolean isFirstMissThisEncounter) {
+        if (relics.contains(FIRST_MISS_FREE) && isFirstMissThisEncounter) {
             return 0;
         }
 

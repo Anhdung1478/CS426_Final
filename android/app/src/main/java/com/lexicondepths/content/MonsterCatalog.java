@@ -65,6 +65,7 @@ public final class MonsterCatalog {
         m.slots = obj.getInt("slots");
         m.resists = toStringList(obj.optJSONArray("resists"));
         m.ascii = toStringList(obj.optJSONArray("ascii"));
+        m.boss = obj.optBoolean("boss", false);
         return m;
     }
 

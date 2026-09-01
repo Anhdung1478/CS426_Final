@@ -51,10 +51,18 @@
                 android:textAppearance="@style/TextAppearance.Lexicon.Body" />
 
             <Button
-                android:id="@+id/practiceButton"
+                android:id="@+id/resumeRunButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_xl"
+                android:visibility="gone"
+                android:text="@string/hub_btn_resume_run" />
+
+            <Button
+                android:id="@+id/practiceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
                 android:text="@string/hub_btn_practice" />
 
             <Button

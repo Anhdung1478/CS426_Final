@@ -29,6 +29,18 @@ public interface WordDao {
     @Query("SELECT * FROM Word WHERE topic = :topic AND cefr = :cefr")
     List<Word> getByTopicAndCefr(String topic, CefrLevel cefr);
 
+    /** A realm run's candidate pool: the whole topic, every band — Damage's below/at/above bands need the spread. */
+    @Query("SELECT * FROM Word WHERE topic = :topic")
+    List<Word> getByTopic(String topic);
+
+    /** Echo Trial's candidate pool: every unlocked topic. */
+    @Query("SELECT * FROM Word")
+    List<Word> getAll();
+
+    /** Synchronous due-id set for Encounter's due-word weighting — getDueWords() is LiveData-only. */
+    @Query("SELECT w.id FROM Word w INNER JOIN WordProgress p ON w.id = p.wordId WHERE p.dueAt <= :now")
+    List<Long> getDueWordIdsSync(long now);
+
     /** Due for review: has a WordProgress row whose dueAt has passed. */
     @Query("SELECT w.* FROM Word w INNER JOIN WordProgress p ON w.id = p.wordId " +
             "WHERE p.dueAt <= :now ORDER BY p.dueAt ASC")

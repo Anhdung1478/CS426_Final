@@ -27,7 +27,7 @@ import com.lexicondepths.db.entity.WordProgress;
                 Run.class, RunNode.class, RunRelic.class,
                 WordEvent.class, Profile.class
         },
-        version = 1,
+        version = 2,
         exportSchema = true
 )
 @TypeConverters(Converters.class)

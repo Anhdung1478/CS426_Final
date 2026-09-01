@@ -5,6 +5,7 @@ import android.widget.FrameLayout;
 
 import com.lexicondepths.game.question.Answer;
 import com.lexicondepths.game.question.Question;
+import com.lexicondepths.game.question.QuestionType;
 
 /**
  * Eleven question types collapse onto four subclasses (McqView, TextInputView, WordleGridView,
@@ -48,6 +49,29 @@ public abstract class QuestionView extends FrameLayout {
     protected void submit(Answer answer) {
         if (listener != null) {
             listener.onAnswered(answer);
+        }
+    }
+
+    /** The eleven-types-onto-four-views mapping from phase-2.md's table, in one place. */
+    public static QuestionView create(Context context, QuestionType type) {
+        switch (type) {
+            case DEFINITION_TO_WORD:
+            case WORD_TO_DEFINITION:
+            case SYNONYM_ANTONYM:
+            case COLLOCATION:
+            case WORD_FORM:
+                return new McqView(context);
+            case CLOZE:
+            case LISTENING_SPELLING:
+            case ANAGRAM:
+                return new TextInputView(context);
+            case WORDLE:
+                return new WordleGridView(context);
+            case SENTENCE_SCRAMBLE:
+            case AFFIX_HARVEST:
+                return new OrderingView(context);
+            default:
+                throw new IllegalArgumentException("No view family for " + type);
         }
     }
 }

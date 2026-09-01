@@ -7,6 +7,7 @@
     <string name="hub_streak">Chuỗi ngày: %1$d</string>
     <string name="hub_due">Từ cần ôn: %1$d</string>
     <string name="hub_marks">Điểm thưởng: %1$d</string>
+    <string name="hub_btn_resume_run">Tiếp tục lượt chơi</string>
     <string name="hub_btn_practice">Luyện tập</string>
     <string name="hub_btn_realm">Chọn vùng đất</string>
     <string name="hub_btn_library">Thư viện của tôi</string>
@@ -37,13 +38,55 @@
 
     <!-- Battle -->
     <string name="add_word_label">Thêm</string>
+    <string name="tts_play">🔊 Phát</string>
+    <string name="tts_play_again">🔊 Phát lại (còn %1$d lần)</string>
+    <string name="tts_no_plays_left">Hết lượt phát</string>
+    <string name="tts_unavailable">Không phát được âm thanh — hãy gõ theo trí nhớ</string>
+    <string name="battle_slots_progress">Câu %1$d / %2$d</string>
+    <string name="battle_damage_taken">Bạn mất %1$d máu.</string>
+    <string name="battle_damage_none">Không mất máu!</string>
+
+    <!-- Realm select -->
+    <string name="realm_select_title">Chọn vùng đất</string>
+    <string name="realm_echo_trial">Thử thách Vọng âm</string>
+    <string name="realm_echo_trial_desc">Mọi chủ đề đã mở khoá, ưu tiên từ cần ôn tập.</string>
+    <string name="realm_item_format">%1$s (%2$s–%3$s)</string>
+
+    <!-- Dungeon map -->
+    <string name="dungeon_map_title">Bản đồ hầm ngục</string>
+    <string name="dungeon_map_hp">Máu: %1$d / %2$d</string>
+    <string name="dungeon_map_marks">Điểm thưởng lượt này: %1$d</string>
+    <string name="dungeon_map_choose">Chọn hướng đi:</string>
+    <string name="dungeon_map_legend">B=Giao chiến  E=Tinh anh  R=Nghỉ ngơi  T=Kho báu  !=Trùm cuối</string>
+    <string name="node_type_battle">⚔ Giao chiến</string>
+    <string name="node_type_elite">☠ Tinh anh</string>
+    <string name="node_type_rest">♨ Nghỉ ngơi</string>
+    <string name="node_type_treasure">✦ Kho báu</string>
+    <string name="node_type_boss">👑 Trùm cuối</string>
+    <string name="rest_dialog_title">Điểm nghỉ ngơi</string>
+    <string name="rest_dialog_heal">Hồi +%1$d máu</string>
+    <string name="rest_dialog_review">Ôn tập từ cần học</string>
+
+    <!-- Battle -->
+    <string name="battle_title">Chiến đấu</string>
+
+    <!-- Reward -->
+    <string name="reward_title">Phần thưởng</string>
+    <string name="reward_choose_relic">Chọn một bảo vật:</string>
+    <string name="reward_skip">Bỏ qua</string>
+    <string name="reward_none_available">Không còn bảo vật nào để chọn.</string>
+
+    <!-- Spoils -->
+    <string name="spoils_title">Chiến lợi phẩm</string>
+    <string name="spoils_result_won">Chiến thắng</string>
+    <string name="spoils_result_lost">Bạn đã gục ngã</string>
+    <string name="spoils_summary">Tầng đạt được: %1$d\nĐiểm thưởng nhận được: %2$d</string>
+    <string name="spoils_missed_words">Chiến lợi phẩm — những từ vọng lại:</string>
+    <string name="spoils_missed_words_empty">Lượt này không có từ nào bị sai.</string>
+    <string name="spoils_continue">Tiếp tục</string>
 
     <!-- Placeholder screens -->
     <string name="placeholder_body">Đang xây dựng — sẽ có trong giai đoạn sau.</string>
-    <string name="realm_select_title">Chọn vùng đất</string>
-    <string name="dungeon_map_title">Bản đồ hầm ngục</string>
-    <string name="battle_title">Chiến đấu</string>
-    <string name="reward_title">Chiến lợi phẩm</string>
     <string name="stats_title">Thống kê từ vựng</string>
     <string name="library_title">Thư viện của tôi</string>
 </resources>
