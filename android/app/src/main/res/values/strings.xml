@@ -35,6 +35,9 @@
     <string name="rating_good">Good</string>
     <string name="rating_easy">Easy</string>
 
+    <!-- Battle -->
+    <string name="add_word_label">Add</string>
+
     <!-- Placeholder screens -->
     <string name="placeholder_body">Under construction — coming in a later phase.</string>
     <string name="realm_select_title">Realm Select</string>

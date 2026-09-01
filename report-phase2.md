@@ -1,0 +1,144 @@
+# Phase 2 Progress Report — P2-1 through P2-8
+
+**Date:** 2026-09-01
+**Scope:** the first eight tasks in `docs/phase-2.md`, across two sessions.
+
+The first four — P2-1 (question contracts), P2-2 (damage + timer bonus), P2-3 (generators A — meaning), P2-4 (generators B — form & usage) — were the critical-path bottleneck: every later Phase 2 task depends on P2-1's contracts, and P2-2's damage formula is what P2-11's battle screen will call.
+
+This session did the four tasks that unblocked once Phase 1 fully closed (P1-5 and P1-11 landed, clearing P2-8's and P2-7's remaining dependencies): P2-5 (generators C — puzzle), P2-6 (TTS + listening generator), P2-7 (question input views), and P2-8 (monsters + encounter builder). Track A (P2-5, P2-8) and Track B (P2-6, P2-7) are now both fully caught up to the fan-out point — every one of the eleven `QuestionType` values has a working generator, and every one of them renders through one of the four `QuestionView` subclasses.
+
+All eight are implemented, built, and unit-tested. `docs/phase-2.md` and `docs/plan.md` now reflect **8/12** for Phase 2.
+
+---
+
+## P2-1 — Question contracts
+
+**Files:** `game/question/{QuestionType,Question,Answer,QuestionResult,QuestionGenerator}.java`
+
+- `QuestionType`: all 11 values from the design doc (`DEFINITION_TO_WORD`, `WORD_TO_DEFINITION`, `SYNONYM_ANTONYM`, `WORD_FORM`, `CLOZE`, `COLLOCATION`, `ANAGRAM`, `SENTENCE_SCRAMBLE`, `WORDLE`, `AFFIX_HARVEST`, `LISTENING_SPELLING`). Every `questionTypes` string used in `assets/monsters.json` (Hydra/Void-eater/Mimic/Sphinx/Cipher/Twins/Echo/Chimera) is a subset of this enum.
+- `Question`: immutable holder for `type`, `wordId`, `prompt`, `options` (empty for free-text types), `correctOptionIndex` (`-1` when not MCQ), and `correctAnswer` (always set — feeds both free-text scoring and the eventual recap screen).
+- `Answer`: `Answer.ofOption(index, elapsedMillis)` / `Answer.ofText(text, elapsedMillis)` factories. `elapsedMillis` lives on `Answer` rather than as a separate `score()` parameter, because the doc's given `QuestionGenerator` interface signature is `QuestionResult score(Question q, Answer a)` — two arguments, no third. Elapsed time has to already be inside `Answer` by the time `score()` runs. This is the one place I extended the doc's illustrative code rather than transcribing it verbatim; noted here since P2-1 is the "freeze the API" task.
+- `QuestionResult`: clamps `ratio` to `[0.0, 1.0]` in the constructor itself, so no generator can hand the future damage formula an out-of-range number regardless of what it computes internally.
+- `QuestionGenerator`: `type()` / `canGenerate(Word)` / `generate(Word, List<Word> pool, Random rng)` / `score(Question, Answer)`, exactly as specified — `Random` passed in, never constructed inside, for reproducibility from a run seed.
+
+**Verified:** `git grep -n "^import android" -- game/question/` returns nothing. `gradlew.bat test` compiles and runs green against these contracts (see full run below).
+
+## P2-2 — Damage + timer bonus
+
+**Files:** `game/combat/Damage.java`, `game/combat/TimerBonus.java`, `app/src/test/java/.../game/combat/{DamageTest,TimerBonusTest}.java`
+
+- `Damage.compute(int playerCefrOrdinal, int wordCefrOrdinal, double ratio, int floor, Set<String> relics, boolean isFirstMissThisRun)` — one deviation from the doc's illustrative signature: I added a trailing `boolean isFirstMissThisRun`. `FIRST_MISS_FREE` is explicitly listed as one of the relics that "land here," but whether a miss is the *first* one this run is run-scoped state that `Damage` has no business owning as a pure static function — that state belongs to `RunEngine` (P2-9, not yet built). Passing it in as a parameter keeps `Damage` pure and testable today without inventing a state-holder class ahead of the task that actually needs one.
+- Base damage by band, chosen as fixed points inside the doc's stated ranges: below-level 19 (18–20), at-level 11 (10–12), one-band-above 6 (5–6), two-plus-above 3 (2–3). `playerCefrOrdinal`/`wordCefrOrdinal` are `CefrLevel.ordinal()` ints, not `CefrLevel` objects — deliberately, so `game/combat` stays decoupled from `db/`, matching the same reasoning `game/srs/Sm2.java` already follows.
+- Depth multiplier: floor ≤1 → 1.0, floor 2 → 1.5, floor ≥3 → 2.0.
+- All four named relics land inside `compute()`: `RATIO_FLOOR_20` clamps the ratio up to a 0.20 floor before the `(1 − ratio)` term; `DEPTH_MULT_MINUS_25` multiplies the depth multiplier by 0.75; `STRETCH_DAMAGE_HALVED` halves the base only when the word's band is above the player's; `FIRST_MISS_FREE` short-circuits to 0 damage when `isFirstMissThisRun` is true. `relics` is documented as the set of active relic **effect** keys (already resolved from held relic IDs via `RelicCatalog` by the caller) — not relic IDs — since `RunRelic.relicId` stores IDs like `"steady_hand"`, not effect keys like `"RATIO_FLOOR_20"`.
+- `TimerBonus.evaluate(elapsedMillis, ratio, fullBonusMs, partialBonusMs)` returns a `Tier` (`FULL`/`PARTIAL`/`NONE`) rather than an invented point value — there's no Marks/reward economy wired up yet for a raw bonus number to feed, and a tier is exactly what the "Done when" checklist needs to test. Critically, `ratio <= 0.0` always returns `NONE` regardless of speed, which is what makes a slow-correct answer never score worse than a fast-wrong one: both floor at `NONE`.
+
+**Verified:** `DamageTest` — 7 tests: below/at/one-above/two-above strictly decreasing damage at the same ratio and floor; ratio `1.0` → `0` damage across every floor × band combination; floor 1→3 exactly doubles damage; and one dedicated test per relic effect (`FIRST_MISS_FREE`, `RATIO_FLOOR_20`, `DEPTH_MULT_MINUS_25`, `STRETCH_DAMAGE_HALVED`). `TimerBonusTest` — 5 tests covering the `<10s`/`<20s`/`≥20s` tiers, that a wrong answer never earns a bonus regardless of speed, and the slow-correct-vs-fast-wrong non-inferiority case directly.
+
+## P2-3 — Generators A (meaning)
+
+**Files:** `game/question/gen/{DefinitionToWordGenerator,WordToDefinitionGenerator,SynonymAntonymGenerator,QuestionSupport}.java`
+
+- `QuestionSupport` is the shared MCQ scaffolding all five MCQ generators (three from P2-3, two from P2-4) route through: `sameBandTopic()` filters a pool to the target word's exact CEFR band + topic; `buildOptions()` builds a deduplicated, shuffled option list with the correct answer never appearing twice; `scoreMcq()` is the one-line binary scorer every MCQ generator's `score()` delegates to. This is the one abstraction added in this batch beyond the frozen P2-1 contracts — justified the same way `minimal-app-design` justifies P2-7's `QuestionView` base class: five real implementations sharing real behavior, not a speculative layer.
+- `DefinitionToWordGenerator` (Sphinx): prompt is the definition, options are headwords.
+- `WordToDefinitionGenerator` (the easier Word→Definition variant): prompt names the headword, options are definitions.
+- `SynonymAntonymGenerator` (Twins): picks synonym-mode or antonym-mode via the passed-in `Random` when a word has both; falls back to whichever list is non-empty when it only has one.
+
+**Verified:** `QuestionSupportTest.buildOptionsPlacesCorrectAnswerUniformlyAcrossManyGenerations` runs 4,000 generations against a 10-distractor pool and asserts every one of the 4 option slots lands between 15% and 35% of the time (an even split would be 25%) — this is the "Done when" uniform-distribution requirement, tested once against the shared mechanism rather than duplicated three times per generator. Per-generator tests (`DefinitionToWordGeneratorTest`, `WordToDefinitionGeneratorTest`, `SynonymAntonymGeneratorTest`) confirm distractors come only from the same band/topic pool, `canGenerate` correctly reports `false` on missing data, and scoring is strictly binary.
+
+## P2-4 — Generators B (form & usage)
+
+**Files:** `game/question/gen/{WordFormGenerator,ClozeGenerator,CollocationGenerator}.java`
+
+The real design problem here was building "a sentence where the grammatical slot disambiguates" (Word Form) and "keep enough context that exactly one answer fits" (Cloze) from data that has no per-form example sentences or POS tags — only one `example` string per word. Sampling the seed data confirmed a pattern: 277/300 examples contain the literal headword, and the other 23 contain one of the word's `forms` instead (`"order"` → `"We ordered noodles..."`). So both generators share `QuestionSupport.findExampleBlank()`: it searches `word.example` for whichever of `{headword} ∪ forms` appears as a whole word (longest candidate tried first), and rejects — returns `null`, `canGenerate` false — when either no candidate appears or the matching candidate appears **more than once** in the sentence (ambiguous: which occurrence is "the" answer?). This is a real, checkable implementation of the "rejected at generation time, not scoring time" requirement rather than an unverifiable heuristic.
+
+- `WordFormGenerator` (Mimic): blanks the matched token, MCQ options are the word's own other forms (headword + `forms`, minus whichever was blanked) — this tests morphology recognition directly rather than vocabulary breadth.
+- `ClozeGenerator` (Void-eater): same blank-finding, free-text answer, gated to B1+ (`canGenerate` returns `false` below B1) since building a sentence with exactly one valid filler needs grammatical maturity per the design doc. Scored case-insensitively with trimming.
+- `CollocationGenerator` (Chimera): picks one of the word's own `collocations` phrases as correct, distractors are other same-band/topic words' collocation phrases.
+
+**Verified:** `QuestionSupportTest` covers `findExampleBlank` directly — matches the headword when no form is present, prefers the longer of two candidates when both would match, returns `null` when nothing matches, and (the one this requirement is actually about) returns `null` when the matched token appears twice in the sentence. `ClozeGeneratorTest.rejectsAnAmbiguousBlankAtGenerationTime` re-confirms the same case through `canGenerate()`, plus explicit A1/A2-gated-out vs. B1+/B2/C1-allowed tests. `WordFormGeneratorTest` and `CollocationGeneratorTest` cover their own `canGenerate`/`generate`/`score` wiring.
+
+## P2-5 — Generators C (puzzle)
+
+**Files:** `game/question/gen/{AnagramGenerator,SentenceScrambleGenerator,WordleGenerator,AffixHarvestGenerator,AffixKeySource,OfflineAffixKeySource}.java`
+
+- `AnagramGenerator` (filler/pacing): Fisher–Yates-shuffles the headword's own letters with the passed-in `Random`, re-rolling (capped at 10 attempts) if the shuffle happens to reproduce the original word. Gated to headwords of 3+ letters so the puzzle isn't trivial. Binary scoring.
+- `SentenceScrambleGenerator` (A1–A2): tokenizes `word.example` on whitespace and shuffles the tokens (same re-roll-on-identity guard as Anagram). The scrambled tokens ride in `Question.options` rather than an empty list — not because it's MCQ, but because P2-7's `OrderingView` needs a source list of tappable chips, and `options` is the only field `Question` offers for that. `correctAnswer` is the reconstructed sentence; scoring is exact-match (case-insensitive, trimmed) against it. Gated to 4+ tokens.
+- `WordleGenerator` (Cipher): `Question.prompt` is the word's definition (a guessable hint — revealing letter-count is normal Wordle UX, revealing the word is not); `correctAnswer` is the headword. `Answer.text` carries every guess made so far, comma-separated, and `score()` walks it in order looking for the first match within the first 6 entries, then applies `(7 − guessNumber) / 6`. The static `feedback(guess, target)` method is the letter-by-letter grid logic P2-7's `WordleGridView` calls directly — classic two-pass algorithm: pass one marks exact-position matches and removes those letters from the target's available pool, pass two marks remaining guess letters `PRESENT` only while the target still has an unclaimed copy of that letter, else `ABSENT`. This is exactly what stops a guess with more copies of a letter than the target holds from over-claiming — verified against the doc's own `SPEED` vs `ERASE` example (no exact-position matches at all, but the repeated E's and single S each correctly resolve to `PRESENT`) plus a second case (`BBBBB` vs `ABBEY`) that specifically exercises the "target's letter budget already exhausted by greens" path, which `SPEED`/`ERASE` doesn't actually hit since it has zero greens.
+- `AffixHarvestGenerator` (Hydra): the "offline answer key" is every seed word sharing the target's `affixKey`, itself included — computed by `AffixKeySource.wordsFor(word, pool)`. Per the doc's explicit ask ("build it behind an interface so that swap touches one class"), `AffixKeySource` is a one-method interface with `OfflineAffixKeySource` as the only implementation today; Phase 3's Datamuse `sp=` swap is a second implementation plus a one-line constructor change, nothing else. `Answer.text` is tokenized on runs of non-letters (so comma-, space-, or newline-separated input all work) and matched case-insensitively as a set against the key; `ratio = min(1.0, found/keySize)`.
+
+**Verified:** `WordleGeneratorTest` — 7 tests, including the two letter-feedback cases above, ratio at guess 1/5/never-solved, and a guess submitted past the 6th being ignored rather than counted. `AffixHarvestGeneratorTest` — 4 tests: gating on missing `affixKey`, the key set matching only same-affix words, a full-credit case with a duplicate and a distractor mixed into the input (dedup + distractor-rejection in one test), and partial credit. `AnagramGeneratorTest` — 4 tests including a 50-seed loop confirming the scrambled output is always a letter-for-letter permutation of the original. `SentenceScrambleGeneratorTest` — 5 tests covering CEFR gating, token-count gating, permutation correctness, and exact-reconstruction scoring.
+
+## P2-6 — TTS + listening generator
+
+**Files:** `game/question/gen/ListeningSpellingGenerator.java`, `ui/widget/Speaker.java` (extended), `ui/practice/PracticeActivity.java` (one-line fix)
+
+- `ListeningSpellingGenerator` (Echo) stays Android-free like every other generator: it doesn't touch TTS at all, it just supplies `correctAnswer = word.headword` for whichever UI layer plays it aloud (P2-7's `TextInputView`). Scoring is Levenshtein distance (standard O(n·m) two-row DP, no library) rather than binary: `ratio = 1 − distance/targetLength`, relying on `QuestionResult`'s existing `[0.0, 1.0]` clamp for the floor rather than re-implementing it — the doc's "clamped at 0" requirement is already enforced centrally, the same way every other generator's ratio already is.
+- `Speaker` (P1-12) gained a play cap — `MAX_PLAYS_PER_QUESTION = 3`, `resetPlays()`, `playsRemaining()` — and `setSpeechRate(float)`, both requested by the doc. **Caught in review before it shipped:** capping `speak()` globally without a per-card reset would have broken P1-12's already-shipped Practice screen — after 3 pronunciations across an entire practice session, the button would silently stop working for every subsequent card. Fixed by adding one `speaker.resetPlays()` call in `PracticeActivity.showCard()`, so the cap applies per-card there (matching its pre-existing unlimited-per-card behavior) and per-question in battle.
+- The "degrade to skippable, never crash or soft-lock" requirement is met in P2-7's `TextInputView`, not here: TTS init failure / missing voice both surface as `speaker.isReady() == false`, which disables the Play button and swaps its label to "Audio unavailable — type from memory" — the player can still type and submit normally. A muted device is indistinguishable from a working one at the code level (fire-and-forget `tts.speak()`, never blocks waiting for playback), so it degrades for free with no special-casing.
+
+**Verified:** `ListeningSpellingGeneratorTest` — 3 tests: exact spelling scores 1.0, a one-letter slip scores strictly between 0 and 1 (not a total loss), and a completely wrong answer floors at 0.0. `Speaker`'s TTS integration itself isn't unit-testable (no Android runtime in `test/`, and Robolectric isn't a project dependency — not added for one widget, see Known deviations); `TextInputView`'s degrade path is exercised by `gradlew.bat assembleDebug` compiling and by inspection, and is a real candidate for a manual airplane-mode check on the exit checklist.
+
+## P2-7 — Question input views
+
+**Files:** `ui/battle/view/{QuestionView,McqView,TextInputView,WordleGridView,OrderingView}.java`
+
+- `QuestionView` is the one abstract base the doc pre-approves — four real subclasses collapsing eleven question types. `bind()` is `final` and starts the elapsed-time clock itself, delegating to an abstract `onBind()`; this is a small deviation from the doc's illustrative `public abstract void bind(Question q)` — making it non-overridable is what actually guarantees "timing starts on bind(), not the first keystroke" for every subclass, rather than relying on each one to remember to capture it.
+- **Deviation:** the doc's illustrative `Listener.onAnswered(Answer a, long elapsedMillis)` takes `elapsedMillis` twice — it's already inside `Answer` (frozen by P2-1, and `Answer.java`'s own javadoc anticipated this exact spot). The listener here is `onAnswered(Answer answer)`, dropping the redundant parameter.
+- `McqView` — Definition→Word, Word→Definition, Synonym/Antonym, Collocation, Word form: prompt + one button per option, tapping submits `Answer.ofOption(index, elapsed)`.
+- `TextInputView` — Cloze, Listening→Spelling, Anagram: prompt + free-text field + submit. Listening→Spelling additionally shows a Play button wired to an optional `Speaker` (null-safe — a host screen with no TTS just never sets one); see P2-6 for the degrade behavior.
+- `WordleGridView` — Wordle: an editable guess row constrained to the target's length (`InputFilter.LengthFilter`), submitting each guess into a scrolling history rendered via `WordleGenerator.feedback()`. **Colorblind-safe by construction:** every tile is `letter + glyph` (✓ correct, ~ present, ✗ absent) with color as a *layered* `BackgroundColorSpan`, reusing the existing `success`/`warn`/`fg_dim` theme colors rather than new ones — the glyph alone already carries the full signal in grayscale, color is bonus, exactly the doc's accessibility rule.
+- `OrderingView` — Sentence scramble and Affix harvest: these two are grouped in the doc's own table despite differing input mechanics (tap chips vs. type words), because both share the same underlying shape — accumulate an ordered list of tokens over several interactions, then submit once. Sentence scramble taps `Question.options` chips into a growing reconstruction, auto-submitting when the last chip is placed; Affix harvest types-and-adds words to a growing list with an explicit Done button (no "timer" concept exists at this layer — the shared battle timer already drives `TimerBonus`).
+
+**Verified:** `gradlew.bat assembleDebug` compiles all five classes clean against the real Android SDK. No JVM unit tests were added for these — they're `FrameLayout` subclasses that need a `Context` to instantiate, and this project has no Robolectric/instrumented-test dependency to give them one (see Known deviations). Three of the four "Done when" boxes are checked in `docs/phase-2.md`; the fourth (soft keyboard not covering the input) is left unchecked because it's actually a property of the hosting Activity's `windowSoftInputMode`, which doesn't exist until P2-11 builds `activity_battle.xml`.
+
+## P2-8 — Monsters + encounter builder
+
+**Files:** `game/run/Encounter.java`, `game/question/gen/QuestionGenerators.java`, `ui/widget/{MonsterRenderer,AsciiMonsterRenderer}.java`
+
+- `QuestionGenerators` is a small addition beyond the doc's file list: a `QuestionType → QuestionGenerator` registry. It didn't exist before this task because nothing needed to go from "a type name in JSON" to "an actual generator instance" until `Encounter` did — and P2-11's battle screen will need the exact same lookup to call `score()` after collecting an `Answer`, so it lives in `game/question/gen/` as a shared, real (not speculative) piece.
+- `Encounter.build(monster, pool, dueWordIds, rng)` stays a pure, Android-free function — `pool` (already topic/CEFR-filtered) and `dueWordIds` (the SRS-due set) are both caller-supplied rather than queried here, the same reasoning `Damage.compute`'s `isFirstMissThisRun` parameter used in P2-2: "which words are due" is Room/DAO state that belongs to `RunEngine` (P2-9, not yet built), not to a function that needs to stay unit-testable without a database.
+- **Boss phases fall out of the same code path as ordinary monsters, with no special-casing.** Slot types are distributed across a monster's declared type list with any remainder going to the earlier types — for 5 slots across 3 types that's 2/2/1, which is exactly the doc's "two of A, two of B, then a finisher of C". Every monster in the current `monsters.json` has exactly one declared type, so this generalizes down to "all N slots, one type" for them automatically; the distribution algorithm is the *only* thing `Encounter` needed to get boss phases right, once one is added to the content file.
+- **Weighted toward SRS-due words**, interpreted as: for each slot's type, split the eligible pool (words the type's generator can actually build a question from, not yet used elsewhere in this encounter) into due vs. not-due, shuffle each half with the seeded `Random`, and take a due word if any exist. Deterministic-and-reproducible rather than true probabilistic weighting — simpler, and the doc says "weighted toward," not "weighted-random sampling."
+- **Fallback, not crash:** if a slot's declared type has no eligible word left in the pool, `Encounter` tries the monster's *other* declared types before giving up on that slot entirely (dropping it — an encounter can end up with fewer than `monster.slots` questions rather than throwing). No word is ever reused within one encounter.
+- `MonsterRenderer` is the exact "escape valve" the doc pre-approves in §8 — a one-method interface plus `AsciiMonsterRenderer`, the only implementation, rendering `monster.ascii` into a `TextView`. If bitmap art shows up later, it's a second class implementing the same interface; nothing else changes.
+
+**Verified:** `EncounterTest` — 6 tests: every one of the 8 real monsters in `monsters.json` (same ids/types/slots, hand-mirrored rather than read from the asset file since JVM unit tests here don't touch Android's asset loader) fills every declared slot from a rich pool; a synthetic 3-type/5-slot boss produces slots grouped exactly `[A,A,B,B,C]` in that order; a type with zero eligible words falls back to the monster's other declared type instead of crashing; a monster whose only type has zero eligible words anywhere drops that slot instead of crashing; a due word is chosen over a non-due one when both are eligible; and no word repeats within one encounter.
+
+---
+
+## Full verification run
+
+```
+gradlew.bat test           → BUILD SUCCESSFUL — 74 tests, 0 failures
+                              (6 Sm2Test carried over from Phase 1 + 68 from Phase 2)
+gradlew.bat assembleDebug  → BUILD SUCCESSFUL
+git grep "^import android" -- game/question/ game/combat/ game/run/   → no matches
+```
+
+Per-class test counts, this session's four tasks: `AnagramGeneratorTest` 4, `SentenceScrambleGeneratorTest` 5, `WordleGeneratorTest` 7, `AffixHarvestGeneratorTest` 4, `ListeningSpellingGeneratorTest` 3, `EncounterTest` 6 — **29 new tests**, all green. (P2-7 added no JVM tests — see Known deviations.)
+
+Carried over from the P2-1–P2-4 session: `DamageTest` 7, `TimerBonusTest` 5, `QuestionSupportTest` 6, `DefinitionToWordGeneratorTest` 3, `WordToDefinitionGeneratorTest` 3, `SynonymAntonymGeneratorTest` 4, `WordFormGeneratorTest` 4, `ClozeGeneratorTest` 4, `CollocationGeneratorTest` 3 — 39 tests.
+
+No dependency was added — everything here is `java.util.*`/`java.util.regex.*`/`android.text.*`/`android.widget.*` (P2-7's views are plain framework widgets) plus the existing `db.entity.Word`/`db.CefrLevel`/`content.Monster` types, consistent with the approved six-dependency budget from Phase 1.
+
+## Known deviations / judgment calls
+
+- **`Answer` carries `elapsedMillis`.** The doc's `QuestionGenerator.score(Question q, Answer a)` signature has no separate time parameter, so the elapsed time has to already live on `Answer` by the time `score()` is called. P2-7 (not yet built) will presumably pass `Answer.ofOption(index, elapsed)` / `Answer.ofText(text, elapsed)` straight from its own `Listener.onAnswered(Answer, long)` callback.
+- **`Damage.compute` gained a sixth parameter, `isFirstMissThisRun`.** `FIRST_MISS_FREE` needs to know whether a miss has already happened this run — state that belongs to P2-9's `RunEngine`, not to a pure damage function. Rather than invent a run-state holder class two tasks early, the caller passes the fact in directly.
+- **Fixed base-damage constants (19/11/6/3)** were picked as representative points inside the doc's stated ranges (18–20/10–12/5–6/2–3) rather than randomized per hit, since `compute()` has no `Random` parameter in its given signature and damage should be a deterministic function of its inputs for testability.
+- **`QuestionSupport` is package-private** in `game/question/gen/` — it's real shared behavior across five MCQ generators plus the two blank-finding generators, not a speculative layer, and it isn't part of the P2-1 frozen public contract.
+- **`TimerBonus` returns a `Tier` enum, not a point value.** No reward economy (Marks, bonus damage) exists yet to attach a number to; the tier is what the "Done when" checklist actually needs, and whichever later task consumes it (P2-11 or P2-12) can decide what each tier is worth without `TimerBonus` itself guessing.
+- **`QuestionGenerators` (P2-8) is a new registry class**, beyond the doc's stated file list for P2-8. It's the natural `QuestionType → QuestionGenerator` lookup both `Encounter` and P2-11's battle screen need, and putting it in `game/question/gen/` next to the generators it maps avoids building it twice.
+- **`Encounter.build` takes `dueWordIds` as a caller-supplied `Set<Long>`**, not a DAO query. Same reasoning as `Damage.compute`'s `isFirstMissThisRun`: knowing what's due is Room-backed state owned by `RunEngine` (P2-9), and `Encounter` needs to stay a pure, unit-testable function.
+- **"Weighted toward SRS-due words" is implemented as due-first-then-shuffled, not weighted-random sampling.** Simpler, deterministic from the seed, and a faithful reading of "weighted toward" rather than an invented probability distribution the doc never specified.
+- **`Encounter`'s fallback drops a slot rather than substituting a hardcoded "safe" type.** If a slot's declared type has no eligible word, it tries the monster's *other* declared types first; only if none of the monster's own types work does the slot disappear. This never triggers against the real seed data — it exists for the "falls back rather than crashing" requirement and is exercised by a contrived starved-pool test.
+- **`QuestionView.Listener.onAnswered` takes only `Answer`, not `(Answer, long)`.** The doc's illustrative signature carries elapsed time twice — `Answer` already has it (frozen in P2-1, and anticipated by `Answer.java`'s own javadoc). Dropping the redundant parameter.
+- **P2-7's four views have no JVM unit tests.** They're `FrameLayout` subclasses needing a live `Context`; this project's `test/` source set is plain JUnit with no Robolectric or instrumented-test dependency, and adding one for four views isn't worth a new dependency per the Phase 1 budget. Verified by `gradlew.bat assembleDebug` compiling clean; real exercise happens on-device once P2-11 wires them into `BattleActivity`.
+- **`Speaker`'s new play cap required a one-line fix in `PracticeActivity`** (`resetPlays()` in `showCard()`) to avoid silently breaking the already-shipped P1-12 pronunciation button after 3 total plays across a session. Caught by tracing every existing caller of `Speaker.speak()` before extending it, not by a test — flagged here since it's exactly the kind of regression a "just add the field" edit would have missed.
+
+---
+
+## What's next
+
+P2-9 (`RunEngine`) is next on the critical path — it's the last thing standing between the current generator/view/encounter layer and an actual playable run, and it unblocks both P2-10 (realm select + map) and, via P2-11, the battle screen. P2-11 (battle screen) can also start now in parallel: P2-2 (damage), P2-7 (views), and P2-8 (encounters) are all it depends on, and all three are done. P2-12 (run end + Spoils) is the Phase 2 milestone and the last task — it needs P2-9 and P2-11 both finished first. See `docs/phase-2.md` for full task detail.

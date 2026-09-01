@@ -35,6 +35,9 @@
     <string name="rating_good">Tốt</string>
     <string name="rating_easy">Dễ</string>
 
+    <!-- Battle -->
+    <string name="add_word_label">Thêm</string>
+
     <!-- Placeholder screens -->
     <string name="placeholder_body">Đang xây dựng — sẽ có trong giai đoạn sau.</string>
     <string name="realm_select_title">Chọn vùng đất</string>

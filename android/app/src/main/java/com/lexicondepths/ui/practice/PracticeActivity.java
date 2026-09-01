@@ -87,6 +87,7 @@ public class PracticeActivity extends AppCompatActivity {
 
         binding.emptyText.setVisibility(View.GONE);
         binding.cardGroup.setVisibility(View.VISIBLE);
+        speaker.resetPlays();
 
         Word word = currentWord();
         binding.progressText.setText(getString(R.string.practice_progress, position + 1, queue.size()));

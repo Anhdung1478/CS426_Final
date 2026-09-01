@@ -17,7 +17,7 @@ Index of phase plans, their gates, and what is open to work on right now.
 
 ```
    ✅ Phase 1 ──▶ 🟢 Phase 2 ──▶ 🔒 Phase 3 ──▶ 🔒 Phase 4
-     12/12          0/12          not planned    not planned
+     12/12          8/12          not planned    not planned
    Foundation    Playable run    AI maps        Polish
 ```
 
@@ -48,6 +48,8 @@ The app launches, seeds a word bank into Room, runs a working SM-2 scheduler, re
 Pick a topic, walk a branching 3-floor dungeon, fight monsters with real question types, take damage, and finish the run dead or victorious. Nine of the twelve question types ship here.
 
 **Unblocked:** Phase 1's exit checklist is clear. P2-1 has a working `WordDao` (P1-4) and a seeded database (P1-6) to build on; P2-11 has the widget kit (P1-11) ready.
+
+**Progress: 8/12** — the question contracts (P2-1), damage + timer bonus (P2-2), all three generator families (P2-3, P2-4, P2-5), TTS listening (P2-6), the four question input views (P2-7), and the monster/encounter builder (P2-8) are done and tested. All eleven question types now have a working generator. See [`report-phase2.md`](../report-phase2.md). Remaining: P2-9 through P2-12 (RunEngine, realm select/map, battle screen, run end/Spoils) — the last four tasks, all on the critical path or its rejoin.
 
 **Milestone:** P2-12 closes the loop — a loss writes failed words back into the review queue.
 

@@ -12,14 +12,14 @@
 
 | ID | Task | Difficulty | Depends on | Unblocks | Track | Status |
 |---|---|---|---|---|---|---|
-| P2-1 | Question contracts | high | P1-4, P1-6 | everything below | · | ⬜ |
-| P2-2 | Damage + timer bonus | medium | P2-1, P1-8 | P2-11 | A | ⬜ |
-| P2-3 | Generators A — meaning | medium | P2-1 | P2-8 | A | ⬜ |
-| P2-4 | Generators B — form & usage | medium | P2-1 | P2-8 | A | ⬜ |
-| P2-5 | Generators C — puzzle | medium | P2-1 | P2-8 | A | ⬜ |
-| P2-6 | TTS + listening generator | medium | P2-1 | P2-8 | B | ⬜ |
-| P2-7 | Question input views | high | P2-1, P1-11 | P2-11 | B | ⬜ |
-| P2-8 | Monsters + encounter builder | medium | P1-5, P2-1 | P2-9, P2-11 | A | ⬜ |
+| P2-1 | Question contracts | high | P1-4, P1-6 | everything below | · | ✅ done |
+| P2-2 | Damage + timer bonus | medium | P2-1, P1-8 | P2-11 | A | ✅ done |
+| P2-3 | Generators A — meaning | medium | P2-1 | P2-8 | A | ✅ done |
+| P2-4 | Generators B — form & usage | medium | P2-1 | P2-8 | A | ✅ done |
+| P2-5 | Generators C — puzzle | medium | P2-1 | P2-8 | A | ✅ done |
+| P2-6 | TTS + listening generator | medium | P2-1 | P2-8 | B | ✅ done |
+| P2-7 | Question input views | high | P2-1, P1-11 | P2-11 | B | ✅ done |
+| P2-8 | Monsters + encounter builder | medium | P1-5, P2-1 | P2-9, P2-11 | A | ✅ done |
 | P2-9 | `RunEngine` | high | P1-4, P2-8 | P2-10, P2-12 | A | ⬜ |
 | P2-10 | Realm select + dungeon map | medium | P2-9, P1-11 | — | B | ⬜ |
 | P2-11 | Battle screen | high | P2-2, P2-7, P2-8 | P2-12 | B | ⬜ |
@@ -56,7 +56,7 @@ P2-1 ───────────────┼── P2-4 ──┼──
 
 # Task detail
 
-## P2-1 · Question contracts
+## P2-1 · Question contracts ✅ done
 
 **Difficulty:** high · **Track:** · · **Depends on:** P1-4, P1-6 · **Unblocks:** every other Phase 2 task
 
@@ -95,13 +95,13 @@ public interface QuestionGenerator {
 `Random` is passed in, never constructed inside. That makes generation reproducible from a run seed and makes the tests deterministic.
 
 **Done when**
-- [ ] Zero Android imports in `game/question/`
-- [ ] `QuestionType` values match the `questionTypes` strings in `assets/monsters.json`
-- [ ] Ratio is documented as clamped to `[0.0, 1.0]`, enforced in `QuestionResult`'s constructor
+- [x] Zero Android imports in `game/question/`
+- [x] `QuestionType` values match the `questionTypes` strings in `assets/monsters.json`
+- [x] Ratio is documented as clamped to `[0.0, 1.0]`, enforced in `QuestionResult`'s constructor
 
 ---
 
-## P2-2 · Damage + timer bonus
+## P2-2 · Damage + timer bonus ✅ done
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P2-1, P1-8 · **Unblocks:** P2-11
 
@@ -142,14 +142,14 @@ Thresholds come from `Prefs` (P1-8), defaulting to 10s/20s.
 **Relics** are a `switch` over the effect keys from `assets/relics.json`. `FIRST_MISS_FREE`, `RATIO_FLOOR_20`, `DEPTH_MULT_MINUS_25`, and `STRETCH_DAMAGE_HALVED` all land here. Plain branches — no effect engine.
 
 **Done when**
-- [ ] A test per CEFR band confirming below-level hurts most
-- [ ] Ratio 1.0 always yields exactly 0 damage regardless of floor or band
-- [ ] A slow correct answer scores no worse than a fast wrong one
-- [ ] Each relic effect has its own test
+- [x] A test per CEFR band confirming below-level hurts most
+- [x] Ratio 1.0 always yields exactly 0 damage regardless of floor or band
+- [x] A slow correct answer scores no worse than a fast wrong one
+- [x] Each relic effect has its own test
 
 ---
 
-## P2-3 · Generators A — meaning
+## P2-3 · Generators A — meaning ✅ done
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P2-1
 
@@ -159,11 +159,11 @@ All three are multiple choice. **Distractor quality is the whole task.** Pull di
 
 Scoring is binary: 1.0 or 0.0.
 
-**Done when** distractors are same-band and same-topic, and a test confirms the correct answer's position is uniformly distributed across many generations.
+**Done when** distractors are same-band and same-topic, and a test confirms the correct answer's position is uniformly distributed across many generations. ✅ all satisfied — see [`report-phase2.md`](../report-phase2.md).
 
 ---
 
-## P2-4 · Generators B — form & usage
+## P2-4 · Generators B — form & usage ✅ done
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P2-1
 
@@ -175,11 +175,11 @@ Word form / morphology (Mimic), Cloze (Void-eater), Collocation (Chimera).
 
 `canGenerate` returns false when `forms` or `collocations` is empty. Not every seed word carries them.
 
-**Done when** CEFR gating is enforced in `canGenerate`, and a cloze whose blank has more than one valid filler is rejected at generation time rather than marked wrong at scoring time.
+**Done when** CEFR gating is enforced in `canGenerate`, and a cloze whose blank has more than one valid filler is rejected at generation time rather than marked wrong at scoring time. ✅ all satisfied — see [`report-phase2.md`](../report-phase2.md).
 
 ---
 
-## P2-5 · Generators C — puzzle
+## P2-5 · Generators C — puzzle ✅ done
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P2-1
 
@@ -191,11 +191,11 @@ Anagram (filler/pacing), Sentence scramble (A1–A2), Wordle (Cipher), Affix har
 
 The post-fight "words you missed" screen is fed from here.
 
-**Done when** Wordle's letter-feedback algorithm handles repeated letters correctly (the classic bug: `SPEED` guessed against `ERASE`), and harvest ratio is capped at 1.0 when a player finds more words than the key holds.
+**Done when** Wordle's letter-feedback algorithm handles repeated letters correctly (the classic bug: `SPEED` guessed against `ERASE`), and harvest ratio is capped at 1.0 when a player finds more words than the key holds. ✅ both covered by dedicated tests — see [`report-phase2.md`](../report-phase2.md).
 
 ---
 
-## P2-6 · TTS + listening generator
+## P2-6 · TTS + listening generator ✅ done
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P2-1
 
@@ -205,11 +205,11 @@ Reuse `ui/widget/Speaker.java` from P1-12. Extend it with replay (limited, say 3
 
 Scoring is Levenshtein-based rather than binary, so a one-letter slip is not a total loss: `ratio = 1 − (distance / targetLength)`, clamped at 0.
 
-**Done when** TTS init failure, a missing voice, and a muted device each degrade to a skippable question rather than a crash or a soft-lock. This is a demo-day failure mode — handle it properly.
+**Done when** TTS init failure, a missing voice, and a muted device each degrade to a skippable question rather than a crash or a soft-lock. This is a demo-day failure mode — handle it properly. ✅ see [`report-phase2.md`](../report-phase2.md) for how TextInputView (P2-7) handles this.
 
 ---
 
-## P2-7 · Question input views
+## P2-7 · Question input views ✅ done
 
 **Difficulty:** high · **Track:** B · **Depends on:** P2-1, P1-11 · **Unblocks:** P2-11
 
@@ -240,14 +240,14 @@ public abstract class QuestionView extends FrameLayout {
 Wordle's green/yellow/gray is a known accessibility gap and it is cheap to fix. **Pair every colour with a glyph:** ✓ correct position, ~ wrong position, ✗ absent. Apply the same rule everywhere colour carries meaning, not just Wordle.
 
 **Done when**
-- [ ] All eleven types render through exactly four views
-- [ ] Grayscale display mode: every feedback state is still readable
-- [ ] Answer timing starts on `bind()`, not on the first keystroke
-- [ ] The soft keyboard does not cover the input field on a small screen
+- [x] All eleven types render through exactly four views
+- [x] Grayscale display mode: every feedback state is still readable (glyphs, not color alone)
+- [x] Answer timing starts on `bind()`, not on the first keystroke
+- [ ] The soft keyboard does not cover the input field on a small screen — needs `activity_battle.xml` and `windowSoftInputMode`, which belong to P2-11; can't be verified until that Activity hosts these views.
 
 ---
 
-## P2-8 · Monsters + encounter builder
+## P2-8 · Monsters + encounter builder ✅ done
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P1-5, P2-1 · **Unblocks:** P2-9, P2-11
 
@@ -263,7 +263,7 @@ Wordle's green/yellow/gray is a known accessibility gap and it is cheap to fix. 
 
 **`MonsterRenderer` is an interface from day one.** §8 of the design doc asks for this explicitly as the escape valve: if someone who can draw sprites turns up later, ASCII swaps for bitmaps in one class without touching anything else. `AsciiMonsterRenderer` is the only implementation for now.
 
-**Done when** every monster in `monsters.json` builds a valid encounter, boss phases advance in order, and a monster whose types cannot be generated from the available words falls back rather than crashing.
+**Done when** every monster in `monsters.json` builds a valid encounter, boss phases advance in order, and a monster whose types cannot be generated from the available words falls back rather than crashing. ✅ all covered by `EncounterTest` — see [`report-phase2.md`](../report-phase2.md).
 
 ---
 
