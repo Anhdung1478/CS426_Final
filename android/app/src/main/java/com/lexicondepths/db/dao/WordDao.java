@@ -17,6 +17,10 @@ public interface WordDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertAll(List<Word> words);
 
+    /** Same insert, but -1 in place of any row an existing headword shadowed — see RealmImport. */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    List<Long> insertAllReturningIds(List<Word> words);
+
     @Query("SELECT COUNT(*) FROM Word")
     int count();
 

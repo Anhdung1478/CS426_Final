@@ -89,4 +89,24 @@
     <string name="placeholder_body">Đang xây dựng — sẽ có trong giai đoạn sau.</string>
     <string name="stats_title">Thống kê từ vựng</string>
     <string name="library_title">Thư viện của tôi</string>
+
+    <!-- My Library / forge (Phase 3) -->
+    <string name="library_forge_header">Rèn một vùng đất mới:</string>
+    <string name="library_topic_hint">Chủ đề (ví dụ: nấu ăn, vũ trụ, bóng đá)</string>
+    <string name="library_forge_button">Rèn vùng đất</string>
+    <string name="library_forging">Đang rèn vùng đất %1$s…</string>
+    <string name="library_forging_offline">Đang mở vùng đất có sẵn…</string>
+    <string name="library_forged">%1$s đã sẵn sàng. Chạm vào bên dưới để vào.</string>
+    <string name="library_forge_failed">Không rèn được: %1$s</string>
+    <string name="library_retry">Thử lại</string>
+    <string name="library_use_offline">Dùng vùng đất ngoại tuyến</string>
+    <string name="library_filter_hint">Lọc theo tên, chủ đề hoặc cấp độ</string>
+    <string name="library_empty">Chưa có vùng đất nào. Chọn một chủ đề ở trên và rèn thử.</string>
+    <string name="library_no_matches">Không có vùng đất nào khớp bộ lọc.</string>
+    <string name="library_row_format">%1$s\n%2$s · %3$s–%4$s · %5$d từ · %6$s</string>
+
+    <!-- Settings: proxy URL (Phase 3) -->
+    <string name="settings_map_api_label">Máy chủ rèn vùng đất</string>
+    <string name="settings_map_api_hint">http://10.0.2.2:8080</string>
+    <string name="settings_map_api_help">Máy ảo dùng 10.0.2.2. Trên điện thoại, dùng IP LAN của máy tính. Để trống để đặt lại.</string>
 </resources>

@@ -29,7 +29,7 @@ One rule overrides everything else in the codebase: **dying in a run never rolls
 | Navigation | One `Activity` per screen, `Intent` extras between them. No Fragments, no Navigation Component. |
 | DI | **None.** `App.java` holds the database, prefs, and executor as fields. |
 | Storage | Room for vocabulary and runs. `SharedPreferences` for settings. |
-| Network | `HttpURLConnection` + `org.json`, both in the SDK. Not needed before Phase 3. |
+| Network | `HttpURLConnection` + `org.json`, both in the SDK. See `content/MapApi.java` and `game/question/gen/DatamuseAffixKeySource.java`. |
 | Async | `ExecutorService` from `App`, plus Room `LiveData` return types. |
 
 ### Binding constraint
@@ -63,10 +63,12 @@ E:\Project\CS426_Final\
 │       │   │   └── question\   ✅  Question models + the 11 shipped generators.
 │       │   ├── content\        ✅  Loaders that read assets\ JSON into memory or Room.
 │       │   └── ui\             ✅  One package per screen, plus ui\widget\ for shared views.
-│       ├── main\assets\        ✅  words_seed.json, monsters.json, relics.json
-│       ├── main\res\           ✅  layout\ values\ values-vi\ font\ drawable\
-│       └── test\java\          ✅  JUnit over game\. Runs without an emulator.
-├── backend\                    ⬜  Spring Boot DeepSeek proxy. Phase 3. Empty for now.
+│       ├── main\assets\        ✅  words_seed.json, monsters.json, relics.json, fallback_map.json
+│       ├── main\res\           ✅  layout\ values\ values-vi\ font\ drawable\ xml\
+│       ├── debug\res\xml\      ✅  network_security_config.xml — cleartext, DEBUG BUILDS ONLY
+│       └── test\java\          ✅  JUnit over game\ and content\. Runs without an emulator.
+├── backend\                    ✅  Spring Boot DeepSeek proxy, 4 classes. See backend\README.md.
+│                               Key comes from $DEEPSEEK_API_KEY — never a tracked file.
 ├── docs\                       ✅  Long-form notes that do not belong in code.
 ├── project-idea.md             ✅  Design doc. Rationale and game design.
 ├── project-context.md          ✅  This file.
@@ -106,6 +108,22 @@ The section that earns this file's existence. Find the feature, get the entry po
 | Run state, HP, resume-after-kill | `game/run/RunEngine.java`, `game/run/RunState.java` | ✅ P2-9 |
 | Relic effects (8 passives) | `game/combat/Damage.java`, `game/combat/TimerBonus.java`, `game/run/RunEngine.java` + `assets/relics.json` | ✅ P2-9 |
 | Monster definitions and ASCII art | `assets/monsters.json`, `content/MonsterCatalog.java` | ✅ P2-8 |
+| One-active-run guard | `game/run/RunEngine.java` (`startRun`) | ✅ P3-5 |
+
+### AI map generation
+
+Everything here routes through the proxy. **The DeepSeek key is never in the APK** — see §2 and `backend/README.md`.
+
+| Feature | Entry point | Status |
+|---|---|---|
+| Generated-map JSON contract (and its validator, twice) | `content/MapJson.java`, `backend/.../MapValidator.java` | ✅ P3-1 |
+| DeepSeek proxy — `/health`, `/generate-map` | `backend/src/main/java/com/lexicondepths/proxy/` | ✅ P3-2, P3-3 |
+| Client HTTP call | `content/MapApi.java` | ✅ P3-4 |
+| Cleartext policy — debug permits, release denies | `res/xml/network_security_config.xml` ×2 | ✅ P3-4 |
+| Importing a generated map into Room | `content/RealmImport.java` | ✅ P3-5 |
+| Forge UI, retry, offline fallback | `ui/library/LibraryActivity.java`, `assets/fallback_map.json` | ✅ P3-6 |
+| Proxy base URL setting | `Prefs.mapApiBaseUrl()`, `ui/settings/SettingsActivity.java` | ✅ P3-9 |
+| Affix answer key from Datamuse | `game/question/gen/DatamuseAffixKeySource.java` | ✅ P3-8 |
 
 ### Question types
 
@@ -135,7 +153,7 @@ One `Activity` each, all in `ui/`.
 | Reward (mid-run relic pick) | `ui/reward/RewardActivity.java` | ✅ P2-12 |
 | Spoils (run-end recap) | `ui/reward/SpoilsActivity.java` | ✅ P2-12 |
 | Vocabulary stats | `ui/stats/StatsActivity.java` | ⬜ Phase 4 |
-| My Library (generated maps) | `ui/library/LibraryActivity.java` | ⬜ Phase 3 |
+| My Library + realm forge | `ui/library/LibraryActivity.java` | ✅ P3-6, P3-7 |
 
 ### Presentation
 
@@ -228,7 +246,8 @@ This file maps *code*. The plan maps *work*. They are separate on purpose — th
 | [`docs/plan.md`](docs/plan.md) | **Start here.** Which phase is open, progression, the two-track working agreement. |
 | [`docs/phase-1.md`](docs/phase-1.md) | Phase 1 task table, dependency graph, and per-task detail. |
 | [`docs/phase-2.md`](docs/phase-2.md) | Phase 2, same shape, now closed. |
+| [`docs/phase-3.md`](docs/phase-3.md) | Phase 3, same shape, now closed. |
 
-**Phase 1 — Foundation and Phase 2 — The playable run are both closed (12/12 each).** See [`docs/plan.md`](docs/plan.md), [`docs/phase-2.md`](docs/phase-2.md), and [`report-phase2.md`](report-phase2.md).
+**Phases 1, 2 and 3 are closed** — 12/12, 12/12, 9/9. See [`docs/plan.md`](docs/plan.md) and the per-phase reports.
 
-Phase 3 (AI map generation) is next but not yet planned in detail, and Phase 4 (polish) isn't planned at all. The project plans two phases ahead, never more.
+Phase 4 (polish) is open but not planned in detail. Writing `docs/phase-4.md` is the next planning step; it is the last phase, so nothing follows it.

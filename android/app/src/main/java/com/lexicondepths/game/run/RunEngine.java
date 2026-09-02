@@ -80,6 +80,15 @@ public final class RunEngine {
     // ---- Room orchestration ----------------------------------------------------------------
 
     public static long startRun(AppDatabase db, Long realmId, List<Monster> allMonsters) {
+        // One active run at a time. RunDao.getActiveRun() is LIMIT 1, so starting a second would
+        // strand the first along with its 24 nodes — invisible to Resume Run and never cleaned up,
+        // which is exactly the leaked-run-rows case P2-12 forbids. The guard lives here rather
+        // than in each screen because every entry point routes through this method.
+        Run active = db.runDao().getActiveRun();
+        if (active != null) {
+            return active.id;
+        }
+
         List<Monster> battleMonsters = new ArrayList<>();
         Monster bossMonster = null;
         for (Monster m : allMonsters) {

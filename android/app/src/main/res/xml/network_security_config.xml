@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Release posture: HTTPS only. The demo proxy runs over plain HTTP on a LAN, which is why the
+  debug variant overrides this file (src/debug/res/xml/) rather than this one being permissive.
+  A cleartext allowance in the shipping manifest would be a real regression, not a formality.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

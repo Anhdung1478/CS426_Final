@@ -121,34 +121,9 @@ public final class SeedLoader {
     private static List<Word> parseWords(JSONArray array) throws Exception {
         List<Word> words = new ArrayList<>();
         for (int i = 0; i < array.length(); i++) {
-            JSONObject obj = array.getJSONObject(i);
-            Word word = new Word();
-            word.headword = obj.getString("headword");
-            word.cefr = CefrLevel.valueOf(obj.getString("cefr"));
-            word.topic = obj.getString("topic");
-            word.pos = obj.getString("pos");
-            word.definition = obj.getString("definition");
-            word.example = obj.getString("example");
-            word.viGloss = obj.isNull("viGloss") ? null : obj.getString("viGloss");
-            word.synonyms = toStringList(obj.optJSONArray("synonyms"));
-            word.antonyms = toStringList(obj.optJSONArray("antonyms"));
-            word.collocations = toStringList(obj.optJSONArray("collocations"));
-            word.forms = toStringList(obj.optJSONArray("forms"));
-            word.affixKey = obj.isNull("affixKey") ? null : obj.getString("affixKey");
-            words.add(word);
+            words.add(MapJson.parseWord(array.getJSONObject(i)));
         }
         return words;
-    }
-
-    private static List<String> toStringList(JSONArray array) throws Exception {
-        List<String> list = new ArrayList<>();
-        if (array == null) {
-            return list;
-        }
-        for (int i = 0; i < array.length(); i++) {
-            list.add(array.getString(i));
-        }
-        return list;
     }
 
     private static String readAsset(Context context, String name) throws IOException {

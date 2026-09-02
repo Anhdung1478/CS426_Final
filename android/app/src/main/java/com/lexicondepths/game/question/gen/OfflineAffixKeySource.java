@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /** Every seed word sharing the target word's affixKey, itself included. */
-final class OfflineAffixKeySource implements AffixKeySource {
+public final class OfflineAffixKeySource implements AffixKeySource {
 
     @Override
     public Set<String> wordsFor(Word word, List<Word> pool) {

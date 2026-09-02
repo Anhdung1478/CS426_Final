@@ -89,4 +89,24 @@
     <string name="placeholder_body">Under construction — coming in a later phase.</string>
     <string name="stats_title">Vocabulary Stats</string>
     <string name="library_title">My Library</string>
+
+    <!-- My Library / forge (Phase 3) -->
+    <string name="library_forge_header">Forge a new realm:</string>
+    <string name="library_topic_hint">Topic (e.g. cooking, space, football)</string>
+    <string name="library_forge_button">Forge realm</string>
+    <string name="library_forging">Forging the %1$s realm…</string>
+    <string name="library_forging_offline">Opening the bundled realm…</string>
+    <string name="library_forged">%1$s is ready. Tap it below to enter.</string>
+    <string name="library_forge_failed">Could not forge: %1$s</string>
+    <string name="library_retry">Retry</string>
+    <string name="library_use_offline">Use offline realm</string>
+    <string name="library_filter_hint">Filter by name, topic, or level</string>
+    <string name="library_empty">No forged realms yet. Pick a topic above and forge one.</string>
+    <string name="library_no_matches">No realm matches that filter.</string>
+    <string name="library_row_format">%1$s\n%2$s · %3$s–%4$s · %5$d words · %6$s</string>
+
+    <!-- Settings: proxy URL (Phase 3) -->
+    <string name="settings_map_api_label">Realm-forge server</string>
+    <string name="settings_map_api_hint">http://10.0.2.2:8080</string>
+    <string name="settings_map_api_help">Emulator uses 10.0.2.2. On a phone, use the LAN IP of your laptop. Leave blank to reset.</string>
 </resources>

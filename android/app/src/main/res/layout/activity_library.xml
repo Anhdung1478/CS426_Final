@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:padding="@dimen/space_lg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/library_title"
+        android:textAppearance="@style/TextAppearance.Lexicon.Title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:text="@string/library_forge_header"
+        android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+    <EditText
+        android:id="@+id/topicInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/library_topic_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLength="40"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+    <Spinner
+        android:id="@+id/levelSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs" />
+
+    <Button
+        android:id="@+id/forgeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:text="@string/library_forge_button" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+    <LinearLayout
+        android:id="@+id/recoveryRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/library_retry" />
+
+        <Button
+            android:id="@+id/offlineButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/library_use_offline" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/filterInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_lg"
+        android:autofillHints=""
+        android:hint="@string/library_filter_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/space_sm">
+
+        <LinearLayout
+            android:id="@+id/realmContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</LinearLayout>

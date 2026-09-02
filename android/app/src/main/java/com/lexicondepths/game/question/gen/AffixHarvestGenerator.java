@@ -7,6 +7,7 @@ import com.lexicondepths.game.question.QuestionGenerator;
 import com.lexicondepths.game.question.QuestionResult;
 import com.lexicondepths.game.question.QuestionType;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class AffixHarvestGenerator implements QuestionGenerator {
         this(new OfflineAffixKeySource());
     }
 
-    AffixHarvestGenerator(AffixKeySource keySource) {
+    public AffixHarvestGenerator(AffixKeySource keySource) {
         this.keySource = keySource;
     }
 
@@ -44,28 +45,36 @@ public final class AffixHarvestGenerator implements QuestionGenerator {
 
     @Override
     public Question generate(Word word, List<Word> pool, Random rng) {
-        Set<String> key = keySource.wordsFor(word, pool);
+        Set<String> target = keySource.wordsFor(word, pool);
+        // correctAnswer is the target (how many are needed); options is the accepted set (what
+        // counts). Separating them is what lets Datamuse add answers without adding difficulty —
+        // options was already empty for this type, so no contract changed. See P3-8.
         String prompt = "Type as many words as you can that use \"" + word.affixKey + "\".";
-        String correctAnswer = String.join(", ", key);
-        return new Question(type(), word.id, prompt, Collections.emptyList(), -1, correctAnswer);
+        List<String> accepted = new ArrayList<>(keySource.acceptedFor(word, pool));
+        return new Question(type(), word.id, prompt, accepted, -1, String.join(", ", target));
     }
 
     @Override
     public QuestionResult score(Question question, Answer answer) {
-        String[] keyWords = question.correctAnswer.isEmpty() ? new String[0] : question.correctAnswer.split(", ");
-        Set<String> key = new HashSet<>();
-        Collections.addAll(key, keyWords);
+        String[] targetWords = question.correctAnswer.isEmpty()
+                ? new String[0] : question.correctAnswer.split(", ");
+        Set<String> target = new HashSet<>();
+        Collections.addAll(target, targetWords);
+
+        // Empty options means the target is also the accepted set — an offline key source.
+        Set<String> accepted = question.options.isEmpty() ? target : new HashSet<>(question.options);
 
         Set<String> found = new HashSet<>();
         if (answer.text != null) {
             for (String token : answer.text.split("[^a-zA-Z]+")) {
-                if (!token.isEmpty() && key.contains(token.toLowerCase(Locale.ROOT))) {
-                    found.add(token.toLowerCase(Locale.ROOT));
+                String lower = token.toLowerCase(Locale.ROOT);
+                if (!lower.isEmpty() && accepted.contains(lower)) {
+                    found.add(lower);
                 }
             }
         }
 
-        double ratio = key.isEmpty() ? 0.0 : Math.min(1.0, found.size() / (double) key.size());
+        double ratio = target.isEmpty() ? 0.0 : Math.min(1.0, found.size() / (double) target.size());
         return new QuestionResult(question.wordId, ratio, answer.elapsedMillis, question.correctAnswer);
     }
 }

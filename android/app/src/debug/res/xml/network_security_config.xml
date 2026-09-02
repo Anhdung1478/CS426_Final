@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  DEBUG BUILDS ONLY. Overrides src/main's HTTPS-only config.
+
+  The Phase 3 proxy runs on a laptop over HTTP: 10.0.2.2 from an emulator, or the laptop's LAN
+  IP from a physical device. Android's network security config cannot express an IP range, and
+  that LAN IP changes with the Wi-Fi network — so this permits cleartext to any host, and the
+  base URL is typed in Settings (P3-9) instead of hardcoded here and rebuilt.
+
+  Release builds get src/main/res/xml/network_security_config.xml, which denies all of this.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

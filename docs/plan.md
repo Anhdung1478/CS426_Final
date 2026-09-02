@@ -16,14 +16,14 @@ Index of phase plans, their gates, and what is open to work on right now.
 ## Progression
 
 ```
-   ✅ Phase 1 ──▶ ✅ Phase 2 ──▶ 🔒 Phase 3 ──▶ 🔒 Phase 4
-     12/12          12/12          not planned    not planned
+   ✅ Phase 1 ──▶ ✅ Phase 2 ──▶ ✅ Phase 3 ──▶ 🟢 Phase 4
+     12/12          12/12           9/9          not planned
    Foundation    Playable run    AI maps        Polish
 ```
 
 Legend: ✅ closed · 🟢 open · ⬜ blocked by an earlier gate · 🔒 not planned yet
 
-The project plans **two phases ahead**. Phase 3 gets written in detail only once Phase 2 closes.
+The project plans **two phases ahead**. Phase 4 is the last phase, so `docs/phase-4.md` is the only plan left to write.
 
 ---
 
@@ -53,19 +53,27 @@ Pick a topic, walk a branching 3-floor dungeon, fight monsters with real questio
 
 ---
 
-### 🔒 Phase 3 — AI map generation · not planned
+### ✅ Phase 3 — AI map generation · **CLOSED**
 
-The Spring Boot proxy in `backend/`, live DeepSeek map generation, and the My Library screen. Also swaps affix harvest onto the Datamuse `sp=` wildcard query.
+📄 [`docs/phase-3.md`](phase-3.md) — 9 tasks, all done
 
-The one constraint worth recording now, because it shapes Phase 2's interfaces: **never call DeepSeek from the client.** The API key would be extractable from the APK. Everything routes through the proxy, whose `.env` holds the key.
+Type a topic, and a Spring Boot proxy asks DeepSeek for a realm, validates it, and hands back a word list the app imports into Room permanently. Forged realms live in My Library and play exactly like seeded ones. Affix harvest also moves onto the Datamuse `sp=` wildcard query.
 
-Not planned in detail yet — Phase 2 just closed. Per the "two phases ahead, never more" rule below, writing `docs/phase-3.md` is the next planning step, not part of this session's scope.
+The constraint that shaped the whole phase: **never call DeepSeek from the client.** The API key would be extractable from the APK, so everything routes through the proxy, which reads the key from `DEEPSEEK_API_KEY` and never writes it to a tracked file.
+
+**Progress: 9/9** — exit checklist passed on an emulator against the live DeepSeek API: a realm forges in ~10-30s and appears in the library, the proxy-down path shows a readable error with Retry and an offline fallback, forging `travel` (which overlaps the 300-word seed) joins the 10 existing words instead of duplicating them and keeps their SRS progress untouched, and a forged realm generates a full 3-floor dungeon whose battles use the AI-written words. `gradlew.bat test` is green at 124 tests in `android/` and 18 in `backend/`. See [`report-phase3.md`](../report-phase3.md).
+
+**Milestone reached:** P3-6 — a realm that did not exist thirty seconds earlier becomes a playable dungeon, and the run engine cannot tell the difference.
+
+Two changes came out of running it rather than writing it, both recorded in the phase file: validation now **drops** an unusable word instead of failing the whole map, and the "one active run" guard moved into `RunEngine.startRun` after the Library screen was caught creating a second, orphaned run.
 
 ---
 
-### 🔒 Phase 4 — Polish · not planned
+### 🟢 Phase 4 — Polish · **OPEN, not planned in detail**
 
 Vocabulary stats screen, SRS review notifications with the Android 13+ `POST_NOTIFICATIONS` runtime permission flow, onboarding tooltips, achievements, and the test/edge-case list for the report.
+
+Phase 4 is the last phase, so there is no phase after it to plan. Writing `docs/phase-4.md` is the next planning step — the same boundary Phase 2's close drew before `docs/phase-3.md` existed.
 
 ---
 

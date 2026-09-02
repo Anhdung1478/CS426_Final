@@ -64,5 +64,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/settings_map_api_label"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+        <EditText
+            android:id="@+id/mapApiUrlInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/settings_map_api_hint"
+            android:importantForAutofill="no"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/settings_map_api_help"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
     </LinearLayout>
 </ScrollView>

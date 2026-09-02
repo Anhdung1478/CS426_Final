@@ -1,0 +1,316 @@
+{
+  "name": "The Cold Hearth",
+  "topic": "cooking",
+  "level": "B1",
+  "words": [
+    {
+      "headword": "boil",
+      "cefr": "A2",
+      "pos": "verb",
+      "definition": "To heat liquid until it bubbles and steams.",
+      "example": "Boil the potatoes for twenty minutes before mashing.",
+      "viGloss": "đun sôi",
+      "synonyms": [
+        "simmer",
+        "heat"
+      ],
+      "antonyms": [
+        "cool",
+        "freeze"
+      ],
+      "collocations": [
+        "boil over",
+        "boiling water",
+        "soft-boiled egg"
+      ],
+      "forms": [
+        "boils",
+        "boiled",
+        "boiling"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "ingredient",
+      "cefr": "B1",
+      "pos": "noun",
+      "definition": "An item used to make a dish or meal.",
+      "example": "First, check that you have all the ingredients for the cake.",
+      "viGloss": "thành phần, nguyên liệu",
+      "synonyms": [
+        "component",
+        "element"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "main ingredient",
+        "fresh ingredients",
+        "list of ingredients"
+      ],
+      "forms": [
+        "ingredients"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "stir",
+      "cefr": "A2",
+      "pos": "verb",
+      "definition": "To move a spoon in a circular motion to mix.",
+      "example": "Stir the soup occasionally to prevent sticking.",
+      "viGloss": "khuấy, quấy",
+      "synonyms": [
+        "mix",
+        "whisk"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "stir well",
+        "stir constantly",
+        "stir-fry"
+      ],
+      "forms": [
+        "stirs",
+        "stirred",
+        "stirring"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "oven",
+      "cefr": "A2",
+      "pos": "noun",
+      "definition": "A heated compartment for baking or roasting food.",
+      "example": "Preheat the oven to 180 degrees before putting in the casserole.",
+      "viGloss": "lò nướng",
+      "synonyms": [
+        "cooker"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "oven mitt",
+        "preheat the oven",
+        "bake in the oven"
+      ],
+      "forms": [
+        "ovens"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "recipe",
+      "cefr": "A2",
+      "pos": "noun",
+      "definition": "Instructions for preparing a particular dish.",
+      "example": "This pasta recipe uses only five ingredients.",
+      "viGloss": "công thức",
+      "synonyms": [
+        "formula",
+        "procedure"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "follow a recipe",
+        "secret recipe",
+        "recipe book"
+      ],
+      "forms": [
+        "recipes"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "bake",
+      "cefr": "A2",
+      "pos": "verb",
+      "definition": "To cook in an oven using dry heat.",
+      "example": "I bake a chocolate cake for my friend's birthday.",
+      "viGloss": "nướng, nướng bánh",
+      "synonyms": [
+        "roast",
+        "toast"
+      ],
+      "antonyms": [
+        "boil",
+        "fry"
+      ],
+      "collocations": [
+        "bake bread",
+        "bake at",
+        "freshly baked"
+      ],
+      "forms": [
+        "bakes",
+        "baked",
+        "baking"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "chop",
+      "cefr": "B1",
+      "pos": "verb",
+      "definition": "To cut into small pieces with a knife.",
+      "example": "Chop the onions into small cubes for the salad.",
+      "viGloss": "chặt, băm",
+      "synonyms": [
+        "cut",
+        "dice",
+        "mince"
+      ],
+      "antonyms": [],
+      "collocations": [
+        "chop finely",
+        "chop up",
+        "chopping board"
+      ],
+      "forms": [
+        "chops",
+        "chopped",
+        "chopping"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "fry",
+      "cefr": "A2",
+      "pos": "verb",
+      "definition": "To cook in hot oil or fat.",
+      "example": "Fry the eggs in a little butter until golden.",
+      "viGloss": "rán, chiên",
+      "synonyms": [
+        "sauté",
+        "pan-fry"
+      ],
+      "antonyms": [
+        "steam",
+        "boil"
+      ],
+      "collocations": [
+        "stir-fry",
+        "deep-fry",
+        "fried rice"
+      ],
+      "forms": [
+        "fries",
+        "fried",
+        "frying"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "tasty",
+      "cefr": "B1",
+      "pos": "adjective",
+      "definition": "Having a pleasant flavor.",
+      "example": "The stew was so tasty that I asked for the recipe.",
+      "viGloss": "ngon",
+      "synonyms": [
+        "delicious",
+        "flavorful"
+      ],
+      "antonyms": [
+        "tasteless",
+        "bland"
+      ],
+      "collocations": [
+        "tasty meal",
+        "tasty snack",
+        "looks tasty"
+      ],
+      "forms": [
+        "tastier",
+        "tastiest",
+        "tastiness"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "steam",
+      "cefr": "B1",
+      "pos": "verb",
+      "definition": "To cook by exposing to steam from boiling water.",
+      "example": "Steam the vegetables to preserve their nutrients.",
+      "viGloss": "hấp",
+      "synonyms": [],
+      "antonyms": [
+        "fry",
+        "deep-fry"
+      ],
+      "collocations": [
+        "steamed rice",
+        "steam for",
+        "steaming hot"
+      ],
+      "forms": [
+        "steams",
+        "steamed",
+        "steaming"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "mix",
+      "cefr": "A2",
+      "pos": "verb",
+      "definition": "To combine two or more substances together.",
+      "example": "Mix the flour and eggs until you have a smooth dough.",
+      "viGloss": "trộn",
+      "synonyms": [
+        "blend",
+        "combine"
+      ],
+      "antonyms": [
+        "separate"
+      ],
+      "collocations": [
+        "mix together",
+        "mix well",
+        "mix in"
+      ],
+      "forms": [
+        "mixes",
+        "mixed",
+        "mixing"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    },
+    {
+      "headword": "snack",
+      "cefr": "B1",
+      "pos": "noun",
+      "definition": "A small amount of food eaten between meals.",
+      "example": "For a quick snack, I grab a piece of fruit.",
+      "viGloss": "đồ ăn vặt, món ăn nhẹ",
+      "synonyms": [
+        "refreshment",
+        "nibble"
+      ],
+      "antonyms": [
+        "feast",
+        "meal"
+      ],
+      "collocations": [
+        "healthy snack",
+        "midnight snack",
+        "snack bar"
+      ],
+      "forms": [
+        "snacks"
+      ],
+      "affixKey": null,
+      "topic": "cooking"
+    }
+  ]
+}

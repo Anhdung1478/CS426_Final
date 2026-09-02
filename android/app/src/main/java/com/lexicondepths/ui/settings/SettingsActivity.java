@@ -17,7 +17,10 @@ import com.lexicondepths.databinding.ActivitySettingsBinding;
 import com.lexicondepths.db.CefrLevel;
 import com.lexicondepths.db.entity.Profile;
 
-/** CEFR level, UI locale, and the two timer-bonus thresholds. Typed reads/writes go through Prefs. */
+/**
+ * CEFR level, UI locale, the two timer-bonus thresholds, and the Phase 3 proxy URL.
+ * Typed reads/writes go through Prefs.
+ */
 public class SettingsActivity extends AppCompatActivity {
 
     private static final int MS_PER_STEP = 500;
@@ -38,7 +41,18 @@ public class SettingsActivity extends AppCompatActivity {
         setUpCefrSpinner();
         setUpLocaleSpinner();
         setUpTimerSeekBars();
+        binding.mapApiUrlInput.setText(prefs.mapApiBaseUrl());
         ready = true;
+    }
+
+    /**
+     * Saved on the way out rather than per keystroke: half a typed IP is not a URL, and every
+     * intermediate value would be persisted.
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        prefs.setMapApiBaseUrl(binding.mapApiUrlInput.getText().toString());
     }
 
     private void setUpCefrSpinner() {

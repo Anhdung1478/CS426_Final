@@ -29,7 +29,9 @@ public final class QuestionGenerators {
         register(map, new AnagramGenerator());
         register(map, new SentenceScrambleGenerator());
         register(map, new WordleGenerator());
-        register(map, new AffixHarvestGenerator());
+        // Datamuse in front, offline behind: a network failure degrades to the Phase 2 behaviour.
+        register(map, new AffixHarvestGenerator(
+                new DatamuseAffixKeySource(new OfflineAffixKeySource())));
         register(map, new ListeningSpellingGenerator());
         return map;
     }
