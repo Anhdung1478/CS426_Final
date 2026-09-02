@@ -17,13 +17,13 @@ Index of phase plans, their gates, and what is open to work on right now.
 
 ```
    ✅ Phase 1 ──▶ ✅ Phase 2 ──▶ ✅ Phase 3 ──▶ 🟢 Phase 4
-     12/12          12/12           9/9          not planned
+     12/12          12/12           9/9            0/14
    Foundation    Playable run    AI maps        Polish
 ```
 
 Legend: ✅ closed · 🟢 open · ⬜ blocked by an earlier gate · 🔒 not planned yet
 
-The project plans **two phases ahead**. Phase 4 is the last phase, so `docs/phase-4.md` is the only plan left to write.
+The project planned **two phases ahead** throughout. Phase 4 is the last phase, so there is nothing left to plan — every phase file now exists.
 
 ---
 
@@ -69,11 +69,22 @@ Two changes came out of running it rather than writing it, both recorded in the 
 
 ---
 
-### 🟢 Phase 4 — Polish · **OPEN, not planned in detail**
+### 🟢 Phase 4 — Polish · **OPEN**
 
-Vocabulary stats screen, SRS review notifications with the Android 13+ `POST_NOTIFICATIONS` runtime permission flow, onboarding tooltips, achievements, and the test/edge-case list for the report.
+📄 [`docs/phase-4.md`](phase-4.md) — 14 tasks
 
-Phase 4 is the last phase, so there is no phase after it to plan. Writing `docs/phase-4.md` is the next planning step — the same boundary Phase 2's close drew before `docs/phase-3.md` existed.
+Closes every loop the first three phases left open. The stats screen finally reads back the `WordEvent` rows the app has been writing since P2-11, Marks become spendable, a daily reminder brings the player back, a cold demo explains itself, and the twelfth question type ships.
+
+**Progress: 0/14.**
+
+Two findings from reading the code shaped the phase, both recorded in the phase file:
+
+- **The seed has no C1 or C2 words** (76 A1 / 76 A2 / 76 B1 / 72 B2), so register/formality is gated at **B2+** rather than the C1+ `project-idea.md` §5 specifies. A question type that cannot appear in a demo is not shipped.
+- **`fallbackToDestructiveMigration` is a permadeath-boundary bug waiting for a release.** It drops `WordProgress` — the one table §5 says a run ending must never touch — so an APK upgrade would do what losing a run is forbidden to do. P4-11 replaces it with a real migration and tests that SRS progress survives.
+
+**Milestone:** P4-2. The app has recorded every answer since Phase 2 and read none of it back except Spoils. The stats screen is the first time a player can see what they have learned, which is the claim the whole project rests on.
+
+Phase 4 is the last phase, so its deferred list is a **won't build** list: the placement quiz, the Hub daily challenge, achievement unlock toasts, C1–C2 content, realm sharing, sprite monsters, and locales beyond `en`/`vi`.
 
 ---
 

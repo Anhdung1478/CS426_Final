@@ -247,7 +247,13 @@ This file maps *code*. The plan maps *work*. They are separate on purpose — th
 | [`docs/phase-1.md`](docs/phase-1.md) | Phase 1 task table, dependency graph, and per-task detail. |
 | [`docs/phase-2.md`](docs/phase-2.md) | Phase 2, same shape, now closed. |
 | [`docs/phase-3.md`](docs/phase-3.md) | Phase 3, same shape, now closed. |
+| [`docs/phase-4.md`](docs/phase-4.md) | Phase 4 — polish. Open, 14 tasks, planned in full. |
 
 **Phases 1, 2 and 3 are closed** — 12/12, 12/12, 9/9. See [`docs/plan.md`](docs/plan.md) and the per-phase reports.
 
-Phase 4 (polish) is open but not planned in detail. Writing `docs/phase-4.md` is the next planning step; it is the last phase, so nothing follows it.
+**Phase 4 (polish) is open and planned** — 14 tasks in [`docs/phase-4.md`](docs/phase-4.md). It is the last phase, so nothing follows it and its deferred list is a *won't build* list.
+
+Two things in this file that Phase 4 will make false, flagged here so nobody trusts them in the meantime:
+
+- **§6's Marks sentence.** "Marks are the permanent currency, spent at the Hub on starting bonuses" describes P4-8/P4-9, not the current code. Right now `SpoilsActivity` writes Marks and `HubActivity` displays them; **nothing reads the field**. They are earned forever and spent never.
+- **§7's colorblind convention.** "Every color-coded feedback state pairs with a shape or glyph" is verified true for `WordleGridView` and unverified everywhere else — `project-idea.md` §11 still lists it as an open gap. P4-12 audits it and corrects whichever document is wrong.
