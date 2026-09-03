@@ -1,6 +1,7 @@
 package com.lexicondepths;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
@@ -135,6 +136,80 @@ public class PermadeathBoundaryTest {
         assertEquals(progress.reps, afterClear.reps);
         assertEquals(progress.lapses, afterClear.lapses);
         assertEquals(progress.dueAt, afterClear.dueAt);
+    }
+
+    /**
+     * The other half of the Spoils promise, and the half that was quietly missing until the
+     * P4-13 pass: a word met for the first time *in a battle* has no WordProgress row, so the
+     * bare UPDATE matched nothing and the word the player just failed was never scheduled.
+     */
+    @Test
+    public void spoils_schedulesAFailedWordThatHasNoProgressRowYet() {
+        Word word = new Word();
+        word.headword = "arbitration";
+        word.cefr = CefrLevel.B2;
+        word.topic = "business";
+        word.pos = "noun";
+        word.definition = "a way of settling a dispute outside of court";
+        word.example = "They chose arbitration over a lawsuit.";
+        word.synonyms = Collections.emptyList();
+        word.antonyms = Collections.emptyList();
+        word.collocations = Collections.emptyList();
+        word.forms = Collections.emptyList();
+        db.wordDao().insertAll(Collections.singletonList(word));
+        long wordId = db.wordDao().getByHeadword("arbitration").id;
+
+        assertNull("precondition: never reviewed, so no progress row",
+                db.wordProgressDao().getByWordId(wordId));
+
+        long now = 1_700_000_000_000L;
+        db.wordProgressDao().resetDueNowOrCreate(wordId, now);
+
+        WordProgress created = db.wordProgressDao().getByWordId(wordId);
+        assertNotNull("a failed word must resurface, whether or not it had been seen before",
+                created);
+        assertEquals(now, created.dueAt);
+        assertEquals("a brand-new row starts at the SM-2 default ease", 2.5, created.ease, 0.0);
+        assertEquals(0, created.interval);
+        assertEquals(0, created.reps);
+        assertEquals(0, created.lapses);
+    }
+
+    /** ...and it must still not disturb a word that already has a schedule. */
+    @Test
+    public void spoils_orCreate_leavesAnExistingScheduleUntouchedExceptDueAt() {
+        Word word = new Word();
+        word.headword = "leverage";
+        word.cefr = CefrLevel.B2;
+        word.topic = "business";
+        word.pos = "verb";
+        word.definition = "to use something to your advantage";
+        word.example = "They leverage their size to cut costs.";
+        word.synonyms = Collections.emptyList();
+        word.antonyms = Collections.emptyList();
+        word.collocations = Collections.emptyList();
+        word.forms = Collections.emptyList();
+        db.wordDao().insertAll(Collections.singletonList(word));
+        long wordId = db.wordDao().getByHeadword("leverage").id;
+
+        WordProgress before = new WordProgress();
+        before.wordId = wordId;
+        before.ease = 1.7;
+        before.interval = 40;
+        before.reps = 9;
+        before.lapses = 4;
+        before.dueAt = 1_900_000_000_000L;
+        db.wordProgressDao().upsert(before);
+
+        long now = 1_700_000_000_000L;
+        db.wordProgressDao().resetDueNowOrCreate(wordId, now);
+
+        WordProgress after = db.wordProgressDao().getByWordId(wordId);
+        assertEquals(now, after.dueAt);
+        assertEquals("the insert must not have overwritten a real schedule", before.ease, after.ease, 0.0);
+        assertEquals(before.interval, after.interval);
+        assertEquals(before.reps, after.reps);
+        assertEquals(before.lapses, after.lapses);
     }
 
     /**

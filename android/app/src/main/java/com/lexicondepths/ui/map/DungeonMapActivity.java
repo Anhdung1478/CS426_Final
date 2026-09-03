@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.lexicondepths.App;
 import com.lexicondepths.R;
+import com.lexicondepths.content.RelicCatalog;
 import com.lexicondepths.databinding.ActivityDungeonMapBinding;
 import com.lexicondepths.db.NodeType;
 import com.lexicondepths.db.RunStatus;
@@ -25,6 +26,8 @@ import com.lexicondepths.ui.battle.BattleActivity;
 import com.lexicondepths.ui.practice.PracticeActivity;
 import com.lexicondepths.ui.reward.RewardActivity;
 import com.lexicondepths.ui.reward.SpoilsActivity;
+
+import java.util.Set;
 
 /**
  * The two-column ladder from RunState, drawn as ASCII with the current position marked and
@@ -79,12 +82,17 @@ public class DungeonMapActivity extends AppCompatActivity {
             return;
         }
 
-        int maxHp = RunEngine.maxHp(state.relicIds());
+        int maxHp = RunEngine.maxHp(relicEffects(state));
         binding.hpBar.setValues(state.run.hp, maxHp);
         binding.hpText.setText(getString(R.string.dungeon_map_hp, state.run.hp, maxHp));
         binding.marksText.setText(getString(R.string.dungeon_map_marks, state.run.marks));
         binding.mapText.setText(renderMap(state));
         renderChoices(state);
+    }
+
+    /** Relic *effect* keys, never IDs — RunEngine branches on effects. See RelicCatalog.effectsFor. */
+    private Set<String> relicEffects(RunState state) {
+        return RelicCatalog.effectsFor(getApplicationContext(), state.relicIds());
     }
 
     private CharSequence renderMap(RunState state) {
@@ -186,13 +194,14 @@ public class DungeonMapActivity extends AppCompatActivity {
     }
 
     private void showRestDialog(RunState state, RunNode node) {
-        int healAmount = RunEngine.restHealAmount(state.relicIds());
+        Set<String> effects = relicEffects(state);
+        int healAmount = RunEngine.restHealAmount(effects);
         new AlertDialog.Builder(this)
                 .setTitle(R.string.rest_dialog_title)
                 .setPositiveButton(getString(R.string.rest_dialog_heal, healAmount), (d, w) ->
                         App.get().io().execute(() -> {
                             Run run = App.get().db().runDao().getRun(runId);
-                            RunEngine.completeRestNode(App.get().db(), run, node, healAmount, state.relicIds());
+                            RunEngine.completeRestNode(App.get().db(), run, node, healAmount, effects);
                             runOnUiThread(this::reload);
                         }))
                 .setNegativeButton(R.string.rest_dialog_review, (d, w) -> {

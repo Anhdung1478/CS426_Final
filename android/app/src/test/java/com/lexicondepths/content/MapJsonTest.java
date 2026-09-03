@@ -86,6 +86,28 @@ public class MapJsonTest {
     @Test
     public void blankOptionalFieldsBecomeNullNotEmptyString() throws Exception {
         assertNull(MapJson.parseMap(map(12, null)).words.get(0).affixKey);
+        assertNull(MapJson.parseMap(map(12, null)).words.get(0).formalAlt);
+    }
+
+    /**
+     * One parser serves both the bundled seed and the network path, so a field added to the
+     * seed format cannot silently fail to parse from DeepSeek — and vice versa. formalAlt gets
+     * exactly the affixKey treatment: optional, and never fatal by its absence.
+     */
+    @Test
+    public void parsesFormalAltFromTheSameCodePathAsTheSeed() throws Exception {
+        String withFormalAlt = "{\"headword\":\"kids\",\"cefr\":\"B2\",\"pos\":\"noun\","
+                + "\"definition\":\"young people\",\"example\":\"The kids ran outside.\","
+                + "\"formalAlt\":\"children\",\"synonyms\":[],\"collocations\":[]}";
+        MapJson.GeneratedMap parsed = MapJson.parseMap(map(11, withFormalAlt));
+
+        Word tagged = null;
+        for (Word word : parsed.words) {
+            if ("kids".equals(word.headword)) {
+                tagged = word;
+            }
+        }
+        assertEquals("children", tagged.formalAlt);
     }
 
     @Test

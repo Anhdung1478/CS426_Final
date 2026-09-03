@@ -5,49 +5,57 @@
       "id": "lexicon_shard",
       "name": "Lexicon Shard",
       "desc": "+10 maximum health.",
-      "effect": "MAX_HP_PLUS_10"
+      "effect": "MAX_HP_PLUS_10",
+      "price": 60
     },
     {
       "id": "quickened_quill",
       "name": "Quickened Quill",
       "desc": "+5 seconds on every question timer.",
-      "effect": "TIMER_PLUS_5S"
+      "effect": "TIMER_PLUS_5S",
+      "price": 60
     },
     {
       "id": "scholars_pardon",
       "name": "Scholar's Pardon",
       "desc": "Your first miss each battle deals no damage.",
-      "effect": "FIRST_MISS_FREE"
+      "effect": "FIRST_MISS_FREE",
+      "price": 60
     },
     {
       "id": "steady_hand",
       "name": "Steady Hand",
       "desc": "Partial-credit ratio can never score below 20%.",
-      "effect": "RATIO_FLOOR_20"
+      "effect": "RATIO_FLOOR_20",
+      "price": 60
     },
     {
       "id": "shallow_roots",
       "name": "Shallow Roots",
       "desc": "Reduces the depth damage multiplier by 25%.",
-      "effect": "DEPTH_MULT_MINUS_25"
+      "effect": "DEPTH_MULT_MINUS_25",
+      "price": 60
     },
     {
       "id": "hearths_ember",
       "name": "Hearth's Ember",
       "desc": "Rest nodes heal 50 HP instead of 30.",
-      "effect": "REST_HEALS_50"
+      "effect": "REST_HEALS_50",
+      "price": 60
     },
     {
       "id": "merchants_ledger",
       "name": "Merchant's Ledger",
       "desc": "+25% Marks earned this run.",
-      "effect": "MARKS_PLUS_25"
+      "effect": "MARKS_PLUS_25",
+      "price": 60
     },
     {
       "id": "tempered_resolve",
       "name": "Tempered Resolve",
       "desc": "Damage from stretch (one band above) questions is halved.",
-      "effect": "STRETCH_DAMAGE_HALVED"
+      "effect": "STRETCH_DAMAGE_HALVED",
+      "price": 60
     }
   ]
 }

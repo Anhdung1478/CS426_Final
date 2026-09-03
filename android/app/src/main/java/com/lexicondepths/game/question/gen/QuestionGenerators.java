@@ -33,6 +33,7 @@ public final class QuestionGenerators {
         register(map, new AffixHarvestGenerator(
                 new DatamuseAffixKeySource(new OfflineAffixKeySource())));
         register(map, new ListeningSpellingGenerator());
+        register(map, new RegisterFormalityGenerator());
         return map;
     }
 

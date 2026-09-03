@@ -1,10 +1,12 @@
 {
-  "version": 1,
+  "version": 2,
   "monsters": [
     {
       "id": "hydra",
       "name": "Hydra",
-      "questionTypes": ["AFFIX_HARVEST"],
+      "questionTypes": [
+        "AFFIX_HARVEST"
+      ],
       "slots": 3,
       "resists": [],
       "ascii": [
@@ -20,7 +22,9 @@
     {
       "id": "void_eater",
       "name": "The Gap",
-      "questionTypes": ["CLOZE"],
+      "questionTypes": [
+        "CLOZE"
+      ],
       "slots": 2,
       "resists": [],
       "ascii": [
@@ -35,7 +39,9 @@
     {
       "id": "mimic",
       "name": "Mimic",
-      "questionTypes": ["WORD_FORM"],
+      "questionTypes": [
+        "WORD_FORM"
+      ],
       "slots": 2,
       "resists": [],
       "ascii": [
@@ -49,7 +55,9 @@
     {
       "id": "sphinx",
       "name": "Sphinx",
-      "questionTypes": ["DEFINITION_TO_WORD"],
+      "questionTypes": [
+        "DEFINITION_TO_WORD"
+      ],
       "slots": 2,
       "resists": [],
       "ascii": [
@@ -63,7 +71,9 @@
     {
       "id": "cipher",
       "name": "Cipher",
-      "questionTypes": ["WORDLE"],
+      "questionTypes": [
+        "WORDLE"
+      ],
       "slots": 3,
       "resists": [],
       "ascii": [
@@ -77,7 +87,9 @@
     {
       "id": "twins",
       "name": "Twins",
-      "questionTypes": ["SYNONYM_ANTONYM"],
+      "questionTypes": [
+        "SYNONYM_ANTONYM"
+      ],
       "slots": 2,
       "resists": [],
       "ascii": [
@@ -89,7 +101,9 @@
     {
       "id": "echo",
       "name": "Echo",
-      "questionTypes": ["LISTENING_SPELLING"],
+      "questionTypes": [
+        "LISTENING_SPELLING"
+      ],
       "slots": 2,
       "resists": [],
       "ascii": [
@@ -103,7 +117,9 @@
     {
       "id": "chimera",
       "name": "Chimera",
-      "questionTypes": ["COLLOCATION"],
+      "questionTypes": [
+        "COLLOCATION"
+      ],
       "slots": 3,
       "resists": [],
       "ascii": [
@@ -115,9 +131,32 @@
       ]
     },
     {
+      "id": "courtier",
+      "name": "The Courtier",
+      "questionTypes": [
+        "REGISTER_FORMALITY",
+        "SYNONYM_ANTONYM"
+      ],
+      "slots": 2,
+      "resists": [],
+      "ascii": [
+        "    _.-\"\"\"-._    ",
+        "   /  ^   ^  \\   ",
+        "  |   (o o)   |  ",
+        "  |    \\_/    |  ",
+        "   \\  =====  /   ",
+        "    '-.___.-'    ",
+        "     /|   |\\     "
+      ]
+    },
+    {
       "id": "archivist",
       "name": "The Archivist",
-      "questionTypes": ["DEFINITION_TO_WORD", "COLLOCATION", "WORDLE"],
+      "questionTypes": [
+        "DEFINITION_TO_WORD",
+        "COLLOCATION",
+        "WORDLE"
+      ],
       "slots": 5,
       "resists": [],
       "boss": true,

@@ -85,8 +85,6 @@
     <string name="spoils_missed_words_empty">Lượt này không có từ nào bị sai.</string>
     <string name="spoils_continue">Tiếp tục</string>
 
-    <!-- Placeholder screens -->
-    <string name="placeholder_body">Đang xây dựng — sẽ có trong giai đoạn sau.</string>
     <string name="stats_title">Thống kê từ vựng</string>
     <string name="library_title">Thư viện của tôi</string>
 
@@ -109,4 +107,103 @@
     <string name="settings_map_api_label">Máy chủ rèn vùng đất</string>
     <string name="settings_map_api_hint">http://10.0.2.2:8080</string>
     <string name="settings_map_api_help">Máy ảo dùng 10.0.2.2. Trên điện thoại, dùng IP LAN của máy tính. Để trống để đặt lại.</string>
+
+    <!-- Onboarding (P4-7) -->
+    <string name="onboarding_title">Cách chơi</string>
+    <string name="onboarding_page">%1$d / %2$d</string>
+    <string name="onboarding_next">Tiếp</string>
+    <string name="onboarding_back">Quay lại</string>
+    <string name="onboarding_skip">Bỏ qua</string>
+    <string name="onboarding_start">Bắt đầu</string>
+    <string name="onboarding_1_title">Hầm ngục làm từ chữ</string>
+    <string name="onboarding_1_body">Đây là một trò chơi từ vựng khoác áo hầm ngục.\n\nMỗi quái vật là một chuỗi câu đố từ vựng, mỗi trận đánh là một buổi học, và từ vựng mới là điều quan trọng. Hầm ngục chỉ là thứ khiến bạn quay lại.\n\nMột bộ lập lịch lặp lại ngắt quãng quyết định bạn gặp từ nào, ẩn dưới lớp vỏ độ khó.</string>
+    <string name="onboarding_2_title">Đường xuống hầm</string>
+    <string name="onboarding_2_body">Ba tầng, mỗi tầng bốn bước. Ở mỗi bước bạn chọn một trong hai điểm: giao chiến, nghỉ ngơi, kho báu, tinh anh, hoặc trùm cuối ở cuối tầng ba.\n\nMáu được mang theo giữa các tầng. Không có lượt hồi máu miễn phí.\n\nVà điều quan trọng nhất: gục ngã không bao giờ lấy đi những gì bạn đã học. Tiến độ từ vựng của bạn là bất khả xâm phạm. Thua một lượt chơi chỉ mất lượt chơi đó — những từ bạn sai sẽ chỉ quay lại sớm hơn.</string>
+    <string name="onboarding_3_title">Chiến đấu</string>
+    <string name="onboarding_3_body">Quái vật không có thanh máu. Chúng có các ô câu hỏi — trả lời hết là quái vật biến mất.\n\nSát thương đi ngược với điều bạn nghĩ: sai một từ dễ đau nhất, còn sai một từ trên trình độ của bạn gần như không hề gì. Điều đó là có chủ đích, để việc với tới từ khó không bao giờ là án tử.\n\nĐồng hồ chỉ giúp bạn. Trả lời nhanh thì giảm sát thương; trả lời chậm không bao giờ bị phạt thêm.</string>
+    <string name="onboarding_4_title">Đọc bảng chữ</string>
+    <string name="onboarding_4_body">Một số câu đố cho phản hồi theo từng chữ cái:\n\n  ✓ đúng chữ, đúng vị trí\n  ~ đúng chữ, sai vị trí\n  ✗ không có trong từ\n\nMọi màu sắc trên màn hình đều đi kèm một ký hiệu như thế, nên không có gì phụ thuộc vào việc phân biệt xanh với vàng.\n\nHãy bắt đầu ở Luyện tập cho một phiên ôn nhẹ nhàng, hoặc Chọn vùng đất để xuống hầm.</string>
+
+    <!-- Stats (P4-2, P4-4) -->
+    <string name="stats_section_mastery">Mức thành thạo</string>
+    <string name="stats_mastery_counts">Mới %1$d · Đang học %2$d · Đã thuộc %3$d · Cần ôn %4$d</string>
+    <string name="stats_mastery_legend">Thanh: mới (mờ) · đang học (hổ phách) · đã thuộc (xanh). Đã thuộc nghĩa là khoảng cách ôn từ 21 ngày trở lên.</string>
+    <string name="stats_section_weak_types">Bạn còn yếu ở đâu</string>
+    <string name="stats_type_accuracy_row">%1$s — %2$d%% qua %3$d câu</string>
+    <string name="stats_section_weak_words">Những từ cần xem lại</string>
+    <string name="stats_weak_word_row">%1$s — %2$d%% qua %3$d câu</string>
+    <string name="stats_section_run_record">Thành tích lượt chơi</string>
+    <string name="stats_run_record">Chuỗi ngày: %1$d\nTầng sâu nhất: %2$d\nThắng: %3$d trên %4$d lượt (%5$d%%)\nĐiểm thưởng: %6$d</string>
+    <string name="stats_section_achievements">Thành tựu</string>
+    <string name="stats_achievement_unlocked">[✓] %1$s</string>
+    <string name="stats_achievement_locked">[ ] %1$s — %2$s</string>
+    <string name="stats_empty_no_answers">Chưa ghi nhận gì. Hãy đánh một trận, phần này sẽ hiện lên — hai mục này dựng từ các câu đã trả lời, không phải từ mức tự đánh giá ở Luyện tập.</string>
+    <string name="stats_empty_not_enough_attempts">Chưa đủ số lần trả lời — một từ cần ít nhất hai lần mới được tính là yếu.</string>
+
+    <!-- Question type labels -->
+    <string name="qtype_definition_to_word">Định nghĩa → từ</string>
+    <string name="qtype_word_to_definition">Từ → định nghĩa</string>
+    <string name="qtype_synonym_antonym">Đồng nghĩa và trái nghĩa</string>
+    <string name="qtype_word_form">Dạng của từ</string>
+    <string name="qtype_cloze">Điền vào chỗ trống</string>
+    <string name="qtype_collocation">Kết hợp từ</string>
+    <string name="qtype_anagram">Đảo chữ</string>
+    <string name="qtype_sentence_scramble">Sắp xếp câu</string>
+    <string name="qtype_wordle">Bảng chữ cái</string>
+    <string name="qtype_affix_harvest">Phụ tố</string>
+    <string name="qtype_listening_spelling">Nghe và viết</string>
+    <string name="qtype_register_formality">Văn phong trang trọng</string>
+    <string name="qtype_unknown">Khác</string>
+
+    <!-- Achievements (P4-3) -->
+    <string name="ach_first_descent">Lần xuống hầm đầu tiên</string>
+    <string name="ach_first_descent_req">hoàn thành một lượt chơi</string>
+    <string name="ach_delver">Kẻ đào sâu</string>
+    <string name="ach_delver_req">tới được tầng 3</string>
+    <string name="ach_depth_conqueror">Người chinh phục vực sâu</string>
+    <string name="ach_depth_conqueror_req">thắng một lượt chơi</string>
+    <string name="ach_word_hoard">Kho từ vựng</string>
+    <string name="ach_word_hoard_req">gặp 150 từ</string>
+    <string name="ach_lexicographer">Nhà từ điển học</string>
+    <string name="ach_lexicographer_req">thuộc 50 từ</string>
+    <string name="ach_unbroken">Không đứt đoạn</string>
+    <string name="ach_unbroken_req">chuỗi 7 lần thắng</string>
+    <string name="ach_realm_forger">Thợ rèn vùng đất</string>
+    <string name="ach_realm_forger_req">rèn một vùng đất</string>
+    <string name="ach_diligent">Chuyên cần</string>
+    <string name="ach_diligent_req">trả lời 200 câu hỏi</string>
+    <string name="ach_silver_tongue">Lưỡi bạc</string>
+    <string name="ach_silver_tongue_req">độ chính xác kết hợp từ 80% qua 20 câu</string>
+
+    <!-- Shop (P4-9) -->
+    <string name="hub_btn_shop">Cửa hàng bảo vật</string>
+    <string name="shop_title">Cửa hàng bảo vật</string>
+    <string name="shop_marks">Điểm thưởng: %1$d</string>
+    <string name="shop_equipped">Lượt chơi tới sẽ bắt đầu với: %1$s</string>
+    <string name="shop_equipped_none">Lượt chơi tới chưa có bảo vật nào.</string>
+    <string name="shop_replace_warning">Mua bảo vật thứ hai sẽ thay thế cái đầu tiên. Điểm thưởng đã tiêu sẽ không được hoàn lại.</string>
+    <string name="shop_relic_row">%1$s — %2$s (%3$d điểm)</string>
+    <string name="shop_buy">Mua với %1$d điểm</string>
+    <string name="shop_buy_short">Cần thêm %1$d điểm</string>
+    <string name="shop_buy_equipped">Đã trang bị cho lượt chơi tới</string>
+    <string name="shop_buy_failed">Không đủ điểm thưởng.</string>
+
+    <!-- Review reminder (P4-5, P4-6) -->
+    <string name="notify_channel_name">Nhắc ôn tập</string>
+    <string name="notify_channel_desc">Nhắc nhở hằng ngày khi có từ cần ôn.</string>
+    <string name="notify_review_title">Lexicon Depths</string>
+    <plurals name="notify_review_body">
+        <item quantity="other">Có %1$d từ đang chờ ôn tập.</item>
+    </plurals>
+    <string name="settings_reminder_label">Nhắc ôn tập hằng ngày</string>
+    <string name="settings_reminder_hour">Giờ nhắc: %1$s</string>
+    <string name="settings_reminder_blocked">Thông báo của ứng dụng đang bị chặn, nên sẽ không có lời nhắc nào tới được.</string>
+    <string name="settings_reminder_open_settings">Mở cài đặt thông báo</string>
+    <string name="settings_replay_intro">Xem lại phần giới thiệu</string>
+
+    <!-- Accessibility (P4-12) -->
+    <string name="cd_monster_art">Hình minh hoạ %1$s</string>
+    <string name="cd_hp_bar">Máu: %1$d trên %2$d</string>
+    <string name="mcq_option_correct">Đúng: %1$s</string>
+    <string name="mcq_option_wrong">Sai: %1$s</string>
 </resources>

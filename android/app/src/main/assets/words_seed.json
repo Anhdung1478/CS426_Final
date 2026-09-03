@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "words": [
     {
       "headword": "apple",
@@ -18,7 +18,8 @@
       "forms": [
         "apples"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "banana",
@@ -36,7 +37,8 @@
       "forms": [
         "bananas"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "bread",
@@ -53,7 +55,8 @@
         "slice of bread"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "water",
@@ -70,7 +73,8 @@
         "glass of water"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "milk",
@@ -86,7 +90,8 @@
         "glass of milk"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "coffee",
@@ -103,7 +108,8 @@
         "make coffee"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "tea",
@@ -120,7 +126,8 @@
         "make tea"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "rice",
@@ -137,7 +144,8 @@
         "cook rice"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "egg",
@@ -156,7 +164,8 @@
       "forms": [
         "eggs"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "meat",
@@ -175,7 +184,8 @@
         "raw meat"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "fish",
@@ -192,7 +202,8 @@
         "fry fish"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "breakfast",
@@ -211,7 +222,8 @@
         "eat breakfast"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "lunch",
@@ -228,7 +240,8 @@
         "pack lunch"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "dinner",
@@ -247,7 +260,8 @@
         "cook dinner"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "hungry",
@@ -271,7 +285,8 @@
         "hungrily",
         "hunger"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "cook",
@@ -294,7 +309,8 @@
         "cooking",
         "cookery"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "eat",
@@ -318,7 +334,8 @@
         "eaten",
         "eating"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "drink",
@@ -342,7 +359,8 @@
         "drunk",
         "drinking"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "cup",
@@ -363,7 +381,8 @@
       "forms": [
         "cups"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "vegetable",
@@ -385,7 +404,8 @@
         "vegetables",
         "vegetarian"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "fruit",
@@ -407,7 +427,8 @@
         "fruits",
         "fruity"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "sugar",
@@ -426,7 +447,8 @@
       "forms": [
         "sugary"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "salt",
@@ -447,7 +469,8 @@
       "forms": [
         "salty"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "recipe",
@@ -466,7 +489,8 @@
       "forms": [
         "recipes"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "restaurant",
@@ -485,7 +509,8 @@
       "forms": [
         "restaurants"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "menu",
@@ -504,7 +529,8 @@
       "forms": [
         "menus"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "order",
@@ -527,7 +553,8 @@
         "ordered",
         "ordering"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "delicious",
@@ -550,7 +577,8 @@
       "forms": [
         "deliciously"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "fresh",
@@ -574,7 +602,8 @@
         "freshly",
         "freshness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "snack",
@@ -594,7 +623,8 @@
         "snacks",
         "snacking"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "meal",
@@ -613,7 +643,8 @@
       "forms": [
         "meals"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "spoon",
@@ -632,7 +663,8 @@
         "spoons",
         "spoonful"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "fork",
@@ -648,7 +680,8 @@
       "forms": [
         "forks"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "knife",
@@ -667,7 +700,8 @@
       "forms": [
         "knives"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "bowl",
@@ -686,7 +720,8 @@
       "forms": [
         "bowls"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "taste",
@@ -710,7 +745,8 @@
         "tasting",
         "tasty"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "waiter",
@@ -731,7 +767,8 @@
         "waiters",
         "waitress"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "diet",
@@ -751,7 +788,8 @@
         "diets",
         "dieting"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "ingredient",
@@ -772,7 +810,8 @@
       "forms": [
         "ingredients"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "nutrition",
@@ -792,7 +831,8 @@
         "nutritious",
         "nutritional"
       ],
-      "affixKey": "-tion"
+      "affixKey": "-tion",
+      "formalAlt": null
     },
     {
       "headword": "appetite",
@@ -811,7 +851,8 @@
       "forms": [
         "appetizer"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "cuisine",
@@ -828,7 +869,8 @@
         "fine cuisine"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "portion",
@@ -849,7 +891,8 @@
       "forms": [
         "portions"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "organic",
@@ -872,7 +915,8 @@
       "forms": [
         "organically"
       ],
-      "affixKey": "-ic"
+      "affixKey": "-ic",
+      "formalAlt": null
     },
     {
       "headword": "protein",
@@ -889,7 +933,8 @@
         "high in protein"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "calorie",
@@ -908,7 +953,8 @@
       "forms": [
         "calories"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "seasoning",
@@ -929,7 +975,8 @@
         "season",
         "seasoned"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "roast",
@@ -952,7 +999,8 @@
         "roasting",
         "roasts"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "boil",
@@ -973,7 +1021,8 @@
         "boiling",
         "boils"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "fry",
@@ -994,7 +1043,8 @@
         "frying",
         "fries"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "bake",
@@ -1016,7 +1066,8 @@
         "baker",
         "bakes"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "grill",
@@ -1039,7 +1090,8 @@
         "grilling",
         "grills"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "leftover",
@@ -1058,7 +1110,8 @@
       "forms": [
         "leftovers"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "allergy",
@@ -1077,7 +1130,8 @@
       "forms": [
         "allergic"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "vegetarian",
@@ -1099,7 +1153,8 @@
         "vegetarians",
         "vegetarianism"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "spicy",
@@ -1123,7 +1178,8 @@
         "spicier",
         "spiciest"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "bland",
@@ -1144,7 +1200,8 @@
         "taste bland"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "culinary",
@@ -1161,7 +1218,8 @@
         "culinary skills"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "gourmet",
@@ -1180,7 +1238,8 @@
       "forms": [
         "gourmets"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "delicacy",
@@ -1199,7 +1258,8 @@
       "forms": [
         "delicacies"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "staple",
@@ -1218,7 +1278,8 @@
       "forms": [
         "staples"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "additive",
@@ -1237,7 +1298,8 @@
       "forms": [
         "additives"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "savor",
@@ -1259,7 +1321,8 @@
         "savoring",
         "savory"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "palatable",
@@ -1281,7 +1344,8 @@
       "forms": [
         "palatability"
       ],
-      "affixKey": "-able"
+      "affixKey": "-able",
+      "formalAlt": null
     },
     {
       "headword": "wholesome",
@@ -1302,7 +1366,8 @@
         "wholesome meal"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "ferment",
@@ -1322,7 +1387,8 @@
         "fermenting",
         "fermentation"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "marinate",
@@ -1343,7 +1409,8 @@
         "marinating",
         "marinade"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "texture",
@@ -1363,7 +1430,8 @@
         "textures",
         "textured"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "consistency"
     },
     {
       "headword": "aroma",
@@ -1385,7 +1453,8 @@
         "aromas",
         "aromatic"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "fragrance"
     },
     {
       "headword": "indulge",
@@ -1409,7 +1478,8 @@
         "indulging",
         "indulgence"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "partake"
     },
     {
       "headword": "ration",
@@ -1430,7 +1500,8 @@
         "rationed",
         "rationing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "apportion"
     },
     {
       "headword": "sustenance",
@@ -1448,7 +1519,8 @@
         "provide sustenance"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "connoisseur",
@@ -1469,7 +1541,8 @@
       "forms": [
         "connoisseurs"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "nourish",
@@ -1491,7 +1564,8 @@
         "nourishing",
         "nourishment"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "sustain"
     },
     {
       "headword": "ripen",
@@ -1511,7 +1585,8 @@
         "ripening",
         "ripe"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "mature"
     },
     {
       "headword": "bus",
@@ -1530,7 +1605,8 @@
       "forms": [
         "buses"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "train",
@@ -1549,7 +1625,8 @@
       "forms": [
         "trains"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "car",
@@ -1570,7 +1647,8 @@
       "forms": [
         "cars"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "plane",
@@ -1591,7 +1669,8 @@
       "forms": [
         "planes"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "ticket",
@@ -1610,7 +1689,8 @@
       "forms": [
         "tickets"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "map",
@@ -1629,7 +1709,8 @@
       "forms": [
         "maps"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "bag",
@@ -1650,7 +1731,8 @@
       "forms": [
         "bags"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "hotel",
@@ -1669,7 +1751,8 @@
       "forms": [
         "hotels"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "room",
@@ -1688,7 +1771,8 @@
       "forms": [
         "rooms"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "street",
@@ -1709,7 +1793,8 @@
       "forms": [
         "streets"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "city",
@@ -1728,7 +1813,8 @@
       "forms": [
         "cities"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "country",
@@ -1749,7 +1835,8 @@
       "forms": [
         "countries"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "passport",
@@ -1768,7 +1855,8 @@
       "forms": [
         "passports"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "airport",
@@ -1787,7 +1875,8 @@
       "forms": [
         "airports"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "taxi",
@@ -1808,7 +1897,8 @@
       "forms": [
         "taxis"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "walk",
@@ -1829,7 +1919,8 @@
         "walked",
         "walking"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "drive",
@@ -1851,7 +1942,8 @@
         "driven",
         "driving"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "arrive",
@@ -1877,7 +1969,8 @@
         "arriving",
         "arrival"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "leave",
@@ -1902,7 +1995,8 @@
         "left",
         "leaving"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "journey",
@@ -1923,7 +2017,8 @@
       "forms": [
         "journeys"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "luggage",
@@ -1942,7 +2037,8 @@
         "lose luggage"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "suitcase",
@@ -1961,7 +2057,8 @@
       "forms": [
         "suitcases"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "destination",
@@ -1980,7 +2077,8 @@
       "forms": [
         "destinations"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "itinerary",
@@ -2001,7 +2099,8 @@
       "forms": [
         "itineraries"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "reservation",
@@ -2023,7 +2122,8 @@
         "reservations",
         "reserve"
       ],
-      "affixKey": "-tion"
+      "affixKey": "-tion",
+      "formalAlt": null
     },
     {
       "headword": "tourist",
@@ -2045,7 +2145,8 @@
         "tourists",
         "tourism"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "sightseeing",
@@ -2061,7 +2162,8 @@
         "go sightseeing"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "souvenir",
@@ -2080,7 +2182,8 @@
       "forms": [
         "souvenirs"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "delay",
@@ -2101,7 +2204,8 @@
         "delayed",
         "delaying"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "departure",
@@ -2123,7 +2227,8 @@
         "departures",
         "depart"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "arrival",
@@ -2145,7 +2250,8 @@
         "arrivals",
         "arrive"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "boarding",
@@ -2164,7 +2270,8 @@
       "forms": [
         "board"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "customs",
@@ -2181,7 +2288,8 @@
         "customs officer"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "visa",
@@ -2200,7 +2308,8 @@
       "forms": [
         "visas"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "currency",
@@ -2219,7 +2328,8 @@
       "forms": [
         "currencies"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "guide",
@@ -2240,7 +2350,8 @@
         "guiding",
         "guided"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "backpack",
@@ -2261,7 +2372,8 @@
         "backpacking",
         "backpacker"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "route",
@@ -2282,7 +2394,8 @@
       "forms": [
         "routes"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "voyage",
@@ -2303,7 +2416,8 @@
       "forms": [
         "voyages"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "transit",
@@ -2320,7 +2434,8 @@
         "transit visa"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "layover",
@@ -2341,7 +2456,8 @@
       "forms": [
         "layovers"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "embark",
@@ -2363,7 +2479,8 @@
         "embarking",
         "embarks"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "disembark",
@@ -2384,7 +2501,8 @@
         "disembarked",
         "disembarking"
       ],
-      "affixKey": "dis-"
+      "affixKey": "dis-",
+      "formalAlt": null
     },
     {
       "headword": "wanderlust",
@@ -2400,7 +2518,8 @@
         "feel wanderlust"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "expedition",
@@ -2420,7 +2539,8 @@
       "forms": [
         "expeditions"
       ],
-      "affixKey": "-tion"
+      "affixKey": "-tion",
+      "formalAlt": null
     },
     {
       "headword": "terrain",
@@ -2437,7 +2557,8 @@
         "mountainous terrain"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "landmark",
@@ -2456,7 +2577,8 @@
       "forms": [
         "landmarks"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "overseas",
@@ -2477,7 +2599,8 @@
         "travel overseas"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "domestic",
@@ -2498,7 +2621,8 @@
       "forms": [
         "domestically"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "commute",
@@ -2519,7 +2643,8 @@
         "commuting",
         "commuter"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "navigate",
@@ -2542,7 +2667,8 @@
         "navigation",
         "navigator"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "explore",
@@ -2550,7 +2676,7 @@
       "topic": "travel",
       "pos": "verb",
       "definition": "to travel around a place to learn about it",
-      "example": "We spent the day exploring the ancient temple.",
+      "example": "We wanted to explore the ancient temple all day.",
       "viGloss": "khám phá",
       "synonyms": [
         "discover"
@@ -2566,7 +2692,8 @@
         "exploring",
         "exploration"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "adventure",
@@ -2586,7 +2713,8 @@
         "adventures",
         "adventurous"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "hostel",
@@ -2605,7 +2733,8 @@
       "forms": [
         "hostels"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "resort",
@@ -2624,7 +2753,8 @@
       "forms": [
         "resorts"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "transport",
@@ -2646,7 +2776,8 @@
         "transportation",
         "transported"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "detour",
@@ -2664,7 +2795,8 @@
       "forms": [
         "detours"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "nomadic",
@@ -2685,7 +2817,8 @@
       "forms": [
         "nomad"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "itinerant"
     },
     {
       "headword": "pilgrimage",
@@ -2704,7 +2837,8 @@
         "pilgrimages",
         "pilgrim"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "cosmopolitan",
@@ -2720,7 +2854,8 @@
         "cosmopolitan city"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "remote",
@@ -2743,7 +2878,8 @@
       "forms": [
         "remotely"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "secluded",
@@ -2764,7 +2900,8 @@
       "forms": [
         "seclusion"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "sequestered"
     },
     {
       "headword": "picturesque",
@@ -2783,7 +2920,8 @@
         "picturesque village"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "breathtaking",
@@ -2802,7 +2940,8 @@
         "breathtaking scenery"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "magnificent"
     },
     {
       "headword": "jetlag",
@@ -2818,7 +2957,8 @@
         "suffer from jetlag"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "quarantine",
@@ -2839,7 +2979,8 @@
       "forms": [
         "quarantined"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "immigration",
@@ -2861,7 +3002,8 @@
         "immigrant",
         "immigrate"
       ],
-      "affixKey": "-tion"
+      "affixKey": "-tion",
+      "formalAlt": null
     },
     {
       "headword": "expatriate",
@@ -2880,7 +3022,8 @@
         "expatriates",
         "expat"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "sojourn",
@@ -2900,7 +3043,8 @@
       "forms": [
         "sojourns"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "trek",
@@ -2922,7 +3066,8 @@
         "trekking",
         "treks"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "expedition"
     },
     {
       "headword": "traverse",
@@ -2943,7 +3088,8 @@
         "traversed",
         "traversing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "navigate"
     },
     {
       "headword": "venture",
@@ -2966,7 +3112,8 @@
         "venturing",
         "ventures"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "embark"
     },
     {
       "headword": "hospitality",
@@ -2985,7 +3132,8 @@
       "forms": [
         "hospitable"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "logistics",
@@ -3004,7 +3152,8 @@
       "forms": [
         "logistical"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "panoramic",
@@ -3022,7 +3171,8 @@
       "forms": [
         "panorama"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "job",
@@ -3043,7 +3193,8 @@
       "forms": [
         "jobs"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "work",
@@ -3064,7 +3215,8 @@
         "worked",
         "working"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "money",
@@ -3083,7 +3235,8 @@
         "save money"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "shop",
@@ -3105,7 +3258,8 @@
         "shops",
         "shopping"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "buy",
@@ -3129,7 +3283,8 @@
         "bought",
         "buying"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "sell",
@@ -3152,7 +3307,8 @@
         "sold",
         "selling"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "price",
@@ -3174,7 +3330,8 @@
         "prices",
         "pricing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "pay",
@@ -3196,7 +3353,8 @@
         "paying",
         "payment"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "boss",
@@ -3216,7 +3374,8 @@
       "forms": [
         "bosses"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "office",
@@ -3235,7 +3394,8 @@
       "forms": [
         "offices"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "meeting",
@@ -3254,7 +3414,8 @@
       "forms": [
         "meetings"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "phone",
@@ -3275,7 +3436,8 @@
       "forms": [
         "phones"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "email",
@@ -3294,7 +3456,8 @@
       "forms": [
         "emails"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "computer",
@@ -3313,7 +3476,8 @@
       "forms": [
         "computers"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "desk",
@@ -3332,7 +3496,8 @@
       "forms": [
         "desks"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "plan",
@@ -3353,7 +3518,8 @@
         "planned",
         "planning"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "team",
@@ -3373,7 +3539,8 @@
         "teams",
         "teamwork"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "customer",
@@ -3394,7 +3561,8 @@
       "forms": [
         "customers"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "manager",
@@ -3415,7 +3583,8 @@
         "manage",
         "management"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "company",
@@ -3436,7 +3605,8 @@
       "forms": [
         "companies"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "salary",
@@ -3457,7 +3627,8 @@
       "forms": [
         "salaries"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "budget",
@@ -3477,7 +3648,8 @@
         "budgets",
         "budgeting"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "invoice",
@@ -3498,7 +3670,8 @@
       "forms": [
         "invoices"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "contract",
@@ -3520,7 +3693,8 @@
         "contracts",
         "contractual"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "deadline",
@@ -3539,7 +3713,8 @@
       "forms": [
         "deadlines"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "employee",
@@ -3562,7 +3737,8 @@
       "forms": [
         "employees"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "employer",
@@ -3582,7 +3758,8 @@
       "forms": [
         "employers"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "interview",
@@ -3603,7 +3780,8 @@
         "interviewed",
         "interviewer"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "promotion",
@@ -3626,7 +3804,8 @@
         "promote",
         "promoted"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "colleague",
@@ -3646,7 +3825,8 @@
       "forms": [
         "colleagues"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "client",
@@ -3667,7 +3847,8 @@
       "forms": [
         "clients"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "product",
@@ -3688,7 +3869,8 @@
         "production",
         "produce"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "service",
@@ -3707,7 +3889,8 @@
       "forms": [
         "services"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "market",
@@ -3727,7 +3910,8 @@
         "markets",
         "marketing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "profit",
@@ -3751,7 +3935,8 @@
         "profits",
         "profitable"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "loss",
@@ -3772,7 +3957,8 @@
       "forms": [
         "losses"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "invest",
@@ -3794,7 +3980,8 @@
         "investing",
         "investment"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "income",
@@ -3815,7 +4002,8 @@
         "source of income"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "revenue",
@@ -3834,7 +4022,8 @@
       "forms": [
         "revenues"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "expense",
@@ -3858,7 +4047,8 @@
         "expenses",
         "expensive"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "negotiate",
@@ -3881,7 +4071,8 @@
         "negotiating",
         "negotiation"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "strategy",
@@ -3903,7 +4094,8 @@
         "strategies",
         "strategic"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "entrepreneur",
@@ -3922,7 +4114,8 @@
         "entrepreneurs",
         "entrepreneurship"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "startup",
@@ -3941,7 +4134,8 @@
       "forms": [
         "startups"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "stakeholder",
@@ -3959,7 +4153,8 @@
       "forms": [
         "stakeholders"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "merger",
@@ -3979,7 +4174,8 @@
         "mergers",
         "merge"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "acquisition",
@@ -3998,7 +4194,8 @@
         "acquisitions",
         "acquire"
       ],
-      "affixKey": "-tion"
+      "affixKey": "-tion",
+      "formalAlt": null
     },
     {
       "headword": "shareholder",
@@ -4016,7 +4213,8 @@
       "forms": [
         "shareholders"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "headquarters",
@@ -4032,7 +4230,8 @@
         "company headquarters"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "branch",
@@ -4051,7 +4250,8 @@
       "forms": [
         "branches"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "distribution",
@@ -4071,7 +4271,8 @@
         "distribute",
         "distributor"
       ],
-      "affixKey": "-tion"
+      "affixKey": "-tion",
+      "formalAlt": null
     },
     {
       "headword": "forecast",
@@ -4094,7 +4295,8 @@
         "forecasted",
         "forecasting"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "deficit",
@@ -4115,7 +4317,8 @@
       "forms": [
         "deficits"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "surplus",
@@ -4136,7 +4339,8 @@
       "forms": [
         "surpluses"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "outsource",
@@ -4155,7 +4359,8 @@
         "outsourced",
         "outsourcing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "franchise",
@@ -4175,7 +4380,8 @@
         "franchises",
         "franchising"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "competitor",
@@ -4197,7 +4403,8 @@
         "compete",
         "competition"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "conglomerate",
@@ -4215,7 +4422,8 @@
       "forms": [
         "conglomerates"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "monopoly",
@@ -4234,7 +4442,8 @@
         "monopolies",
         "monopolize"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "subsidiary",
@@ -4252,7 +4461,8 @@
       "forms": [
         "subsidiaries"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "liability",
@@ -4260,7 +4470,7 @@
       "topic": "business",
       "pos": "noun",
       "definition": "a debt or financial obligation",
-      "example": "The firm's liabilities increased after the loan.",
+      "example": "The firm took on a new liability after the loan.",
       "viGloss": "nợ phải trả/trách nhiệm pháp lý",
       "synonyms": [],
       "antonyms": [
@@ -4274,7 +4484,8 @@
         "liabilities",
         "liable"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "asset",
@@ -4295,7 +4506,8 @@
       "forms": [
         "assets"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "holding"
     },
     {
       "headword": "equity",
@@ -4312,7 +4524,8 @@
         "equity stake"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "dividend",
@@ -4331,7 +4544,8 @@
       "forms": [
         "dividends"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "portfolio",
@@ -4350,7 +4564,8 @@
       "forms": [
         "portfolios"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "arbitration",
@@ -4369,7 +4584,8 @@
         "arbitrate",
         "arbitrator"
       ],
-      "affixKey": "-tion"
+      "affixKey": "-tion",
+      "formalAlt": null
     },
     {
       "headword": "compliance",
@@ -4389,7 +4605,8 @@
         "comply",
         "compliant"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "adherence"
     },
     {
       "headword": "procurement",
@@ -4408,7 +4625,8 @@
       "forms": [
         "procure"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "acquisition"
     },
     {
       "headword": "overhead",
@@ -4425,7 +4643,8 @@
         "overhead costs"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "expenditure"
     },
     {
       "headword": "insolvency",
@@ -4445,7 +4664,8 @@
       "forms": [
         "insolvent"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "leverage",
@@ -4465,7 +4685,8 @@
         "leveraged",
         "leveraging"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "utilize"
     },
     {
       "headword": "diversify",
@@ -4485,7 +4706,8 @@
         "diversifying",
         "diversification"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "benchmark",
@@ -4507,7 +4729,8 @@
         "benchmarks",
         "benchmarking"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "incentive",
@@ -4527,7 +4750,8 @@
         "incentives",
         "incentivize"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "inducement"
     },
     {
       "headword": "litigation",
@@ -4549,7 +4773,8 @@
         "litigate",
         "litigant"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "happy",
@@ -4573,7 +4798,8 @@
         "happily",
         "happiness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "sad",
@@ -4597,7 +4823,8 @@
         "sadly",
         "sadness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "angry",
@@ -4621,7 +4848,8 @@
         "angrily",
         "anger"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "tired",
@@ -4643,7 +4871,8 @@
         "tiredly",
         "tiredness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "scared",
@@ -4664,7 +4893,8 @@
         "feel scared"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "excited",
@@ -4686,7 +4916,8 @@
         "excitedly",
         "excitement"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "glad",
@@ -4706,7 +4937,8 @@
       "forms": [
         "gladly"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "afraid",
@@ -4727,7 +4959,8 @@
         "be afraid"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "worried",
@@ -4751,7 +4984,8 @@
         "worry",
         "worriedly"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "calm",
@@ -4775,7 +5009,8 @@
         "calmly",
         "calmness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "proud",
@@ -4797,7 +5032,8 @@
         "proudly",
         "pride"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "shy",
@@ -4821,7 +5057,8 @@
         "shyly",
         "shyness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "bored",
@@ -4843,7 +5080,8 @@
         "boredom",
         "boring"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "surprised",
@@ -4865,7 +5103,8 @@
         "surprisingly",
         "surprise"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "nervous",
@@ -4889,7 +5128,8 @@
         "nervously",
         "nervousness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "lonely",
@@ -4909,7 +5149,8 @@
       "forms": [
         "loneliness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "brave",
@@ -4933,7 +5174,8 @@
         "bravely",
         "bravery"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "kind",
@@ -4957,7 +5199,8 @@
         "kindly",
         "kindness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "funny",
@@ -4980,7 +5223,8 @@
         "funnier",
         "funniest"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "jealous",
@@ -5002,7 +5246,8 @@
         "jealously",
         "jealousy"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "embarrassed",
@@ -5024,7 +5269,8 @@
         "embarrassment",
         "embarrassing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "confident",
@@ -5046,7 +5292,8 @@
         "confidently",
         "confidence"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "disappointed",
@@ -5068,7 +5315,8 @@
         "disappointment",
         "disappointing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "curious",
@@ -5088,7 +5336,8 @@
         "curiously",
         "curiosity"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "confused",
@@ -5110,7 +5359,8 @@
         "confusion",
         "confusing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "grateful",
@@ -5134,7 +5384,8 @@
         "gratefully",
         "gratitude"
       ],
-      "affixKey": "-ful"
+      "affixKey": "-ful",
+      "formalAlt": null
     },
     {
       "headword": "anxious",
@@ -5158,7 +5409,8 @@
         "anxiously",
         "anxiety"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "cheerful",
@@ -5182,7 +5434,8 @@
         "cheerfully",
         "cheerfulness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "frustrated",
@@ -5204,7 +5457,8 @@
         "frustration",
         "frustrating"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "relieved",
@@ -5223,7 +5477,8 @@
         "relief",
         "relieving"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "ashamed",
@@ -5244,7 +5499,8 @@
         "feel ashamed"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "hopeful",
@@ -5268,7 +5524,8 @@
         "hopefully",
         "hope"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "miserable",
@@ -5291,7 +5548,8 @@
         "miserably",
         "misery"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "content",
@@ -5314,7 +5572,8 @@
         "contentment",
         "contentedly"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "irritated",
@@ -5336,7 +5595,8 @@
         "irritation",
         "irritating"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "amazed",
@@ -5358,7 +5618,8 @@
         "amazement",
         "amazing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "upset",
@@ -5379,7 +5640,8 @@
       "forms": [
         "upsetting"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "satisfied",
@@ -5403,7 +5665,8 @@
         "satisfaction",
         "satisfying"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "overwhelmed",
@@ -5422,7 +5685,8 @@
       "forms": [
         "overwhelming"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "resentful",
@@ -5444,7 +5708,8 @@
         "resentfully",
         "resentment"
       ],
-      "affixKey": "-ful"
+      "affixKey": "-ful",
+      "formalAlt": null
     },
     {
       "headword": "compassionate",
@@ -5465,7 +5730,8 @@
         "compassionately",
         "compassion"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "empathetic",
@@ -5484,7 +5750,8 @@
         "empathetically",
         "empathy"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "insecure",
@@ -5505,7 +5772,8 @@
       "forms": [
         "insecurity"
       ],
-      "affixKey": "in-"
+      "affixKey": "in-",
+      "formalAlt": null
     },
     {
       "headword": "optimistic",
@@ -5529,7 +5797,8 @@
         "optimistically",
         "optimism"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "pessimistic",
@@ -5550,7 +5819,8 @@
         "pessimistically",
         "pessimism"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "indifferent",
@@ -5571,7 +5841,8 @@
         "indifferently",
         "indifference"
       ],
-      "affixKey": "in-"
+      "affixKey": "in-",
+      "formalAlt": null
     },
     {
       "headword": "envious",
@@ -5592,7 +5863,8 @@
         "enviously",
         "envy"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "guilty",
@@ -5614,7 +5886,8 @@
         "guiltily",
         "guilt"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "longing",
@@ -5634,7 +5907,8 @@
       "forms": [
         "longingly"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "nostalgic",
@@ -5654,7 +5928,8 @@
         "nostalgically",
         "nostalgia"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "apprehensive",
@@ -5675,7 +5950,8 @@
         "apprehensively",
         "apprehension"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "restless",
@@ -5697,7 +5973,8 @@
         "restlessly",
         "restlessness"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "melancholy",
@@ -5715,7 +5992,8 @@
         "melancholy mood"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "elated",
@@ -5738,7 +6016,8 @@
       "forms": [
         "elation"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "distressed",
@@ -5759,7 +6038,8 @@
         "distress",
         "distressing"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "sympathetic",
@@ -5781,7 +6061,8 @@
         "sympathetically",
         "sympathy"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "skeptical",
@@ -5805,7 +6086,8 @@
         "skeptically",
         "skepticism"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "euphoric",
@@ -5828,7 +6110,8 @@
         "euphorically",
         "euphoria"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "despondent",
@@ -5850,7 +6133,8 @@
       "forms": [
         "despondency"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "complacent",
@@ -5869,7 +6153,8 @@
         "complacently",
         "complacency"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "disdain",
@@ -5891,7 +6176,8 @@
       "forms": [
         "disdainful"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "contempt"
     },
     {
       "headword": "apathy",
@@ -5912,7 +6198,8 @@
       "forms": [
         "apathetic"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "indifference"
     },
     {
       "headword": "remorse",
@@ -5933,7 +6220,8 @@
       "forms": [
         "remorseful"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "contrition"
     },
     {
       "headword": "trepidation",
@@ -5951,7 +6239,8 @@
         "with trepidation"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "apprehension"
     },
     {
       "headword": "exuberant",
@@ -5972,7 +6261,8 @@
         "exuberantly",
         "exuberance"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "ambivalent",
@@ -5991,7 +6281,8 @@
         "ambivalently",
         "ambivalence"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "forlorn",
@@ -6011,7 +6302,8 @@
       "forms": [
         "forlornly"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "wistful",
@@ -6031,7 +6323,8 @@
       "forms": [
         "wistfully"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "indignant",
@@ -6052,7 +6345,8 @@
         "indignantly",
         "indignation"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "resilience",
@@ -6073,7 +6367,8 @@
       "forms": [
         "resilient"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "vulnerability",
@@ -6091,7 +6386,8 @@
       "forms": [
         "vulnerable"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "susceptibility"
     },
     {
       "headword": "equanimity",
@@ -6109,7 +6405,8 @@
         "face with equanimity"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "empathy",
@@ -6129,7 +6426,8 @@
         "empathetic",
         "empathize"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     },
     {
       "headword": "discontent",
@@ -6151,7 +6449,8 @@
       "forms": [
         "discontented"
       ],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": "dissatisfaction"
     },
     {
       "headword": "aggrieved",
@@ -6167,7 +6466,8 @@
         "aggrieved party"
       ],
       "forms": [],
-      "affixKey": null
+      "affixKey": null,
+      "formalAlt": null
     }
   ]
 }

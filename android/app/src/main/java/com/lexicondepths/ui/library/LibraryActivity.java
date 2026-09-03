@@ -18,6 +18,7 @@ import com.lexicondepths.content.MapJson;
 import com.lexicondepths.content.Monster;
 import com.lexicondepths.content.MonsterCatalog;
 import com.lexicondepths.content.RealmImport;
+import com.lexicondepths.content.RelicCatalog;
 import com.lexicondepths.databinding.ActivityLibraryBinding;
 import com.lexicondepths.db.CefrLevel;
 import com.lexicondepths.db.dao.RealmDao;
@@ -230,7 +231,8 @@ public class LibraryActivity extends AppCompatActivity {
     private void play(long realmId) {
         App.get().io().execute(() -> {
             List<Monster> monsters = MonsterCatalog.load(getApplicationContext());
-            long runId = RunEngine.startRun(App.get().db(), realmId, monsters);
+            long runId = RunEngine.startRun(App.get().db(), realmId, monsters,
+                    RelicCatalog.load(getApplicationContext()));
             onUi(() -> {
                 Intent intent = new Intent(this, DungeonMapActivity.class);
                 intent.putExtra(DungeonMapActivity.EXTRA_RUN_ID, runId);

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_lg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stats_title"
+            android:textAppearance="@style/TextAppearance.Lexicon.Title" />
+
+        <!-- 1. Mastery -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/stats_section_mastery"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body"
+            android:textStyle="bold" />
+
+        <!-- Counts come first, then the bar. Per §7 the bar is never the only way to read a value. -->
+        <TextView
+            android:id="@+id/masteryCountsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+        <LinearLayout
+            android:id="@+id/masteryBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hp_bar_height"
+            android:layout_marginTop="@dimen/space_sm"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/masteryLegendText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/stats_mastery_legend"
+            android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
+
+        <!-- 2. Where you are weak -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/stats_section_weak_types"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/typeAccuracyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:orientation="vertical" />
+
+        <!-- 3. Words to revisit -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/stats_section_weak_words"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/weakWordsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:orientation="vertical" />
+
+        <!-- 4. Run record -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/stats_section_run_record"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/runRecordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+        <!-- 5. Achievements (P4-4) — a section, not a screen. Nine rows is not a screen. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/stats_section_achievements"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/achievementsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>

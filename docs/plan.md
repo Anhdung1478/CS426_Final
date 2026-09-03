@@ -16,14 +16,14 @@ Index of phase plans, their gates, and what is open to work on right now.
 ## Progression
 
 ```
-   ✅ Phase 1 ──▶ ✅ Phase 2 ──▶ ✅ Phase 3 ──▶ 🟢 Phase 4
-     12/12          12/12           9/9            0/14
+   ✅ Phase 1 ──▶ ✅ Phase 2 ──▶ ✅ Phase 3 ──▶ ✅ Phase 4
+     12/12          12/12           9/9           14/14
    Foundation    Playable run    AI maps        Polish
 ```
 
 Legend: ✅ closed · 🟢 open · ⬜ blocked by an earlier gate · 🔒 not planned yet
 
-The project planned **two phases ahead** throughout. Phase 4 is the last phase, so there is nothing left to plan — every phase file now exists.
+**All four phases are closed.** The project planned two phases ahead throughout; Phase 4 was the last, so nothing follows it and its deferred list is a *won't build* list rather than a handoff.
 
 ---
 
@@ -69,22 +69,24 @@ Two changes came out of running it rather than writing it, both recorded in the 
 
 ---
 
-### 🟢 Phase 4 — Polish · **OPEN**
+### ✅ Phase 4 — Polish · **CLOSED**
 
-📄 [`docs/phase-4.md`](phase-4.md) — 14 tasks
+📄 [`docs/phase-4.md`](phase-4.md) — 14 tasks, all done
 
-Closes every loop the first three phases left open. The stats screen finally reads back the `WordEvent` rows the app has been writing since P2-11, Marks become spendable, a daily reminder brings the player back, a cold demo explains itself, and the twelfth question type ships.
+Closed every loop the first three phases left open. The stats screen reads back the `WordEvent` rows the app had been writing since P2-11, Marks became spendable at a relic shop, a daily reminder brings the player back, a cold demo explains itself, and the twelfth question type shipped.
 
-**Progress: 0/14.**
+**Progress: 14/14** — exit checklist passed on an emulator: onboarding shows once and replays from Settings, the stats screen reads as an invitation on a fresh install and shows worst-first per-type accuracy after a run, an achievement unlocks and survives a subsequent loss, the notification toggle covers granted/denied/blocked, a bought relic applies and is consumed by exactly one run, a v2 database upgrades to v3 with SRS progress untouched, and a live `api.datamuse.com` call is made from the device. 146 unit tests in `android/`, 18 in `backend/`, 18 instrumentation tests. See [`report-phase4.md`](../report-phase4.md).
+
+**Milestone reached:** P4-2. The stats screen is the first time a player can see what they have learned, which is the claim the whole project rests on.
 
 Two findings from reading the code shaped the phase, both recorded in the phase file:
 
-- **The seed has no C1 or C2 words** (76 A1 / 76 A2 / 76 B1 / 72 B2), so register/formality is gated at **B2+** rather than the C1+ `project-idea.md` §5 specifies. A question type that cannot appear in a demo is not shipped.
-- **`fallbackToDestructiveMigration` is a permadeath-boundary bug waiting for a release.** It drops `WordProgress` — the one table §5 says a run ending must never touch — so an APK upgrade would do what losing a run is forbidden to do. P4-11 replaces it with a real migration and tests that SRS progress survives.
+- **The seed has no C1 or C2 words** (76 A1 / 76 A2 / 76 B1 / 72 B2), so register/formality shipped gated at **B2+** rather than the C1+ `project-idea.md` §5 specifies. A question type that cannot appear in a demo is not shipped.
+- **`fallbackToDestructiveMigration` was a permadeath-boundary bug waiting for a release.** It drops `WordProgress` — the one table §5 says a run ending must never touch — so an APK upgrade would have done what losing a run is forbidden to do. P4-11 replaced it with a real migration and `MigrationTest` asserts SRS progress survives.
 
-**Milestone:** P4-2. The app has recorded every answer since Phase 2 and read none of it back except Spoils. The stats screen is the first time a player can see what they have learned, which is the claim the whole project rests on.
+**And five more came out of running it,** which is the argument for P4-13 existing at all — every one was invisible to the build and to the test suite. They are listed with their fixes in [`report-phase4.md`](../report-phase4.md): a fresh install seeded zero words, three relics had never once applied their effect, the Spoils promise skipped exactly the words a player had just failed, the Hub's due count went stale mid-session, and every screen drew its first line under the status bar.
 
-Phase 4 is the last phase, so its deferred list is a **won't build** list: the placement quiz, the Hub daily challenge, achievement unlock toasts, C1–C2 content, realm sharing, sprite monsters, and locales beyond `en`/`vi`.
+Phase 4 was the last phase, so its deferred list is a **won't build** list: the placement quiz, the Hub daily challenge, achievement unlock toasts, C1–C2 content, realm sharing, sprite monsters, and locales beyond `en`/`vi`.
 
 ---
 
@@ -120,3 +122,5 @@ When a task completes, update two places:
 2. The progress count in this file's Progression block and the phase entry
 
 When a phase closes, mark the next one 🟢 and write the detail file for the phase after it — always two ahead, never more.
+
+With Phase 4 closed there is no next phase. This file is now a record rather than a plan.

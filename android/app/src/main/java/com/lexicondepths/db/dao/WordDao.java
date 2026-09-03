@@ -24,6 +24,15 @@ public interface WordDao {
     @Query("SELECT COUNT(*) FROM Word")
     int count();
 
+    /**
+     * insertAll ignores conflicts, so a content bump can add a field to a word that is already
+     * in the table but never fill it in — and REPLACE is not an option, since a new rowid would
+     * orphan that word's WordProgress and RealmWord rows. This is the narrow write that lets a
+     * seed version bump reach existing rows: sparse optional fields only, never ids.
+     */
+    @Query("UPDATE Word SET formalAlt = :formalAlt, affixKey = :affixKey WHERE headword = :headword")
+    void backfillOptionalFields(String headword, String formalAlt, String affixKey);
+
     @Query("SELECT * FROM Word WHERE id = :id")
     Word getById(long id);
 

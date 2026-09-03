@@ -96,7 +96,7 @@ Each type maps to an attack flavor. Some monsters resist certain types, forcing 
 | 9 | **Word → definition** | Reverse, multiple choice | Easier variant for A1–A2 |
 | 10 | **Sentence scramble** | Reorder words into valid syntax | Good for A1–A2 |
 | 11 | **Anagram / unscramble** | Quick strike | Filler/pacing |
-| 12 | **Register / formality pick** | Which phrasing fits this context | C1+ only |
+| 12 | **Register / formality pick** | Which phrasing fits this context | B2+ (see below) |
 
 For affix harvest, use Datamuse's `sp=` wildcard query to generate the answer key server-side — enables partial credit scoring and a "words you missed" screen after the fight.
 
@@ -146,7 +146,9 @@ Worth highlighting to the grader: two very different UX modes, one shared learni
 ### CEFR level (A1–C2)
 `level` field on the word bank. Users pick a starting level in onboarding (an optional 10-question placement quiz spanning A1→B2 is a nice-to-have, not required).
 
-Level gates: which words appear, monster difficulty, and which question types unlock (cloze/register only from B1+/C1+).
+Level gates: which words appear, monster difficulty, and which question types unlock (cloze/register only from B1+/B2+).
+
+> **Register/formality shipped at B2+, not C1+.** `words_seed.json` is 76 A1 / 76 A2 / 76 B1 / 72 B2 with zero C1 and zero C2, so a C1 gate would have made the type unreachable outside a forged C1 realm — and a question type that cannot appear in a demo is not shipped. The gate is realised by which words carry `Word.formalAlt` (24 B2 words, six per topic), so it needed no gating code at all. See `docs/phase-4.md` P4-10.
 
 Seed data: Oxford 3000/5000 word lists map roughly to CEFR bands — a defensible dataset rather than guessing difficulty by hand.
 
@@ -252,12 +254,18 @@ Build the monster renderer as an **interface** from day one. If a teammate who c
 
 ## 11. Outstanding gaps
 
-Things still needing decisions or work:
+All closed. Phase 4 was the last phase, so the two items at the bottom are decisions rather than deferrals.
 
-- [ ] **Run structure** — node types, relics/power-ups, what meta-progression persists between runs. *This is the remaining gameplay gap before locking the data model.*
-- [ ] **Room schema** — entities and relationships (blocked on the above)
-- [ ] **Onboarding flow** — three unfamiliar mechanics stacked (Wordle feedback, roguelike navigation, RPG combat). 3–4 tooltip screens make a cold demo far easier to follow; easy polish points.
-- [ ] **Colorblind-safe feedback** — Wordle's green/yellow/gray is a known accessibility gap. Pair colors with shapes/icons (✓ / ~ / ✗). Cheap to add, reads well in the writeup.
-- [ ] **Runtime notification permission** — Android 13+ requires explicit `POST_NOTIFICATIONS` request. Build the request flow and a graceful denied-fallback into the screen flow, not as an afterthought.
-- [ ] **Font verification** — Vietnamese diacritic coverage (see §8). Do this early.
-- [ ] **Test plan / edge-case list for the report** — first launch with no internet, DeepSeek returning malformed JSON, empty word bank, run ending mid-battle, switching UI locale mid-session. Often explicitly on grading rubrics for "complete, working" apps.
+- [x] **Run structure** — 3 floors × 4 steps, two nodes per step, five node types, eight relics. Closed in Phase 2; see `project-context.md` §6.
+- [x] **Room schema** — nine entities, now at version 3 with a real migration. `project-context.md` §5.
+- [x] **Onboarding flow** — four pages, shown once, replayable from Settings. `ui/onboarding/OnboardingActivity.java` (P4-7).
+- [x] **Colorblind-safe feedback** — audited in P4-12. `WordleGridView` already paired every tile with `✓ ~ ✗`; the HP bar and the stats proportion bar were colour-only and now carry their values as text. MCQ answers turned out to have no colour feedback at all, so there was nothing to pair. `project-context.md` §7 is corrected to describe what the code actually does.
+- [x] **Runtime notification permission** — three branches (API < 33, granted, denied), the request fired on the Settings toggle rather than at launch, and a system-settings route for a permanent denial. `ui/settings/SettingsActivity.java` (P4-6).
+- [x] **Font verification** — Vietnamese diacritics verified in Phase 1; both locales carry every string.
+- [x] **Test plan / edge-case list for the report** — run, not just listed. See `report-phase4.md`.
+
+**Won't build.** Phase 4 was the last phase:
+
+- The optional CEFR placement quiz (§5) — always a nice-to-have; the CEFR level is set in Settings instead.
+- The Hub daily challenge (§9) — the daily review reminder (P4-5) covers the same "come back tomorrow" job for a fraction of the surface area.
+- Register/formality at C1–C2, and any C1–C2 seed content. The type ships gated at B2+; see the note in §5.

@@ -14,6 +14,11 @@
         <item name="android:fontFamily">@font/mono_font_family</item>
         <item name="fontFamily">@font/mono_font_family</item>
         <item name="android:windowBackground">@color/bg</item>
+        <!-- targetSdk 35 enforces edge-to-edge. The insets are applied in App.java rather
+             than with android:fitsSystemWindows, which would overwrite each layout's own
+             padding instead of adding to it. Found by the P4-12 audit. -->
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
     </style>
 
 </resources>

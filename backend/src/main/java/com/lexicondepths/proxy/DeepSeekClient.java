@@ -52,7 +52,9 @@ public class DeepSeekClient {
                   "antonyms":     array of 0-2 single English words,
                   "collocations": array of 0-3 short phrases that include the headword,
                   "forms":        array of 0-4 inflected or derived forms of the headword,
-                  "affixKey":     string like "re-" or "-tion" if the headword has a clear affix, otherwise null
+                  "affixKey":     string like "re-" or "-tion" if the headword has a clear affix, otherwise null,
+                  "formalAlt":    string, a MORE FORMAL single-word equivalent of the headword
+                                  ("kids" -> "children"), or null if the headword is already formal
                 }
             }
 

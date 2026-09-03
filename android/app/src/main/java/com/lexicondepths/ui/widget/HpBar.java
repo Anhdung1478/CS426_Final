@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.accessibility.AccessibilityNodeInfo;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -36,7 +37,17 @@ public class HpBar extends View {
         this.value = Math.max(0, value);
         this.max = Math.max(1, max);
         updateFilledColor();
+        // §7: a colour-coded state must never be the only way to read a value. The green-to-red
+        // switch below is exactly that, so the bar carries its own numbers for TalkBack, and
+        // every screen using it also prints HP as text.
+        setContentDescription(getContext().getString(R.string.cd_hp_bar, this.value, this.max));
         invalidate();
+    }
+
+    @Override
+    public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo info) {
+        super.onInitializeAccessibilityNodeInfo(info);
+        info.setClassName(android.widget.ProgressBar.class.getName());
     }
 
     private void updateFilledColor() {

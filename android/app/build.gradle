@@ -43,6 +43,12 @@ android {
         viewBinding true
         buildConfig true
     }
+
+    // MigrationTestHelper reads the exported schema JSON off the device, so the schemas
+    // directory ships as an androidTest asset.
+    sourceSets {
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
 }
 
 dependencies {

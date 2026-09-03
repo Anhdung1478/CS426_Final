@@ -132,6 +132,9 @@ public final class MapJson {
 
         word.viGloss = blankToNull(obj.optString("viGloss", ""));
         word.affixKey = blankToNull(obj.optString("affixKey", ""));
+        // Optional, exactly like affixKey: a missing formalAlt costs the word one question
+        // type, which is not a defect. Neither validator has a fatal rule for it.
+        word.formalAlt = blankToNull(obj.optString("formalAlt", ""));
         word.synonyms = toStringList(obj.optJSONArray("synonyms"));
         word.antonyms = toStringList(obj.optJSONArray("antonyms"));
         word.collocations = toStringList(obj.optJSONArray("collocations"));

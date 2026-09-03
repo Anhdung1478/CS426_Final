@@ -1,13 +1,17 @@
 package com.lexicondepths.game.run;
 
 import com.lexicondepths.content.Monster;
+import com.lexicondepths.content.Relic;
 import com.lexicondepths.db.AppDatabase;
 import com.lexicondepths.db.NodeType;
 import com.lexicondepths.db.RunStatus;
+import com.lexicondepths.db.entity.Profile;
 import com.lexicondepths.db.entity.Run;
 import com.lexicondepths.db.entity.RunNode;
+import com.lexicondepths.db.entity.RunRelic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -59,12 +63,13 @@ public final class RunEngine {
         return Math.min(maxHp, currentHp + Math.max(0, amount));
     }
 
-    public static int maxHp(Set<String> relicIds) {
-        return STARTING_HP + (relicIds.contains(MAX_HP_PLUS_10) ? 10 : 0);
+    /** relicEffects is effect keys (RelicCatalog.effectsFor), never relic IDs — see that method. */
+    public static int maxHp(Set<String> relicEffects) {
+        return STARTING_HP + (relicEffects.contains(MAX_HP_PLUS_10) ? 10 : 0);
     }
 
-    public static int restHealAmount(Set<String> relicIds) {
-        return relicIds.contains(REST_HEALS_50) ? 50 : DEFAULT_REST_HEAL;
+    public static int restHealAmount(Set<String> relicEffects) {
+        return relicEffects.contains(REST_HEALS_50) ? 50 : DEFAULT_REST_HEAL;
     }
 
     /** {floor, step} after clearing a non-terminal node — wraps to the next floor past step 4. */
@@ -79,43 +84,86 @@ public final class RunEngine {
 
     // ---- Room orchestration ----------------------------------------------------------------
 
-    public static long startRun(AppDatabase db, Long realmId, List<Monster> allMonsters) {
+    /**
+     * allRelics is RelicCatalog.load()'s list, passed in rather than looked up so this method
+     * stays Android-free. It is what turns Profile.pendingRelicId — the relic bought with Marks
+     * at the shop (P4-8) — into a RunRelic row for the run about to start.
+     */
+    public static long startRun(AppDatabase db, Long realmId, List<Monster> allMonsters,
+                                List<Relic> allRelics) {
         // One active run at a time. RunDao.getActiveRun() is LIMIT 1, so starting a second would
         // strand the first along with its 24 nodes — invisible to Resume Run and never cleaned up,
         // which is exactly the leaked-run-rows case P2-12 forbids. The guard lives here rather
         // than in each screen because every entry point routes through this method.
+        // ⚠️ Returning here must NOT consume the purchase: the player did not get a new run,
+        // so they must not lose the relic they paid Marks for.
         Run active = db.runDao().getActiveRun();
         if (active != null) {
             return active.id;
         }
 
         List<Monster> battleMonsters = new ArrayList<>();
-        Monster bossMonster = null;
+        Monster foundBoss = null;
         for (Monster m : allMonsters) {
             if (m.boss) {
-                bossMonster = m;
+                foundBoss = m;
             } else {
                 battleMonsters.add(m);
             }
         }
+        final Monster bossMonster = foundBoss;
+
+        Profile profile = db.profileDao().getProfileSync();
+        Relic purchased = findRelic(allRelics, profile == null ? null : profile.pendingRelicId);
 
         Run run = new Run();
         run.realmId = realmId;
-        run.hp = STARTING_HP;
+        run.hp = purchased == null
+                ? STARTING_HP
+                : maxHp(Collections.singleton(purchased.effect));
         run.floor = 1;
         run.step = 1;
         run.marks = 0;
         run.seed = new Random().nextLong();
         run.status = RunStatus.ACTIVE;
         run.startedAt = System.currentTimeMillis();
-        long runId = db.runDao().insertRun(run);
 
-        List<RunNode> nodes = NodeGen.generate(run.seed, battleMonsters, bossMonster);
-        for (RunNode node : nodes) {
-            node.runId = runId;
+        long[] newRunId = new long[1];
+        // Insert, grant and clear together: a purchase surviving into a second run is a free
+        // relic every run forever, and a cleared field with no RunRelic row is a theft.
+        db.runInTransaction(() -> {
+            newRunId[0] = db.runDao().insertRun(run);
+
+            List<RunNode> nodes = NodeGen.generate(run.seed, battleMonsters, bossMonster);
+            for (RunNode node : nodes) {
+                node.runId = newRunId[0];
+            }
+            db.runDao().insertNodes(nodes);
+
+            if (purchased != null) {
+                RunRelic granted = new RunRelic();
+                granted.runId = newRunId[0];
+                granted.relicId = purchased.id;
+                granted.acquiredAt = run.startedAt;
+                db.runDao().insertRelic(granted);
+
+                profile.pendingRelicId = null;
+                db.profileDao().upsert(profile);
+            }
+        });
+        return newRunId[0];
+    }
+
+    private static Relic findRelic(List<Relic> allRelics, String relicId) {
+        if (relicId == null || allRelics == null) {
+            return null;
         }
-        db.runDao().insertNodes(nodes);
-        return runId;
+        for (Relic relic : allRelics) {
+            if (relicId.equals(relic.id)) {
+                return relic;
+            }
+        }
+        return null; // The relic was removed from relics.json since the purchase — drop it silently.
     }
 
     public static RunState loadState(AppDatabase db, long runId) {

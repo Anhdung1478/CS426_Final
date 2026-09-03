@@ -2,6 +2,8 @@
 
 **Goal:** close every loop the first three phases left open. The vocabulary the player has been building becomes visible and legible on a stats screen, Marks become spendable, a daily reminder brings them back, a cold demo explains itself, the twelfth question type ships, and the schema stops being able to destroy the one thing §5 says it must never destroy.
 
+> **Closed, 14/14.** See [`report-phase4.md`](../report-phase4.md) for how each exit-checklist item was verified, the six bugs the edge-case pass found, and what was not verified.
+
 **Phase 4 is the last phase.** Nothing follows it, so its "deferred" list is a *won't build* list, not a promise. Everything not in the task table below is out of scope permanently, and the phase ends with a report rather than a handoff.
 
 **Milestone:** P4-2. The app has been recording every answer since P2-11 and reading none of it back. The stats screen is the first time a player can see what they have actually learned, which is the claim the whole project rests on.
@@ -39,20 +41,20 @@ Phase 4 adds columns anyway (P4-8, P4-10), so the version number is getting bump
 
 | ID | Task | Difficulty | Depends on | Unblocks | Track | Status |
 |---|---|---|---|---|---|---|
-| P4-1 | Stats snapshot contract + aggregate queries | high | P1-4, P2-1 | P4-2, P4-3, P4-5 | · | ⬜ |
-| P4-2 | Vocabulary stats screen | medium | P4-1 | P4-4 | B | ⬜ |
-| P4-3 | Achievement definitions | medium | P4-1 | P4-4 | A | ⬜ |
-| P4-4 | Achievements on the stats screen | low | P4-2, P4-3 | — | B | ⬜ |
-| P4-5 | Review reminder — channel, alarm, boot re-arm | medium | P4-1 | P4-6 | A | ⬜ |
-| P4-6 | `POST_NOTIFICATIONS` runtime flow | medium | P4-5 | — | B | ⬜ |
-| P4-7 | Onboarding carousel | medium | — | — | B | ⬜ |
-| P4-8 | Marks purchase — persistence and consumption | medium | P2-9 | P4-9, P4-11 | A | ⬜ |
-| P4-9 | Relic shop screen | medium | P4-8 | — | B | ⬜ |
-| P4-10 | Register/formality question type | high | P2-1, P3-1 | P4-11 | A | ⬜ |
-| P4-11 | Real Room migration, destructive fallback removed | medium | P4-8, P4-10 | P4-13 | A | ⬜ |
-| P4-12 | Colorblind and accessibility audit | low | — | — | B | ⬜ |
-| P4-13 | Edge-case hardening + `RealmImport` test | medium | P4-11 | P4-14 | · | ⬜ |
-| P4-14 | Phase 4 report and test plan | low | everything | — | · | ⬜ |
+| P4-1 | Stats snapshot contract + aggregate queries | high | P1-4, P2-1 | P4-2, P4-3, P4-5 | · | ✅ |
+| P4-2 | Vocabulary stats screen | medium | P4-1 | P4-4 | B | ✅ |
+| P4-3 | Achievement definitions | medium | P4-1 | P4-4 | A | ✅ |
+| P4-4 | Achievements on the stats screen | low | P4-2, P4-3 | — | B | ✅ |
+| P4-5 | Review reminder — channel, alarm, boot re-arm | medium | P4-1 | P4-6 | A | ✅ |
+| P4-6 | `POST_NOTIFICATIONS` runtime flow | medium | P4-5 | — | B | ✅ |
+| P4-7 | Onboarding carousel | medium | — | — | B | ✅ |
+| P4-8 | Marks purchase — persistence and consumption | medium | P2-9 | P4-9, P4-11 | A | ✅ |
+| P4-9 | Relic shop screen | medium | P4-8 | — | B | ✅ |
+| P4-10 | Register/formality question type | high | P2-1, P3-1 | P4-11 | A | ✅ |
+| P4-11 | Real Room migration, destructive fallback removed | medium | P4-8, P4-10 | P4-13 | A | ✅ |
+| P4-12 | Colorblind and accessibility audit | low | — | — | B | ✅ |
+| P4-13 | Edge-case hardening + `RealmImport` test | medium | P4-11 | P4-14 | · | ✅ |
+| P4-14 | Phase 4 report and test plan | low | everything | — | · | ✅ |
 
 **Critical path:** P4-10 → P4-11 → P4-13 → P4-14 — four hops, and the only chain that reaches the report. P4-1 → P4-2 → P4-4 is three and has slack; start P4-10 early anyway, since it is the phase's other `high`.
 
@@ -90,7 +92,7 @@ P4-12  ── independent
 
 # Task detail
 
-## P4-1 · Stats snapshot contract + aggregate queries ⬜
+## P4-1 · Stats snapshot contract + aggregate queries ✅
 
 **Difficulty:** high · **Track:** · · **Depends on:** P1-4, P2-1 · **Unblocks:** P4-2, P4-3, P4-5
 
@@ -148,7 +150,7 @@ This is the part of the task worth the "high" rating, and not because the SQL is
 
 ---
 
-## P4-2 · Vocabulary stats screen ⬜
+## P4-2 · Vocabulary stats screen ✅
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P4-1
 
@@ -186,7 +188,7 @@ A fresh install has no `WordEvent` rows at all, and a stats screen full of zeros
 
 ---
 
-## P4-3 · Achievement definitions ⬜
+## P4-3 · Achievement definitions ✅
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P4-1
 
@@ -226,7 +228,7 @@ What it costs, stated plainly rather than discovered later: **no unlock timestam
 
 ---
 
-## P4-4 · Achievements on the stats screen ⬜
+## P4-4 · Achievements on the stats screen ✅
 
 **Difficulty:** low · **Track:** B · **Depends on:** P4-2, P4-3
 
@@ -243,7 +245,7 @@ Locked and unlocked rows are distinguished by **glyph and text weight, not by co
 
 ---
 
-## P4-5 · Review reminder — channel, alarm, boot re-arm ⬜
+## P4-5 · Review reminder — channel, alarm, boot re-arm ✅
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P4-1
 
@@ -274,7 +276,7 @@ Three small classes in a new top-level `notify/` package. Not `ui/` — nothing 
 
 ---
 
-## P4-6 · `POST_NOTIFICATIONS` runtime flow ⬜
+## P4-6 · `POST_NOTIFICATIONS` runtime flow ✅
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P4-5
 
@@ -309,7 +311,7 @@ A toggle that silently fails to arm anything is worse than no toggle. The toggle
 
 ---
 
-## P4-7 · Onboarding carousel ⬜
+## P4-7 · Onboarding carousel ✅
 
 **Difficulty:** medium · **Track:** B · **Depends on:** —
 
@@ -341,7 +343,7 @@ Gated on a `Prefs` flag and shown once before the Hub. **Settings gets a "Replay
 
 ---
 
-## P4-8 · Marks purchase — persistence and consumption ⬜
+## P4-8 · Marks purchase — persistence and consumption ✅
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P2-9 · **Unblocks:** P4-9, P4-11
 
@@ -378,7 +380,7 @@ Price is a `price` field in `relics.json`, not a constant in code. `RelicCatalog
 
 ---
 
-## P4-9 · Relic shop screen ⬜
+## P4-9 · Relic shop screen ✅
 
 **Difficulty:** medium · **Track:** B · **Depends on:** P4-8
 
@@ -396,7 +398,7 @@ Second reason this screen earns its place: it is where a player can **read what 
 
 ---
 
-## P4-10 · Register/formality question type ⬜
+## P4-10 · Register/formality question type ✅
 
 **Difficulty:** high · **Track:** A · **Depends on:** P2-1, P3-1 · **Unblocks:** P4-11
 
@@ -442,7 +444,7 @@ Options: `formalAlt` (correct) plus three distractors **drawn from other pool wo
 
 ---
 
-## P4-11 · Real Room migration, destructive fallback removed ⬜
+## P4-11 · Real Room migration, destructive fallback removed ✅
 
 **Difficulty:** medium · **Track:** A · **Depends on:** P4-8, P4-10 · **Unblocks:** P4-13
 
@@ -468,7 +470,7 @@ The version is getting bumped by this phase regardless. Writing the migration is
 
 ---
 
-## P4-12 · Colorblind and accessibility audit ⬜
+## P4-12 · Colorblind and accessibility audit ✅
 
 **Difficulty:** low · **Track:** B · **Depends on:** —
 
@@ -491,7 +493,7 @@ Then the basics `project-idea.md` §11 groups with it: `contentDescription` on e
 
 ---
 
-## P4-13 · Edge-case hardening + `RealmImport` test ⬜
+## P4-13 · Edge-case hardening + `RealmImport` test ✅
 
 **Difficulty:** medium · **Track:** · · **Depends on:** P4-11 · **Unblocks:** P4-14
 
@@ -532,7 +534,7 @@ Each one either passes or produces a fix in this task. Whichever it is gets reco
 
 ---
 
-## P4-14 · Phase 4 report and test plan ⬜
+## P4-14 · Phase 4 report and test plan ✅
 
 **Difficulty:** low · **Track:** · · **Depends on:** everything
 

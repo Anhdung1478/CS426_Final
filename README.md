@@ -6,7 +6,9 @@ Dying in a run never rolls back what the player learned — permadeath only clea
 
 ## Status
 
-Phase 1 (Foundation) and Phase 2 (The playable run) are closed — 24/24 tasks. The app seeds a word bank, runs SM-2 flashcard review, and plays a full 3-floor dungeon run with 9 of 12 question types, in English and Vietnamese. Phase 3 (AI map generation via a backend proxy) is next, not yet started.
+**All four phases are closed — 47/47 tasks.** The app seeds a 300-word bank, runs SM-2 flashcard review, plays a full 3-floor dungeon run with all 12 question types in English and Vietnamese, forges new realms from a topic via a DeepSeek proxy, shows a vocabulary stats screen with achievements, spends Marks on a starting relic, and posts a daily review reminder.
+
+146 unit tests, 18 backend tests, 18 instrumentation tests. See [`report-phase4.md`](report-phase4.md) for the final exit checklist, including what was verified how and what was not verified.
 
 ## Stack
 
@@ -29,5 +31,5 @@ cd android
 | [`project-idea.md`](project-idea.md) | Game design and the pedagogical rationale — the *why*. |
 | [`project-context.md`](project-context.md) | Feature → file map, Room schema, conventions — read this first in a new session. |
 | [`docs/plan.md`](docs/plan.md) | Roadmap: which phase is open, progression between phases. |
-| [`docs/phase-1.md`](docs/phase-1.md) / [`docs/phase-2.md`](docs/phase-2.md) | Per-task detail for each closed phase. |
-| [`report-phase1.md`](report-phase1.md) / [`report-phase2.md`](report-phase2.md) | Exit-checklist writeups for each phase. |
+| [`docs/phase-1.md`](docs/phase-1.md) … [`docs/phase-4.md`](docs/phase-4.md) | Per-task detail for each phase. |
+| [`report-phase1.md`](report-phase1.md) … [`report-phase4.md`](report-phase4.md) | Exit-checklist writeups. Phase 4's also lists the five bugs the edge-case pass found. |

@@ -13,7 +13,9 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Parses relics.json into memory and stays there — relics never change at
@@ -23,6 +25,8 @@ public final class RelicCatalog {
 
     private static final String TAG = "RelicCatalog";
     private static final String ASSET_FILE = "relics.json";
+    // Only used if a relic entry omits its price — the file is the source of truth.
+    private static final int DEFAULT_PRICE = 60;
 
     private static List<Relic> cache;
 
@@ -57,12 +61,29 @@ public final class RelicCatalog {
         return null;
     }
 
+    /**
+     * Relic IDs to relic *effect* keys. Damage, TimerBonus, RunEngine and RunResult all branch
+     * on effects, never on IDs — passing a set of IDs to any of them silently matches nothing,
+     * which is exactly how three relics shipped inert through Phases 2 and 3. Every caller
+     * routes through here so that mistake has one place left to be made.
+     */
+    public static Set<String> effectsFor(Context context, Set<String> relicIds) {
+        Set<String> effects = new HashSet<>();
+        for (Relic relic : load(context)) {
+            if (relicIds.contains(relic.id)) {
+                effects.add(relic.effect);
+            }
+        }
+        return effects;
+    }
+
     private static Relic parseRelic(JSONObject obj) throws Exception {
         Relic r = new Relic();
         r.id = obj.getString("id");
         r.name = obj.getString("name");
         r.desc = obj.getString("desc");
         r.effect = obj.getString("effect");
+        r.price = obj.optInt("price", DEFAULT_PRICE);
         return r;
     }
 

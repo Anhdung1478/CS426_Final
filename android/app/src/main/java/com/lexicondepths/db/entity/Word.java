@@ -51,4 +51,12 @@ public class Word {
 
     @Nullable
     public String affixKey;
+
+    /**
+     * The more formal equivalent of the headword ("kids" → "children"). Nullable and sparse,
+     * exactly like affixKey: it serves one question type, and a word without it simply cannot
+     * produce that type. See RegisterFormalityGenerator.
+     */
+    @Nullable
+    public String formalAlt;
 }

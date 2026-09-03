@@ -64,6 +64,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <!-- P4-6: daily review reminder. The permission request fires on the toggle, never at
+             launch — see SettingsActivity. -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/reminderSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:minHeight="48dp"
+            android:text="@string/settings_reminder_label"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+        <TextView
+            android:id="@+id/reminderHourLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
+        <Spinner
+            android:id="@+id/reminderHourSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/reminderBlockedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/settings_reminder_blocked"
+            android:textAppearance="@style/TextAppearance.Lexicon.Dim"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/reminderSettingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:minHeight="48dp"
+            android:text="@string/settings_reminder_open_settings"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/replayIntroButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:minHeight="48dp"
+            android:text="@string/settings_replay_intro" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

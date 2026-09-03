@@ -27,6 +27,10 @@ public interface RealmDao {
     @Query("SELECT COUNT(*) FROM Realm")
     int count();
 
+    /** Realm Forger (P4-3) asks one question: has anything ever been forged? */
+    @Query("SELECT COUNT(*) FROM Realm WHERE generated = 1")
+    int countGenerated();
+
     @Query("SELECT * FROM Realm WHERE id = :id")
     Realm getById(long id);
 

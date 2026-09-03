@@ -52,7 +52,7 @@ public abstract class QuestionView extends FrameLayout {
         }
     }
 
-    /** The eleven-types-onto-four-views mapping from phase-2.md's table, in one place. */
+    /** The twelve-types-onto-four-views mapping from phase-2.md's table, in one place. */
     public static QuestionView create(Context context, QuestionType type) {
         switch (type) {
             case DEFINITION_TO_WORD:
@@ -60,6 +60,7 @@ public abstract class QuestionView extends FrameLayout {
             case SYNONYM_ANTONYM:
             case COLLOCATION:
             case WORD_FORM:
+            case REGISTER_FORMALITY:
                 return new McqView(context);
             case CLOZE:
             case LISTENING_SPELLING:

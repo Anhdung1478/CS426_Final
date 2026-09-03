@@ -18,10 +18,14 @@ public class Prefs {
     private static final String KEY_TIMER_FULL = "timer_full_bonus_ms";
     private static final String KEY_TIMER_PARTIAL = "timer_partial_bonus_ms";
     private static final String KEY_MAP_API_BASE_URL = "map_api_base_url";
+    private static final String KEY_REMINDERS_ENABLED = "reminders_enabled";
+    private static final String KEY_REMINDER_HOUR = "reminder_hour";
+    private static final String KEY_ONBOARDING_SEEN = "onboarding_seen";
 
     private static final CefrLevel DEFAULT_CEFR = CefrLevel.B1;
     private static final int DEFAULT_TIMER_FULL_MS = 10000;
     private static final int DEFAULT_TIMER_PARTIAL_MS = 20000;
+    private static final int DEFAULT_REMINDER_HOUR = 20;
 
     private final SharedPreferences prefs;
 
@@ -70,6 +74,37 @@ public class Prefs {
         // Storing the default verbatim would pin it, so a later build-config change wouldn't take.
         String stored = BuildConfig.MAP_API_BASE_URL.equals(trimmed) ? "" : trimmed;
         prefs.edit().putString(KEY_MAP_API_BASE_URL, stored).apply();
+    }
+
+    /**
+     * Off by default. The permission prompt fires when this is switched on (P4-6), not at
+     * launch — a cold POST_NOTIFICATIONS ask before the user knows what the app is, is what
+     * trains people to hit Deny reflexively.
+     */
+    public boolean remindersEnabled() {
+        return prefs.getBoolean(KEY_REMINDERS_ENABLED, false);
+    }
+
+    public void setRemindersEnabled(boolean enabled) {
+        prefs.edit().putBoolean(KEY_REMINDERS_ENABLED, enabled).apply();
+    }
+
+    public int reminderHour() {
+        int hour = prefs.getInt(KEY_REMINDER_HOUR, DEFAULT_REMINDER_HOUR);
+        return hour < 0 || hour > 23 ? DEFAULT_REMINDER_HOUR : hour;
+    }
+
+    public void setReminderHour(int hourOfDay) {
+        prefs.edit().putInt(KEY_REMINDER_HOUR, Math.max(0, Math.min(23, hourOfDay))).apply();
+    }
+
+    /** Gates the onboarding carousel (P4-7) to exactly one showing per install. */
+    public boolean onboardingSeen() {
+        return prefs.getBoolean(KEY_ONBOARDING_SEEN, false);
+    }
+
+    public void setOnboardingSeen() {
+        prefs.edit().putBoolean(KEY_ONBOARDING_SEEN, true).apply();
     }
 
     /** Bounded so partial can never be less than full. */

@@ -4,6 +4,13 @@
     <!-- Map generation only. The key lives on the proxy, never in this APK. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Needed only on API 33+ (Android 13), where notifications became a runtime permission.
+         Declaring it is harmless below 33; SettingsActivity requests it on the reminder
+         toggle, never at launch. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- AlarmManager schedules do not survive a reboot; BootReceiver re-arms them. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -67,6 +74,18 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:label="@string/onboarding_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.shop.ShopActivity"
+            android:exported="false"
+            android:label="@string/shop_title"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".ui.stats.StatsActivity"
             android:exported="false"
             android:label="@string/stats_title"
@@ -77,6 +96,22 @@
             android:exported="false"
             android:label="@string/library_title"
             android:screenOrientation="portrait" />
+
+        <!-- notify/ (P4-5). Neither is exported: the alarm receiver is only ever triggered by
+             our own PendingIntent, and BootReceiver only by the system broadcast. -->
+        <receiver
+            android:name=".notify.ReminderReceiver"
+            android:exported="false" />
+
+        <!-- Exported because ACTION_BOOT_COMPLETED comes from the system, and a non-exported
+             receiver would never see it. RECEIVE_BOOT_COMPLETED is what gates it. -->
+        <receiver
+            android:name=".notify.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
     </application>
 

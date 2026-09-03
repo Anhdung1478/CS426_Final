@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.lexicondepths.App;
 import com.lexicondepths.R;
+import com.lexicondepths.content.RelicCatalog;
 import com.lexicondepths.databinding.ActivitySpoilsBinding;
 import com.lexicondepths.db.AppDatabase;
 import com.lexicondepths.db.RunStatus;
@@ -65,7 +66,8 @@ public class SpoilsActivity extends AppCompatActivity {
             for (RunRelic relic : db.runDao().getRelicsForRun(runId)) {
                 relicIds.add(relic.relicId);
             }
-            RunResult result = RunResult.from(run, failed, relicIds);
+            RunResult result = RunResult.from(run, failed,
+                    RelicCatalog.effectsFor(getApplicationContext(), relicIds));
 
             List<Word> missedWords = new ArrayList<>();
             for (Long wordId : result.failedWordIds) {
@@ -78,7 +80,10 @@ public class SpoilsActivity extends AppCompatActivity {
             long now = System.currentTimeMillis();
             db.runInTransaction(() -> {
                 for (Long wordId : result.failedWordIds) {
-                    db.wordProgressDao().resetDueNow(wordId, now);
+                    // ...OrCreate, not resetDueNow: a word first met in this battle has no
+                    // WordProgress row, and a bare UPDATE would skip precisely the words the
+                    // player just proved they do not know.
+                    db.wordProgressDao().resetDueNowOrCreate(wordId, now);
                 }
 
                 Profile profile = db.profileDao().getProfileSync();
@@ -88,7 +93,14 @@ public class SpoilsActivity extends AppCompatActivity {
                 profile.marks += result.marksEarned;
                 profile.totalRuns += 1;
                 profile.bestFloor = Math.max(profile.bestFloor, result.floorReached);
-                profile.streak = result.status == RunStatus.WON ? profile.streak + 1 : 0;
+                // streak zeroes on a loss; runsWon must not, or "Depth Conqueror" would
+                // re-lock itself the next time the player died. Same transaction as the rest.
+                if (result.status == RunStatus.WON) {
+                    profile.streak += 1;
+                    profile.runsWon += 1;
+                } else {
+                    profile.streak = 0;
+                }
                 profile.lastActiveAt = now;
                 db.profileDao().upsert(profile);
 

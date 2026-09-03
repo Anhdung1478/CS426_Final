@@ -1,6 +1,5 @@
 package com.lexicondepths.ui.battle;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import com.lexicondepths.App;
 import com.lexicondepths.R;
 import com.lexicondepths.content.Monster;
 import com.lexicondepths.content.MonsterCatalog;
-import com.lexicondepths.content.Relic;
 import com.lexicondepths.content.RelicCatalog;
 import com.lexicondepths.databinding.ActivityBattleBinding;
 import com.lexicondepths.db.AppDatabase;
@@ -120,7 +118,7 @@ public class BattleActivity extends AppCompatActivity {
                 ids.add(relic.relicId);
             }
             relicIds = ids;
-            relicEffects = resolveEffects(getApplicationContext(), ids);
+            relicEffects = RelicCatalog.effectsFor(getApplicationContext(), ids);
 
             pool = loadPool(db, run);
             Set<Long> dueIds = new HashSet<>(db.wordDao().getDueWordIdsSync(System.currentTimeMillis()));
@@ -145,16 +143,6 @@ public class BattleActivity extends AppCompatActivity {
         return db.wordDao().getByTopic(realm.topic);
     }
 
-    private static Set<String> resolveEffects(Context context, Set<String> relicIds) {
-        Set<String> effects = new HashSet<>();
-        for (Relic relic : RelicCatalog.load(context)) {
-            if (relicIds.contains(relic.id)) {
-                effects.add(relic.effect);
-            }
-        }
-        return effects;
-    }
-
     private void onEncounterReady() {
         if (questions.isEmpty() || currentIndex >= questions.size()) {
             // Either no eligible word existed for this monster's types, or the app was killed
@@ -171,7 +159,11 @@ public class BattleActivity extends AppCompatActivity {
     }
 
     private void updateHp() {
-        binding.hpBar.setValues(run.hp, RunEngine.maxHp(relicIds));
+        int maxHp = RunEngine.maxHp(relicEffects);
+        binding.hpBar.setValues(run.hp, maxHp);
+        // The bar goes red below 30%, which is colour alone. The number is the pairing §7 asks
+        // for, and it is also what TalkBack reads.
+        binding.hpText.setText(getString(R.string.dungeon_map_hp, run.hp, maxHp));
     }
 
     private void bindCurrentQuestion() {

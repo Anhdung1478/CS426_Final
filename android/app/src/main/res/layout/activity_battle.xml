@@ -28,6 +28,13 @@
         android:layout_marginTop="@dimen/space_sm"
         android:textAppearance="@style/TextAppearance.Lexicon.Dim" />
 
+    <TextView
+        android:id="@+id/hpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textAppearance="@style/TextAppearance.Lexicon.Body" />
+
     <com.lexicondepths.ui.widget.HpBar
         android:id="@+id/hpBar"
         android:layout_width="match_parent"

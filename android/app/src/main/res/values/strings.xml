@@ -85,8 +85,6 @@
     <string name="spoils_missed_words_empty">No missed words this run.</string>
     <string name="spoils_continue">Continue</string>
 
-    <!-- Placeholder screens -->
-    <string name="placeholder_body">Under construction — coming in a later phase.</string>
     <string name="stats_title">Vocabulary Stats</string>
     <string name="library_title">My Library</string>
 
@@ -109,4 +107,104 @@
     <string name="settings_map_api_label">Realm-forge server</string>
     <string name="settings_map_api_hint">http://10.0.2.2:8080</string>
     <string name="settings_map_api_help">Emulator uses 10.0.2.2. On a phone, use the LAN IP of your laptop. Leave blank to reset.</string>
+
+    <!-- Onboarding (P4-7) -->
+    <string name="onboarding_title">How this works</string>
+    <string name="onboarding_page">%1$d / %2$d</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_back">Back</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_start">Begin</string>
+    <string name="onboarding_1_title">A dungeon made of words</string>
+    <string name="onboarding_1_body">This is a vocabulary game wearing a dungeon.\n\nEvery monster is a set of word puzzles, every fight is a study session, and the words are the point. The dungeon is just what makes you come back.\n\nA spaced-repetition scheduler decides which words you meet, disguised as difficulty.</string>
+    <string name="onboarding_2_title">The descent</string>
+    <string name="onboarding_2_body">Three floors, four steps each. At every step you pick one of two nodes: a battle, a rest, a treasure, an elite, or the boss at the end of floor three.\n\nHP carries across floors. There is no free heal between them.\n\nAnd the important part: dying never takes back what you learned. Your word progress is untouchable. A lost run costs you the run, nothing else — words you missed simply come back sooner.</string>
+    <string name="onboarding_3_title">Combat</string>
+    <string name="onboarding_3_body">Monsters have no health bar. They have question slots — answer them all and the monster is gone.\n\nDamage runs backwards from what you would expect: missing an easy word hurts most, and missing a word above your level barely stings. That is on purpose, so reaching above your level is never a death sentence.\n\nThe timer only ever helps you. Answering fast reduces damage; answering slowly never adds any.</string>
+    <string name="onboarding_4_title">Reading the grid</string>
+    <string name="onboarding_4_body">Some puzzles give letter-by-letter feedback:\n\n  ✓ right letter, right place\n  ~ right letter, wrong place\n  ✗ not in the word\n\nEvery colour on screen is paired with a glyph like these, so nothing depends on telling green from yellow.\n\nStart at Practice for a quiet review session, or Realm Select to descend.</string>
+
+    <!-- Stats (P4-2, P4-4) -->
+    <string name="stats_section_mastery">Mastery</string>
+    <string name="stats_mastery_counts">New %1$d · Learning %2$d · Mastered %3$d · Due now %4$d</string>
+    <string name="stats_mastery_legend">Bar: new (dim) · learning (amber) · mastered (green). Mastered means an interval of 21 days or more.</string>
+    <string name="stats_section_weak_types">Where you are weak</string>
+    <string name="stats_type_accuracy_row">%1$s — %2$d%% over %3$d answers</string>
+    <string name="stats_section_weak_words">Words to revisit</string>
+    <string name="stats_weak_word_row">%1$s — %2$d%% over %3$d answers</string>
+    <string name="stats_section_run_record">Run record</string>
+    <string name="stats_run_record">Streak: %1$d\nBest floor: %2$d\nRuns won: %3$d of %4$d (%5$d%%)\nMarks: %6$d</string>
+    <string name="stats_section_achievements">Achievements</string>
+    <string name="stats_achievement_unlocked">[✓] %1$s</string>
+    <string name="stats_achievement_locked">[ ] %1$s — %2$s</string>
+    <string name="stats_empty_no_answers">Nothing recorded yet. Fight a monster and this fills in — these two sections are built from answered questions, not from Practice self-ratings.</string>
+    <string name="stats_empty_not_enough_attempts">Not enough attempts yet — a word needs two before it can count as weak.</string>
+
+    <!-- Question type labels -->
+    <string name="qtype_definition_to_word">Definition → word</string>
+    <string name="qtype_word_to_definition">Word → definition</string>
+    <string name="qtype_synonym_antonym">Synonyms and antonyms</string>
+    <string name="qtype_word_form">Word forms</string>
+    <string name="qtype_cloze">Fill the gap</string>
+    <string name="qtype_collocation">Collocation</string>
+    <string name="qtype_anagram">Anagram</string>
+    <string name="qtype_sentence_scramble">Sentence order</string>
+    <string name="qtype_wordle">Letter grid</string>
+    <string name="qtype_affix_harvest">Affixes</string>
+    <string name="qtype_listening_spelling">Listening</string>
+    <string name="qtype_register_formality">Formal register</string>
+    <string name="qtype_unknown">Other</string>
+
+    <!-- Achievements (P4-3) -->
+    <string name="ach_first_descent">First Descent</string>
+    <string name="ach_first_descent_req">finish one run</string>
+    <string name="ach_delver">Delver</string>
+    <string name="ach_delver_req">reach floor 3</string>
+    <string name="ach_depth_conqueror">Depth Conqueror</string>
+    <string name="ach_depth_conqueror_req">win a run</string>
+    <string name="ach_word_hoard">Word Hoard</string>
+    <string name="ach_word_hoard_req">see 150 words</string>
+    <string name="ach_lexicographer">Lexicographer</string>
+    <string name="ach_lexicographer_req">master 50 words</string>
+    <string name="ach_unbroken">Unbroken</string>
+    <string name="ach_unbroken_req">a 7-win streak</string>
+    <string name="ach_realm_forger">Realm Forger</string>
+    <string name="ach_realm_forger_req">forge a realm</string>
+    <string name="ach_diligent">Diligent</string>
+    <string name="ach_diligent_req">answer 200 questions</string>
+    <string name="ach_silver_tongue">Silver Tongue</string>
+    <string name="ach_silver_tongue_req">80% collocation accuracy over 20 answers</string>
+
+    <!-- Shop (P4-9) -->
+    <string name="hub_btn_shop">Relic Shop</string>
+    <string name="shop_title">Relic Shop</string>
+    <string name="shop_marks">Marks: %1$d</string>
+    <string name="shop_equipped">Next run starts with: %1$s</string>
+    <string name="shop_equipped_none">Next run starts with no relic.</string>
+    <string name="shop_replace_warning">Buying a second relic replaces the first. The Marks you spent on it are not refunded.</string>
+    <string name="shop_relic_row">%1$s — %2$s (%3$d Marks)</string>
+    <string name="shop_buy">Buy for %1$d Marks</string>
+    <string name="shop_buy_short">Need %1$d more Marks</string>
+    <string name="shop_buy_equipped">Equipped for your next run</string>
+    <string name="shop_buy_failed">Not enough Marks.</string>
+
+    <!-- Review reminder (P4-5, P4-6) -->
+    <string name="notify_channel_name">Review reminder</string>
+    <string name="notify_channel_desc">A daily nudge when words are due for review.</string>
+    <string name="notify_review_title">Lexicon Depths</string>
+    <plurals name="notify_review_body">
+        <item quantity="one">%1$d word is due for review.</item>
+        <item quantity="other">%1$d words are due for review.</item>
+    </plurals>
+    <string name="settings_reminder_label">Daily review reminder</string>
+    <string name="settings_reminder_hour">Reminder time: %1$s</string>
+    <string name="settings_reminder_blocked">Notifications are blocked for this app, so no reminder can arrive.</string>
+    <string name="settings_reminder_open_settings">Open notification settings</string>
+    <string name="settings_replay_intro">Replay intro</string>
+
+    <!-- Accessibility (P4-12) -->
+    <string name="cd_monster_art">Illustration of %1$s</string>
+    <string name="cd_hp_bar">Health: %1$d of %2$d</string>
+    <string name="mcq_option_correct">Correct: %1$s</string>
+    <string name="mcq_option_wrong">Wrong: %1$s</string>
 </resources>

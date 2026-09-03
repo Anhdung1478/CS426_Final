@@ -80,6 +80,13 @@
                 android:text="@string/hub_btn_library" />
 
             <Button
+                android:id="@+id/shopButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/hub_btn_shop" />
+
+            <Button
                 android:id="@+id/statsButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

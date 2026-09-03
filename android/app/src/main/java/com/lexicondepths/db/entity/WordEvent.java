@@ -19,7 +19,11 @@ public class WordEvent {
     public long wordId;
 
     @Nullable
-    public Long runId; // null == answered in Practice mode, not a run
+    // Always non-null today: only BattleActivity writes WordEvent rows. Practice grades a
+    // card by self-rating, which is not a completion ratio and must not be averaged into
+    // the per-question-type accuracy the stats screen reports. Nullable so a future
+    // non-run question source does not need a schema change.
+    public Long runId;
 
     @NonNull
     public String questionType;

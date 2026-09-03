@@ -60,8 +60,10 @@ E:\Project\CS426_Final\
 │       │   │   ├── srs\        ✅  SM-2 scheduler.
 │       │   │   ├── combat\     ✅  Damage + timer bonus math.
 │       │   │   ├── run\        ✅  Dungeon generation and run state.
-│       │   │   └── question\   ✅  Question models + the 11 shipped generators.
+│       │   │   ├── question\   ✅  Question models + all 12 generators.
+│       │   │   └── stats\      ✅  StatsSnapshot, its projections, and the achievement predicates.
 │       │   ├── content\        ✅  Loaders that read assets\ JSON into memory or Room.
+│       │   ├── notify\         ✅  Daily review reminder: channel, alarm, boot re-arm. Not a screen.
 │       │   └── ui\             ✅  One package per screen, plus ui\widget\ for shared views.
 │       ├── main\assets\        ✅  words_seed.json, monsters.json, relics.json, fallback_map.json
 │       ├── main\res\           ✅  layout\ values\ values-vi\ font\ drawable\ xml\
@@ -127,7 +129,7 @@ Everything here routes through the proxy. **The DeepSeek key is never in the APK
 
 ### Question types
 
-All 11 shipped types implement `game/question/QuestionGenerator.java` and return a `QuestionResult` carrying a **completion ratio 0.0–1.0**. That single number is what lets a Wordle grid and an affix harvest feed the same damage formula.
+All 12 types implement `game/question/QuestionGenerator.java` and return a `QuestionResult` carrying a **completion ratio 0.0–1.0**. That single number is what lets a Wordle grid and an affix harvest feed the same damage formula.
 
 | Group | File | Status |
 |---|---|---|
@@ -136,7 +138,7 @@ All 11 shipped types implement `game/question/QuestionGenerator.java` and return
 | Word form, Cloze, Collocation | `game/question/gen/` | ✅ P2-4 |
 | Anagram, Sentence scramble, Wordle, Affix harvest | `game/question/gen/` | ✅ P2-5 |
 | Listening→Spelling (+ TTS wrapper) | `game/question/gen/`, `ui/widget/Speaker.java` | ✅ P2-6 |
-| Register/formality (C1+) | — | deferred past Phase 2 |
+| Register/formality (B2+) | `game/question/gen/RegisterFormalityGenerator.java` | ✅ P4-10 |
 
 ### Screens
 
@@ -152,7 +154,9 @@ One `Activity` each, all in `ui/`.
 | Battle | `ui/battle/BattleActivity.java` | ✅ P2-11 |
 | Reward (mid-run relic pick) | `ui/reward/RewardActivity.java` | ✅ P2-12 |
 | Spoils (run-end recap) | `ui/reward/SpoilsActivity.java` | ✅ P2-12 |
-| Vocabulary stats | `ui/stats/StatsActivity.java` | ⬜ Phase 4 |
+| Vocabulary stats + achievements | `ui/stats/StatsActivity.java` | ✅ P4-2, P4-4 |
+| Relic shop (the Marks sink) | `ui/shop/ShopActivity.java` | ✅ P4-9 |
+| Onboarding carousel | `ui/onboarding/OnboardingActivity.java` | ✅ P4-7 |
 | My Library + realm forge | `ui/library/LibraryActivity.java` | ✅ P3-6, P3-7 |
 
 ### Presentation
@@ -167,11 +171,23 @@ One `Activity` each, all in `ui/`.
 | English + Vietnamese strings | `res/values/strings.xml`, `res/values-vi/strings.xml` | ✅ P1-10 |
 | Runtime locale switch | `AppCompatDelegate.setApplicationLocales` in Settings | ✅ P1-10 |
 
+### Stats, progression and device integration
+
+| Feature | Entry point | Status |
+|---|---|---|
+| The one stats contract three consumers read | `game/stats/StatsSnapshot.java`, `content/StatsLoader.java` | ✅ P4-1 |
+| Mastery buckets, per-type accuracy, weakest words | the aggregate queries on `WordProgressDao`/`WordEventDao` | ✅ P4-1 |
+| Nine achievements, derived not stored | `game/stats/Achievements.java` | ✅ P4-3 |
+| Marks purchase → a run's starting relic | `db/dao/ProfileDao.buyRelic`, `game/run/RunEngine.startRun` | ✅ P4-8 |
+| Daily review reminder | `notify/` + `AndroidManifest.xml` | ✅ P4-5 |
+| `POST_NOTIFICATIONS` runtime flow | `ui/settings/SettingsActivity.java` | ✅ P4-6 |
+| Schema migration 2 → 3 | `db/AppDatabase.MIGRATION_2_3`, `androidTest/MigrationTest.java` | ✅ P4-11 |
+
 ---
 
 ## 5. Room schema at a glance
 
-Nine entities in `db/`. Monsters and relics are deliberately **not** tables — they are static JSON in `assets/`, since they never change at runtime.
+Nine entities in `db/`, at schema version 3. Monsters and relics are deliberately **not** tables — they are static JSON in `assets/`, since they never change at runtime.
 
 | Entity | Purpose |
 |---|---|
@@ -183,7 +199,7 @@ Nine entities in `db/`. Monsters and relics are deliberately **not** tables — 
 | `RunNode` | One node on the map. `slot` is 0 or 1 (the branch choice). |
 | `RunRelic` | Relics held this run. |
 | `WordEvent` | Every answer given: ratio, damage, timestamp. Feeds Spoils and stats. |
-| `Profile` | Singleton row (id=1): CEFR level, marks, streak, best floor. |
+| `Profile` | Singleton row (id=1): CEFR level, marks, streak, best floor, runs won, the relic bought for the next run. |
 
 ### ⚠️ The permadeath boundary
 
@@ -192,7 +208,13 @@ This is the one invariant that must never break, and it is the thing a grader is
 - **Wiped when a run ends:** `Run`, `RunNode`, `RunRelic` — HP, floor, held relics, run currency, path taken.
 - **Never touched by a run ending:** `WordProgress`, `Profile`, `WordEvent`.
 
-Enforced mechanically: the run-clearing DAO method has no reference to `WordProgress` at all, and a unit test asserts it. Losing a battle is a game setback. It is never a loss of what the player learned.
+Enforced mechanically, now against both threats:
+
+- **Losing a run.** `RunDao.clearRunState()` has no reference to `WordProgress` at all, and `PermadeathBoundaryTest` asserts it.
+- **Upgrading the APK.** Until P4-11 the database was built with Room's destructive fallback, which drops every table on a version mismatch — `WordProgress` included. An upgrade would have done exactly what losing a run is forbidden to do. `AppDatabase.MIGRATION_2_3` replaces it and `MigrationTest` asserts ease, interval, reps, lapses and `dueAt` all survive.
+- **A forged realm re-importing a word you already know.** `RealmImport` joins the existing row rather than replacing it, so the word keeps its id and its progress. `RealmImportTest` asserts it.
+
+Losing a battle is a game setback. It is never a loss of what the player learned.
 
 The related mechanic runs the *opposite* direction: on death, every word failed during the run gets `dueAt` reset to now, so it resurfaces immediately. That is the **Spoils** system. A loss makes the next run easier, which is both good roguelike design and correct spaced-repetition practice.
 
@@ -207,7 +229,7 @@ Kept small enough to fit a handful of columns.
 - **HP:** 100, carried across floors, no free heal between them. `REST` gives 30 HP or a due-word review.
 - **Depth multiplier** on damage: 1.0 / 1.5 / 2.0 by floor.
 - **Relics:** 8 passives, each a plain `switch` branch in `Damage.java` or `TimerBonus.java`. No effect engine.
-- **Marks** are the permanent currency, spent at the Hub on starting bonuses.
+- **Marks** are the permanent currency, spent at the Relic Shop off the Hub on the relic your next run starts with. Buying sets `Profile.pendingRelicId`; `RunEngine.startRun` turns it into that run's first `RunRelic` and clears it, in one transaction.
 
 ### Damage is inverse to difficulty
 
@@ -232,7 +254,7 @@ Failing an *easy* question hurts more than failing a hard one. This models "you 
 - Room access never runs on the main thread. Use `App.executor()` or a `LiveData` return type.
 - Comments explain *why*, not *what*. Keep them rare.
 - Prefer standard widgets. Write a custom `View` only when a static helper genuinely cannot do the job.
-- Every color-coded feedback state pairs with a shape or glyph (✓ / ~ / ✗) for colorblind readability.
+- Every color-coded feedback state pairs with a glyph or a number, never color alone. Audited in P4-12: `WordleGridView` already did it; the HP bar and the stats proportion bar did not and now carry their values as text. MCQ answers turned out to have no color feedback at all, so there was nothing to pair.
 - Build check before calling a task done: `cd android && gradlew.bat assembleDebug` then `gradlew.bat test`.
 
 ---
@@ -247,13 +269,8 @@ This file maps *code*. The plan maps *work*. They are separate on purpose — th
 | [`docs/phase-1.md`](docs/phase-1.md) | Phase 1 task table, dependency graph, and per-task detail. |
 | [`docs/phase-2.md`](docs/phase-2.md) | Phase 2, same shape, now closed. |
 | [`docs/phase-3.md`](docs/phase-3.md) | Phase 3, same shape, now closed. |
-| [`docs/phase-4.md`](docs/phase-4.md) | Phase 4 — polish. Open, 14 tasks, planned in full. |
+| [`docs/phase-4.md`](docs/phase-4.md) | Phase 4 — polish. Closed, 14/14. |
 
-**Phases 1, 2 and 3 are closed** — 12/12, 12/12, 9/9. See [`docs/plan.md`](docs/plan.md) and the per-phase reports.
+**All four phases are closed** — 12/12, 12/12, 9/9, 14/14. See [`docs/plan.md`](docs/plan.md) and the per-phase reports.
 
-**Phase 4 (polish) is open and planned** — 14 tasks in [`docs/phase-4.md`](docs/phase-4.md). It is the last phase, so nothing follows it and its deferred list is a *won't build* list.
-
-Two things in this file that Phase 4 will make false, flagged here so nobody trusts them in the meantime:
-
-- **§6's Marks sentence.** "Marks are the permanent currency, spent at the Hub on starting bonuses" describes P4-8/P4-9, not the current code. Right now `SpoilsActivity` writes Marks and `HubActivity` displays them; **nothing reads the field**. They are earned forever and spent never.
-- **§7's colorblind convention.** "Every color-coded feedback state pairs with a shape or glyph" is verified true for `WordleGridView` and unverified everywhere else — `project-idea.md` §11 still lists it as an open gap. P4-12 audits it and corrects whichever document is wrong.
+Phase 4 was the last phase, so its deferred list is a *won't build* list rather than a handoff. See [`report-phase4.md`](report-phase4.md) for what shipped, what was verified how, and what was not verified.

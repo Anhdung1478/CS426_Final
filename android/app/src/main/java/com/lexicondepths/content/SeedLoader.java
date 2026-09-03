@@ -65,7 +65,17 @@ public final class SeedLoader {
         }
 
         final List<Word> toInsert = words;
-        db.runInTransaction(() -> db.wordDao().insertAll(toInsert));
+        db.runInTransaction(() -> {
+            db.wordDao().insertAll(toInsert);
+            // A re-seed at a higher version reaches words that are already in the table, which
+            // a conflict-ignoring insert never can. Without this an upgraded install would have
+            // formalAlt null on every row and could never produce a register question.
+            for (Word word : toInsert) {
+                if (word.formalAlt != null || word.affixKey != null) {
+                    db.wordDao().backfillOptionalFields(word.headword, word.formalAlt, word.affixKey);
+                }
+            }
+        });
         seedRealms(db);
 
         prefs.edit().putInt(KEY_SEED_VERSION, fileVersion).apply();
@@ -118,10 +128,21 @@ public final class SeedLoader {
         return topic.isEmpty() ? topic : Character.toUpperCase(topic.charAt(0)) + topic.substring(1);
     }
 
+    /**
+     * One unusable row must not cost the other 299. MapJson.parseMap already skips-and-continues
+     * for exactly this reason on the network path; letting the exception escape here meant a
+     * single bad example sentence left a fresh install with an empty word bank and no visible
+     * error — which is what it did, undetected, from P3-1 until the P4-13 edge-case pass. The
+     * skip is logged so a content mistake is loud in logcat rather than silent everywhere.
+     */
     private static List<Word> parseWords(JSONArray array) throws Exception {
         List<Word> words = new ArrayList<>();
         for (int i = 0; i < array.length(); i++) {
-            words.add(MapJson.parseWord(array.getJSONObject(i)));
+            try {
+                words.add(MapJson.parseWord(array.getJSONObject(i)));
+            } catch (MapJson.InvalidMapException unusable) {
+                Log.e(TAG, "Skipping unusable seed word: " + unusable.getMessage());
+            }
         }
         return words;
     }

@@ -9,6 +9,7 @@ import com.lexicondepths.App;
 import com.lexicondepths.R;
 import com.lexicondepths.content.Monster;
 import com.lexicondepths.content.MonsterCatalog;
+import com.lexicondepths.content.RelicCatalog;
 import com.lexicondepths.databinding.ActivityRealmSelectBinding;
 import com.lexicondepths.db.entity.Realm;
 import com.lexicondepths.db.entity.Run;
@@ -73,7 +74,8 @@ public class RealmSelectActivity extends AppCompatActivity {
     private void startRun(Long realmId) {
         App.get().io().execute(() -> {
             List<Monster> monsters = MonsterCatalog.load(getApplicationContext());
-            long runId = RunEngine.startRun(App.get().db(), realmId, monsters);
+            long runId = RunEngine.startRun(App.get().db(), realmId, monsters,
+                    RelicCatalog.load(getApplicationContext()));
             runOnUiThread(() -> goToMap(runId));
         });
     }

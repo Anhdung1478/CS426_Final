@@ -100,9 +100,52 @@ public class EncounterTest {
             if (typeName.equals("AFFIX_HARVEST")) {
                 w.affixKey = "un-";
             }
+            if (typeName.equals("REGISTER_FORMALITY")) {
+                w.formalAlt = "formal" + i;
+                w.example = "This is word" + i + " in a sentence.";
+            }
             pool.add(w);
         }
         return pool;
+    }
+
+    /**
+     * P4-10's first designed-against failure mode. Encounter.pickSlot drops a slot it cannot
+     * fill and falls back only to the monster's *other* declared types, so a monster declaring
+     * REGISTER_FORMALITY alone would build a zero-slot encounter in any topic whose pool has no
+     * formalAlt words. The Courtier declares a second type precisely so that cannot happen.
+     */
+    @Test
+    public void theCourtierNeverProducesAZeroSlotEncounter() {
+        Monster courtier = monster("courtier",
+                Arrays.asList("REGISTER_FORMALITY", "SYNONYM_ANTONYM"), 2);
+
+        List<Word> withFormalAlts = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            Word w = word(i, "word" + i, "definition " + i);
+            w.formalAlt = "formal" + i;
+            w.synonyms = Arrays.asList("syn" + i);
+            withFormalAlts.add(w);
+        }
+        Encounter rich = Encounter.build(courtier, withFormalAlts, Collections.emptySet(), new Random(1));
+        assertEquals(2, rich.slots.size());
+        assertEquals("the first slot must be the type the monster leads with",
+                QuestionType.REGISTER_FORMALITY, rich.slots.get(0).type);
+
+        // A topic that carries no formalAlt at all: every slot degrades to the second type,
+        // and the encounter still has its full complement.
+        List<Word> noFormalAlts = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            Word w = word(i, "word" + i, "definition " + i);
+            w.synonyms = Arrays.asList("syn" + i);
+            noFormalAlts.add(w);
+        }
+        Encounter degraded = Encounter.build(courtier, noFormalAlts, Collections.emptySet(), new Random(1));
+        assertEquals("dropping a slot instead of falling back would be a shorter fight",
+                2, degraded.slots.size());
+        for (Encounter.Slot slot : degraded.slots) {
+            assertEquals(QuestionType.SYNONYM_ANTONYM, slot.type);
+        }
     }
 
     @Test
